@@ -1,0 +1,630 @@
+ant -f C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\python build.and.examples
+build.package.x3d.py:
+X3D stylesheets.BuildX3dPythonPackageFromX3duom.saxon:
+Following output is for X3D version 4.0 in X3dPackageSubdirectory=python/x3d
+Saxon-HE 9.7.0.13J from Saxonica
+Java version 13
+Stylesheet compilation time: 1.419186s (1419.1862ms)
+Processing file:/C:/x3d-code/www.web3d.org/specifications/X3dUnifiedObjectModel-4.0.xml
+Using parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+Building tree for file:/C:/x3d-code/www.web3d.org/specifications/X3dUnifiedObjectModel-4.0.xml using class net.sf.saxon.tree.tiny.TinyBuilder
+Tree built in 140.4484ms
+Tree size: 20180 nodes, 0 characters, 28931 attributes
+Writing to file:/C:/x3d-code/www.web3d.org/x3d/stylesheets/python/x3d/__init__.py
+Writing to file:/C:/x3d-code/www.web3d.org/x3d/stylesheets/python/x3d/x3d.py
+URIResolver.resolve href="../tooltips/x3d-3.3.profile.xml" base="file:/C:/x3d-code/www.web3d.org/x3d/stylesheets/X3duomToX3dPythonPackage.xslt"
+Building tree for file:/C:/x3d-code/www.web3d.org/x3d/tooltips/x3d-3.3.profile.xml using class net.sf.saxon.tree.tiny.TinyBuilder
+Tree built in 228.2105ms
+Tree size: 3171 nodes, 0 characters, 8803 attributes
+*** Warning, duplicate field encountered in X3DUOM: ParticleSystem geometry
+Execution time: 2.613393s (2613.3939ms)
+Memory used: 29462528
+Result: C:\x3d-code\www.web3d.org\x3d\stylesheets/python/x3d/x3d.py and __init__.py
+PYTHONPATH=C:\x3d-code\www.web3d.org\x3d\stylesheets\python\x3d;C:\Users\brutzman\AppData\Roaming\Python\Python38\Scripts;
+BuildX3dPythonPackageFromX3duom.saxon complete.
+test.x3d.py.local:
+Loading local x3d.py package in python to check for correctness...
+x3d.py package loaded, have fun with X3D Graphics!
+versions:
+X3D stylesheets.versions:
+ant -version
+Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+java -version
+openjdk version "13.0.1" 2019-10-15
+OpenJDK Runtime Environment (build 13.0.1+9)
+OpenJDK 64-Bit Server VM (build 13.0.1+9, mixed mode, sharing)
+python -version
+Python 3.8.1
+ANT_HOME  =C:\apache-ant-1.10.7
+JAVA_HOME =C:\Program Files\Java\openjdk\jdk-13.0.1
+PYTHONHOME=C:\Program Files\Python38\
+PYTHONPATH=C:\x3d-code\www.web3d.org\x3d\stylesheets\python\x3d;C:\Users\brutzman\AppData\Roaming\Python\Python38\Scripts;
+javac source/target      $java.source=1.8
+Java/JVM version    $ant.java.version=13
+Java/JVM detail version $java.version=13
+Ant version              $ant.version=Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+Configuration settings:  https://savage.nps.edu/Savage/developers.html
+===========================================
+examples:
+set.local.PYTHONPATH:
+local.PYTHONPATH=x3d
+test.x3d.py:
+Loading active PYTHONPATH x3d.py package in python to check for correctness...
+x3d.py package loaded, have fun with X3D Graphics!
+===========================================
+examples.HelloWorld.prefixed:
+Convert and test verbose approach using HelloWorldPrefixed.py
+convert.X3dToPython.xslt.prefixed:
+Deleting: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\examples\HelloWorldPrefixed.py
+set.local.PYTHONPATH:
+local.PYTHONPATH=x3d
+convert.X3dToPython.xslt:
+===========================================
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\python\examples\HelloWorld.py
+===========================================
+convert.X3dToPython.xslt conversion of HelloWorld.x3d to HelloWorld.py complete.
+###############################################
+#
+# Now available: developmental python x3d.py package on PyPi for import.
+#   This approach greatly simplifies Python X3D deployment and use.
+#   https://pypi.org/project/x3d
+#
+# Installation:
+#       pip install x3d
+# or
+#       python -m pip install x3d
+#
+# Developer options for loading x3d package:
+#
+#    from x3d import *  # preferred approach, terser source that avoids x3d.* class prefixes
+#
+# or
+#    import x3d         # traditional way to subclass x3d package, all classes require x3d.* prefix
+#                       # but python source is very verbose, for example x3d.Material x3d.Shape etc.
+#                       # X3dToPython.xslt stylesheet insertPackagePrefix=true supports this option.
+
+import x3d
+
+###############################################
+
+#  comment preceding root node 
+newModel=x3d.X3D(profile='Immersive',version='3.3',
+  head=x3d.head(
+    children=[
+    x3d.meta(content='HelloWorld.x3d',name='title'),
+    x3d.meta(content='Simple X3D scene example: Hello World!',name='description'),
+    x3d.meta(content='30 October 2000',name='created'),
+    x3d.meta(content='31 October 2019',name='modified'),
+    x3d.meta(content='Don Brutzman',name='creator'),
+    x3d.meta(content='HelloWorld.tall.png',name='Image'),
+    x3d.meta(content='http://en.wikipedia.org/wiki/Hello_world',name='reference'),
+    x3d.meta(content='https://en.wikipedia.org/wiki/Hello#.22Hello.2C_World.22_computer_program',name='reference'),
+    x3d.meta(content='https://en.wikipedia.org/wiki/"Hello,_World!"_program',name='reference'),
+    x3d.meta(content='http://en.wikibooks.org/w/index.php?title=Computer_Programming/Hello_world',name='reference'),
+    x3d.meta(content='http://www.HelloWorldExample.net',name='reference'),
+    x3d.meta(content='http://www.web3D.org',name='reference'),
+    x3d.meta(content='http://www.web3d.org/realtime-3d/news/internationalization-x3d',name='reference'),
+    x3d.meta(content='http://www.web3d.org/x3d/content/examples/HelloWorld.x3d',name='reference'),
+    x3d.meta(content='http://X3dGraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes',name='reference'),
+    x3d.meta(content='http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter01TechnicalOverview/HelloWorld.x3d',name='identifier'),
+    x3d.meta(content='http://www.web3d.org/x3d/content/examples/license.html',name='license'),
+    x3d.meta(content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit',name='generator'),
+    #  Alternate encodings: VRML97, X3D ClassicVRML Encoding, X3D Compressed Binary Encoding (CBE), X3DOM, JSON 
+    x3d.meta(content='HelloWorld.wrl',name='reference'),
+    x3d.meta(content='HelloWorld.x3dv',name='reference'),
+    x3d.meta(content='HelloWorld.x3db',name='reference'),
+    x3d.meta(content='HelloWorld.xhtml',name='reference'),
+    x3d.meta(content='HelloWorld.json',name='reference')]),
+  Scene=x3d.Scene(
+    #  Example scene to illustrate X3D nodes and fields (XML elements and attributes) 
+    children=[
+    x3d.WorldInfo(title='Hello World!'),
+    x3d.Group(
+      children=[
+      x3d.Viewpoint(DEF='ViewUpClose',centerOfRotation=(0,-1,0),description='Hello world!',position=(0,-1,7)),
+      #  insert commas to test removal when converted to ttl 
+      x3d.Transform(DEF='TestWhitespaceCommas',rotation=(0,1,0,3),
+        children=[
+        x3d.Shape(
+          geometry=x3d.Sphere(),
+          appearance=x3d.Appearance(
+            material=x3d.Material(DEF='MaterialLightBlue',diffuseColor=(0.1,0.5,1)),
+            texture=x3d.ImageTexture(DEF='ImageCloudlessEarth',url=["earth-topo.png","earth-topo.jpg","earth-topo-small.gif","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.png","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.jpg","http://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif"])))]),
+      x3d.Transform(translation=(0,-2,0),
+        children=[
+        x3d.Shape(
+          geometry=x3d.Text(DEF='TextMessage',string=["Hello","world!"],
+            fontStyle=x3d.FontStyle(justify=["MIDDLE","MIDDLE"])),
+          appearance=x3d.Appearance(
+            material=x3d.Material(USE='MaterialLightBlue')))])])])
+) # X3D model complete
+
+###############################################
+# Self-test diagnostics
+###############################################
+
+if         x3d.metaDiagnostics(newModel): # built-in utility method in X3D class
+    print (x3d.metaDiagnostics(newModel))
+print ("python x3d.py load successful for HelloWorld.py")
+===========================================
+Loading local x3d.py package in python to check for correctness...
+  then test HelloWorld.py execution and self-validation:
+  python examples/HelloWorld.py
+x3d.py package loaded, have fun with X3D Graphics!
+python x3d.py load successful for HelloWorld.py
+convert.X3dToPython.xslt conversion of HelloWorld.x3d to HelloWorld.py complete.
+===========================================
+Moving 1 file to C:\x3d-code\www.web3d.org\x3d\stylesheets\python\examples
+Attempting to rename: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\examples\HelloWorld.py to C:\x3d-code\www.web3d.org\x3d\stylesheets\python\examples\HelloWorldPrefixed.py
+===========================================
+examples.HelloWorld:
+set.local.PYTHONPATH:
+local.PYTHONPATH=x3d
+convert.X3dToPython.xslt:
+===========================================
+===========================================
+convert.X3dToPython.xslt conversion of HelloWorld.x3d to HelloWorld.py complete.
+###############################################
+#
+# Now available: developmental python x3d.py package on PyPi for import.
+#   This approach greatly simplifies Python X3D deployment and use.
+#   https://pypi.org/project/x3d
+#
+# Installation:
+#       pip install x3d
+# or
+#       python -m pip install x3d
+#
+# Developer options for loading x3d package:
+#
+#    from x3d import *  # preferred approach, terser source that avoids x3d.* class prefixes
+#
+# or
+#    import x3d         # traditional way to subclass x3d package, all classes require x3d.* prefix
+#                       # but python source is very verbose, for example x3d.Material x3d.Shape etc.
+#                       # X3dToPython.xslt stylesheet insertPackagePrefix=true supports this option.
+
+from x3d import *
+
+###############################################
+
+#  comment preceding root node 
+newModel=X3D(profile='Immersive',version='3.3',
+  head=head(
+    children=[
+    meta(content='HelloWorld.x3d',name='title'),
+    meta(content='Simple X3D scene example: Hello World!',name='description'),
+    meta(content='30 October 2000',name='created'),
+    meta(content='31 October 2019',name='modified'),
+    meta(content='Don Brutzman',name='creator'),
+    meta(content='HelloWorld.tall.png',name='Image'),
+    meta(content='http://en.wikipedia.org/wiki/Hello_world',name='reference'),
+    meta(content='https://en.wikipedia.org/wiki/Hello#.22Hello.2C_World.22_computer_program',name='reference'),
+    meta(content='https://en.wikipedia.org/wiki/"Hello,_World!"_program',name='reference'),
+    meta(content='http://en.wikibooks.org/w/index.php?title=Computer_Programming/Hello_world',name='reference'),
+    meta(content='http://www.HelloWorldExample.net',name='reference'),
+    meta(content='http://www.web3D.org',name='reference'),
+    meta(content='http://www.web3d.org/realtime-3d/news/internationalization-x3d',name='reference'),
+    meta(content='http://www.web3d.org/x3d/content/examples/HelloWorld.x3d',name='reference'),
+    meta(content='http://X3dGraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes',name='reference'),
+    meta(content='http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter01TechnicalOverview/HelloWorld.x3d',name='identifier'),
+    meta(content='http://www.web3d.org/x3d/content/examples/license.html',name='license'),
+    meta(content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit',name='generator'),
+    #  Alternate encodings: VRML97, X3D ClassicVRML Encoding, X3D Compressed Binary Encoding (CBE), X3DOM, JSON 
+    meta(content='HelloWorld.wrl',name='reference'),
+    meta(content='HelloWorld.x3dv',name='reference'),
+    meta(content='HelloWorld.x3db',name='reference'),
+    meta(content='HelloWorld.xhtml',name='reference'),
+    meta(content='HelloWorld.json',name='reference')]),
+  Scene=Scene(
+    #  Example scene to illustrate X3D nodes and fields (XML elements and attributes) 
+    children=[
+    WorldInfo(title='Hello World!'),
+    Group(
+      children=[
+      Viewpoint(DEF='ViewUpClose',centerOfRotation=(0,-1,0),description='Hello world!',position=(0,-1,7)),
+      #  insert commas to test removal when converted to ttl 
+      Transform(DEF='TestWhitespaceCommas',rotation=(0,1,0,3),
+        children=[
+        Shape(
+          geometry=Sphere(),
+          appearance=Appearance(
+            material=Material(DEF='MaterialLightBlue',diffuseColor=(0.1,0.5,1)),
+            texture=ImageTexture(DEF='ImageCloudlessEarth',url=["earth-topo.png","earth-topo.jpg","earth-topo-small.gif","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.png","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.jpg","http://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif"])))]),
+      Transform(translation=(0,-2,0),
+        children=[
+        Shape(
+          geometry=Text(DEF='TextMessage',string=["Hello","world!"],
+            fontStyle=FontStyle(justify=["MIDDLE","MIDDLE"])),
+          appearance=Appearance(
+            material=Material(USE='MaterialLightBlue')))])])])
+) # X3D model complete
+
+###############################################
+# Self-test diagnostics
+###############################################
+
+if         metaDiagnostics(newModel): # built-in utility method in X3D class
+    print (metaDiagnostics(newModel))
+print ("python x3d.py load successful for HelloWorld.py")
+===========================================
+Loading local x3d.py package in python to check for correctness...
+  then test HelloWorld.py execution and self-validation:
+  python examples/HelloWorld.py
+x3d.py package loaded, have fun with X3D Graphics!
+python x3d.py load successful for HelloWorld.py
+convert.X3dToPython.xslt conversion of HelloWorld.x3d to HelloWorld.py complete.
+===========================================
+set.local.PYTHONPATH:
+local.PYTHONPATH=x3d
+examples.SmokeTests:
+Run PythonX3dSmokeTests.py in python using local build of Python x3d package
+  python examples/PythonX3dSmokeTests.py
+===================
+Importing local development copy of X3D package:
+  from x3d import *
+x3d.py package loaded, have fun with X3D Graphics!
+===================
+PythonX3dSmokeTests:
+
+SFBool test       = True
+SFBool test.value = True
+SFBool     isValidSFBool(test)=True
+SFBool assertValidSFBool(test)
+MFBool test       = [True, False, True, False, True, False, True, False, True, False]
+MFBool test.value = [True, False, True, False, True, False, True, False, True, False]
+MFBool     isValidMFBool(test)=True
+MFBool assertValidMFBool(test)
+MFBool bool(test)=True, len(test)=10
+MFBool test downcast legal singleton: SFBool(MFBool([True]))=True, type=<class 'x3d.SFBool'>
+MFBool test   upcast legal SF value:  MFBool(SFBool(False))=[False], type=<class 'x3d.MFBool'>
+- - - - - - - - - -
+SFInt32 test       = 1
+SFInt32 test.value = 1
+SFInt32     isValidSFInt32(test)=True
+SFInt32 assertValidSFInt32(test)
+MFInt32 test       = [0, 1, 2, 3, 4, 5]
+MFInt32 test.value = [0, 1, 2, 3, 4, 5]
+MFInt32     isValidMFInt32(test)=True
+MFInt32 assertValidMFInt32(test)
+MFInt32 bool(test)=True, len(test)=6
+downcasting by dereferencing simple-list value=[1], type=<class 'x3d.MFInt32'> as 1
+SFInt32 test downcast legal singleton: SFInt32(MFInt32(1))=1, type=<class 'x3d.SFInt32'>
+MFInt32 test   upcast legal SF value:  MFInt32(SFInt32(2))=[2], type=<class 'x3d.MFInt32'>
+- - - - - - - - - -
+SFFloat test       = 1
+SFFloat test.value = 1
+SFFloat     isValidSFFloat(test)=True
+SFFloat assertValidSFFloat(test)
+MFFloat test       = [0, 1, 2]
+MFFloat test.value = [0, 1, 2]
+MFFloat     isValidMFFloat(test)=True
+MFFloat assertValidMFFloat(test)
+downcasting by dereferencing simple-list value=[1], type=<class 'x3d.MFFloat'> as 1
+SFFloat test downcast legal singleton: SFFloat(MFFloat(1))=1, type=<class 'x3d.SFFloat'>
+MFFloat test   upcast legal SF value:  MFFloat(SFFloat(2))=[2], type=<class 'x3d.MFFloat'>
+- - - - - - - - - -
+SFDouble test       = 1
+SFDouble test.value = 1
+SFDouble     isValidSFDouble(test)=True
+SFDouble assertValidSFDouble(test)
+MFDouble test       = [0, 1, 2]
+MFDouble test.value = [0, 1, 2]
+MFDouble     isValidMFDouble(test)=True
+MFDouble assertValidMFDouble(test)
+downcasting by dereferencing simple-list value=[1], type=<class 'x3d.MFDouble'> as 1
+SFDouble test downcast legal singleton: SFDouble(MFDouble(1))=1, type=<class 'x3d.SFDouble'>
+MFDouble test   upcast legal SF value:  MFDouble(SFDouble(2))=[2], type=<class 'x3d.MFDouble'>
+- - - - - - - - - -
+SFString test       = 'test setter'
+SFString test.value = test setter
+SFString     isValidSFString(test)=True
+SFString assertValidSFString(test)
+MFString test       = [test, setter]
+MFString test.value = ['test', 'setter']
+MFString     isValidMFString(test)=True
+MFString assertValidMFString(test)
+downcasting by dereferencing simple-list value=[one], type=<class 'x3d.MFString'> as one
+SFString test downcast legal singleton: SFString(MFString("one"))='one', type=<class 'x3d.SFString'>
+MFString test   upcast legal SF value:  MFString(SFString("two"))=['two'], type=<class 'x3d.MFString'>
+- - - - - - - - - -
+SFVec2f test       = (1, 2)
+SFVec2f test.value = (1, 2)
+SFVec2f     isValidSFVec2f(test)=True
+SFVec2f assertValidSFVec2f(test)
+MFVec2f test       = [(0, 1), (2, 3)]
+MFVec2f test.value = [(0, 1), (2, 3)]
+MFVec2f     isValidMFVec2f(test)=True
+MFVec2f assertValidMFVec2f(test)
+downcasting by dereferencing simple-list value=[(11, 12)], type=<class 'x3d.MFVec2f'> as (11, 12)
+SFVec2f test downcast legal singleton: SFVec2f(MFVec2f([(11,12)]))=(11, 12), type=<class 'x3d.SFVec2f'>
+- - - - - - - - - -
+SFVec2d test       = (1, 2)
+SFVec2d test.value = (1, 2)
+SFVec2d     isValidSFVec2d(test)=True
+SFVec2d assertValidSFVec2d(test)
+MFVec2d test       = [(0, 1), (2, 3)]
+MFVec2d test.value = [(0, 1), (2, 3)]
+MFVec2d     isValidMFVec2d(test)=True
+MFVec2d assertValidMFVec2d(test)
+- - - - - - - - - -
+SFVec3f test       = (1, 2, 3)
+SFVec3f test.value = (1, 2, 3)
+SFVec3f     isValidSFVec3f(test)=True
+SFVec3f assertValidSFVec3f(test)
+MFVec3f test       = [(0, 1, 2), (3, 4, 5)]
+MFVec3f test.value = [(0, 1, 2), (3, 4, 5)]
+MFVec3f     isValidMFVec3f(test)=True
+MFVec3f assertValidMFVec3f(test)
+- - - - - - - - - -
+SFVec3d test       = (1, 2, 3)
+SFVec3d test.value = (1, 2, 3)
+SFVec3d     isValidSFVec3d(test)=True
+SFVec3d assertValidSFVec3d(test)
+MFVec3d test       = [(0, 1, 2), (3, 4, 5)]
+MFVec3d test.value = [(0, 1, 2), (3, 4, 5)]
+MFVec3d     isValidMFVec3d(test)=True
+MFVec3d assertValidMFVec3d(test)
+- - - - - - - - - -
+SFVec4f test       = (1, 2, 3, 4)
+SFVec4f test.value = (1, 2, 3, 4)
+SFVec4f     isValidSFVec4f(test)=True
+SFVec4f assertValidSFVec4f(test)
+MFVec4f test       = [(0, 1, 2, 3), (4, 5, 6, 7)]
+MFVec4f test.value = [(0, 1, 2, 3), (4, 5, 6, 7)]
+MFVec4f     isValidMFVec4f(test)=True
+MFVec4f assertValidMFVec4f(test)
+- - - - - - - - - -
+SFVec4d test       = (1, 2, 3, 4)
+SFVec4d test.value = (1, 2, 3, 4)
+SFVec4d     isValidSFVec4d(test)=True
+SFVec4d assertValidSFVec4d(test)
+MFVec4d test       = [(0, 1, 2, 3), (4, 5, 6, 7)]
+MFVec4d test.value = [(0, 1, 2, 3), (4, 5, 6, 7)]
+MFVec4d     isValidMFVec4d(test)=True
+MFVec4d assertValidMFVec4d(test)
+- - - - - - - - - -
+SFColor test       = (0, 0.5, 1)
+SFColor test.value = (0, 0.5, 1)
+SFColor     isValidSFColor(test)=True
+SFColor assertValidSFColor(test)
+- - - - - - - - - -
+MFColor test       = [(0, 0.5, 1), (1, 0.5, 0)]
+MFColor test.value = [(0, 0.5, 1), (1, 0.5, 0)]
+MFColor     isValidMFColor(test)=True
+MFColor assertValidMFColor(test)
+- - - - - - - - - -
+SFColorRGBA test       = (0, 0.5, 1, 0.75)
+SFColorRGBA test.value = (0, 0.5, 1, 0.75)
+SFColorRGBA     isValidSFColorRGBA(test)=True
+SFColorRGBA assertValidSFColorRGBA(test)
+MFColorRGBA test       = [(0, 0.5, 1, 0.75), (1, 0.5, 0, 0.75)]
+MFColorRGBA test.value = [(0, 0.5, 1, 0.75), (1, 0.5, 0, 0.75)]
+MFColorRGBA     isValidMFColorRGBA(test)=True
+MFColorRGBA assertValidMFColorRGBA(test)
+- - - - - - - - - -
+SFRotation test       = (0, 0.5, 1, 0.75)
+SFRotation test.value = (0, 0.5, 1, 0.75)
+SFRotation     isValidSFRotation(test)=True
+SFRotation assertValidSFRotation(test)
+MFRotation test       = [(0, 0.5, 1, 0.75), (1, 0.5, 0, 0.75)]
+MFRotation test.value = [(0, 0.5, 1, 0.75), (1, 0.5, 0, 0.75)]
+MFRotation     isValidMFRotation(test)=True
+MFRotation assertValidMFRotation(test)
+- - - - - - - - - -
+SFNode() test       = WorldInfo(DEF='A')
+SFNode() test.value = WorldInfo(DEF='A')
+SFNode     isValidSFNode(test)=True
+SFNode assertValidSFNode(test)
+MFNode()     test            = [Group(DEF='B'), WorldInfo(DEF='C')]
+MFNode() str(test.value)     = [<x3d.Group object at 0x000002B997289A00>, <x3d.WorldInfo object at 0x000002B9972899D0>] TODO get result to match by adding MFNode.__repl__; questionable use case
+MFNode     isValidMFNode(test)=True
+MFNode assertValidMFNode(test)
+- - - - - - - - - -
+
+Range function tests:
+isPositive()    tests passed
+isNonNegative() tests passed
+isZeroToOne()   tests passed
+isBoundingBox() tests passed
+isPositive   (None)= None
+isNonNegative(None)= None
+isZeroToOne  (None)= None
+isBoundingBox(None)= None
+
+Assertion tests:
+test AssertionError assertBoundingBox:       Group(bboxSize=(+3, +2, +1)) expected to pass
+test AssertionError assertZeroToOne:         SpotLight(ambientIntensity=0.5) expected to pass
+test AssertionError assertNonNegative:       SpotLight(radius=1) expected to pass
+test AssertionError assertPositive:          unit(conversionFactor=1) expected to pass
+test AssertionError assertGreaterThanEquals: component(level=1) expected to pass
+test AssertionError assertLessThanEquals:    component(level=5) expected to pass
+test AssertionError assertGreaterThan:       Arc2D(startAngle=-6.28) expected to pass
+test AssertionError assertLessThan:          Arc2D(startAngle=+6.28) expected to pass
+
+(Assertion tests expected to fail are commented out and require individual confirmation checks)
+
+test X3DField type mismatch:  isValidSFVec3f(SFColor()) expected to return False, actual return: False
+
+Node and field tests:
+materialInstance.NAME= Material
+field accessor test, including default value emissiveColor:
+materialInstance=Material(DEF='Grey',diffuseColor=(0.5, 0.5, 0.5),emissiveColor=(0, 0, 0),transparency=0.2)
+must use str() function when concatenating:
+    materialInstance  = Material(diffuseColor=(0.5, 0.5, 0.5),transparency=0.2,DEF='Grey')
+str(materialInstance) = Material(diffuseColor=(0.5, 0.5, 0.5),transparency=0.2,DEF='Grey') (should match)
+assertValidSFNode (materialInstance) =True
+isX3DNode         (materialInstance) =True
+isX3DStatement    (materialInstance) =False
+WorldInfo(USE='useful',class_='classic')= WorldInfo(DEF=None,USE='useful',class_='classic')
+    Group() = Group()
+str(Group())= Group() (should match)
+    routeInstance = ROUTE(fromField='Here',toField='There')
+str(routeInstance)= ROUTE(fromField='Here',toField='There') (should match)
+    ROUTE()  = ROUTE()
+str(ROUTE()) = ROUTE() (should match)
+isX3DNode     (routeInstance)=False
+isX3DNode     (ROUTE())      =False (should match)
+isX3DStatement(routeInstance)=True
+isX3DStatement(ROUTE())      =True (should match)
+    nestedNodesTest = Shape(appearance=Appearance(material=Material(diffuseColor=(0.3, 0.4, 0.5),transparency=0.2,DEF='Grey')),geometry=Sphere(radius=2),IS=MetadataString(value=[checking]))
+str(nestedNodesTest)= Shape(appearance=Appearance(material=Material(diffuseColor=(0.3, 0.4, 0.5),transparency=0.2,DEF='Grey')),geometry=Sphere(radius=2),IS=MetadataString(value=[checking])) (should match)
+    groupTest  = Group(bboxSize=(1, 2, 3),children=[WorldInfo(), Group(), Shape()])
+str(groupTest) = Group(bboxSize=(1, 2, 3),children=[WorldInfo(), Group(), Shape()]) (should match)
+     headTest  = head(children=[component(), unit(), meta(content='2',name='1'), meta()])
+ str(headTest) = head(children=[component(), unit(), meta(content='2',name='1'), meta()]) (should match)
+    sceneTest  = Scene(children=[WorldInfo(), Group()])
+str(sceneTest) = Scene(children=[WorldInfo(), Group()]) (should match)
+
+metaDiagnostics utility function:
+meta info: diagnostic test 1, hint: diagnostic test 2, warning: diagnostic test 3, error: diagnostic test 4
+
+    modelTest     = X3D(head=head(children=[component(level=2,name='Grouping'), meta(content='name-value pair',name='description',Scene=Scene(children=[WorldInfo(title='modelTest sample scene'), Group()]))
+str(modelTest)    = X3D(head=head(children=[component(level=2,name='Grouping'), meta(content='name-value pair',name='description',Scene=Scene(children=[WorldInfo(title='modelTest sample scene'), Group()])) (should match)
+    modelTest.toXML() =
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Immersive' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component level='2' name='Grouping'/>
+    <meta content='name-value pair' name='description'/>
+    <meta content='diagnostic test 1' name='info'/>
+    <meta content='diagnostic test 2' name='hint'/>
+    <meta content='diagnostic test 3' name='warning'/>
+    <meta content='diagnostic test 4' name='error'/>
+  </head>
+  <Scene>
+    <WorldInfo title='modelTest sample scene'/>
+    <Group/>
+  </Scene>
+</X3D>
+
+Current work:
+DONE value range checks for simple types
+TEST save toXML() .x3d recursive serializer
+TODO save toClassicVRML() .x3dv
+TODO check node types when building scene graph
+TODO add and invoke validation methods that walk model tree
+
+PythonX3dSmokeTests execution complete.
+test.X3dToPython.SmokeTests complete.
+===========================================
+examples.BackgroundCollection:
+set.local.PYTHONPATH:
+local.PYTHONPATH=x3d
+convert.X3dToPython.xslt:
+===========================================
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\python\examples\BackgroundCollection.py
+===========================================
+convert.X3dToPython.xslt conversion of BackgroundCollection.x3d to BackgroundCollection.py complete.
+###############################################
+#
+# Now available: developmental python x3d.py package on PyPi for import.
+#   This approach greatly simplifies Python X3D deployment and use.
+#   https://pypi.org/project/x3d
+#
+# Installation:
+#       pip install x3d
+# or
+#       python -m pip install x3d
+#
+# Developer options for loading x3d package:
+#
+#    from x3d import *  # preferred approach, terser source that avoids x3d.* class prefixes
+#
+# or
+#    import x3d         # traditional way to subclass x3d package, all classes require x3d.* prefix
+#                       # but python source is very verbose, for example x3d.Material x3d.Shape etc.
+#                       # X3dToPython.xslt stylesheet insertPackagePrefix=true supports this option.
+
+from x3d import *
+
+###############################################
+
+newModel=X3D(profile='Interchange',version='3.3',
+  head=head(
+    children=[
+    meta(content='BackgroundCollection.x3d',name='title'),
+    meta(content='Collection of example Background nodes for author reuse, browse by selecting corresponding viewpoints.',name='description'),
+    meta(content='28 December 2014',name='created'),
+    meta(content='20 October 2019',name='modified'),
+    meta(content='Don Brutzman',name='creator'),
+    meta(content='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas',name='reference'),
+    meta(content='https://www.web3d.org/x3d/tooltips/X3dTooltips.html#Background',name='reference'),
+    meta(content='https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/enveffects.html#Background',name='reference'),
+    meta(content='https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/enveffects.html#Concepts',name='reference'),
+    meta(content='https://x3dgraphics.com/slidesets/X3dForWebAuthors/Chapter11-LightingEnvironment.pdf',name='reference'),
+    meta(content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Visualization/BackgroundCollection.x3d',name='identifier'),
+    meta(content='https://www.web3d.org/x3d/content/examples/license.html',name='license'),
+    meta(content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit',name='generator')]),
+  Scene=Scene(
+    children=[
+    WorldInfo(title='BackgroundCollection.x3d'),
+    Group(DEF='AllLandBackgrounds',
+      children=[
+      Background(DEF='BlueSkyWhiteHorizonBrownLand',groundAngle=[1.309,1.5708],groundColor=[(0.5,0.3,0.3),(0.5,0.3,0.3),(0.5,0.4,0.4)],skyAngle=[1.309,1.572],skyColor=[(0,0.2,0.7),(0,0.5,1),(1,1,1)]),
+      Viewpoint(DEF='BlueSkyWhiteHorizonBrownLandViewpoint',description='Blue Sky White Horizon Brown Land'),
+      ROUTE(fromField='isBound',fromNode='BlueSkyWhiteHorizonBrownLandViewpoint',toField='set_bind',toNode='BlueSkyWhiteHorizonBrownLand')]),
+    Group(DEF='AllSeaBackgrounds',
+      children=[
+      Background(DEF='BlueOceanWhiteHorizon',groundAngle=[1.309,1.570796],groundColor=[(0,0.3,.7),(0,0.35,0.75),(0,0.4,0.8)],skyAngle=[1.309,1.571],skyColor=[(0,0.3,0.8),(0,0.5,1),(1,1,1)]),
+      Viewpoint(DEF='BlueOceanWhiteHorizonViewpoint',description='Blue Ocean White Horizon'),
+      ROUTE(fromField='isBound',fromNode='BlueOceanWhiteHorizonViewpoint',toField='set_bind',toNode='BlueOceanWhiteHorizon'),
+      Background(DEF='OvercastSkyBlueOcean',groundAngle=[0.1,1.5,1.56,1.570796],groundColor=[(0,0,0),(0,0.1,0.2),(0,0.1,0.2),(0,0.15,0.3),(0.1,0.1,0.1)],skyAngle=[0.1,1.4,1.5,1.565,1.57079],skyColor=[(0.1,0.1,0.1),(0.2,0.2,0.2),(0.2,0.2,0.2),(0,0.3804,0.4784),(0,0.2,0.4),(0.4,0.4,0.4)]),
+      Viewpoint(DEF='OvercastSkyBlueOceanViewpoint',description='Overcast Sky Blue Ocean'),
+      ROUTE(fromField='isBound',fromNode='OvercastSkyBlueOceanViewpoint',toField='set_bind',toNode='OvercastSkyBlueOcean'),
+      Background(DEF='BlueSkyBlueOcean',groundAngle=[1.57079],groundColor=[(0,0.15,0.25),(0,0.15,0.25)],skyColor=[(0,0.3,0.5)]),
+      Viewpoint(DEF='BlueSkyBlueOceanViewpoint',description='Blue Sky Blue Ocean'),
+      ROUTE(fromField='isBound',fromNode='BlueSkyBlueOceanViewpoint',toField='set_bind',toNode='BlueSkyBlueOcean')]),
+    Group(DEF='AllSkyBackgrounds',
+      children=[
+      Background(DEF='SimplyWhite',skyColor=[(1,1,1)]),
+      Viewpoint(DEF='SimplyWhiteViewpoint',description='Simply White'),
+      ROUTE(fromField='isBound',fromNode='SimplyWhiteViewpoint',toField='set_bind',toNode='SimplyWhite'),
+      Background(DEF='SimplyGrey',skyColor=[(0.8,0.8,0.8)]),
+      Viewpoint(DEF='SimplyGreyViewpoint',description='Simply Grey'),
+      ROUTE(fromField='isBound',fromNode='SimplyGreyViewpoint',toField='set_bind',toNode='SimplyGrey'),
+      Background(DEF='SimplyDarkGrey',skyColor=[(0.4,0.4,0.4)]),
+      Viewpoint(DEF='SimplyDarkGreyViewpoint',description='Simply Dark Grey'),
+      ROUTE(fromField='isBound',fromNode='SimplyDarkGreyViewpoint',toField='set_bind',toNode='SimplyDarkGrey'),
+      Background(DEF='SimplyBlack'),
+      Viewpoint(DEF='SimplyBlackViewpoint',description='Simply Black'),
+      ROUTE(fromField='isBound',fromNode='SimplyBlackViewpoint',toField='set_bind',toNode='SimplyBlack')]),
+    Group(DEF='AllVarietyBackgrounds',
+      children=[
+      Background(DEF='BackgroundTest1',groundAngle=[1,1.4,1.5],groundColor=[(0,0,0),(0.2157,1,0.1216),(0.5,0.5,0.5),(1,1,1)],skyAngle=[1,1.309,1.57079],skyColor=[(0,0,0),(0.1647,0.0588,1),(0.5,0.5,0.5),(1,1,1)]),
+      Background(DEF='BackgroundTest2',groundAngle=[1,1.309],groundColor=[(0,0.3,.7),(0,0.35,0.75),(0,0.4,0.8)],skyAngle=[1.309,1.57079],skyColor=[(0,0.3,0.8),(0,0.5,1),(1,1,1)]),
+      Background(DEF='BackgroundTest3',groundAngle=[1.57079],groundColor=[(0,0.15,0.25),(0,0.15,0.25)],skyColor=[(0,0.3,0.5)]),
+      Background(DEF='BackgroundTest4',groundAngle=[1.57079],groundColor=[(0,0.15,0.25),(0,0.15,0.25)],skyColor=[(0,0.3,0.5)]),
+      Viewpoint(DEF='ViewpointTest1',description='Test1'),
+      ROUTE(fromField='isBound',fromNode='ViewpointTest1',toField='set_bind',toNode='BackgroundTest1'),
+      Viewpoint(DEF='ViewpointTest2',description='Test2'),
+      ROUTE(fromField='isBound',fromNode='ViewpointTest2',toField='set_bind',toNode='BackgroundTest2'),
+      Viewpoint(DEF='ViewpointTest3',description='Test3'),
+      ROUTE(fromField='isBound',fromNode='ViewpointTest3',toField='set_bind',toNode='BackgroundTest3'),
+      Viewpoint(DEF='ViewpointTest4',description='Test4'),
+      ROUTE(fromField='isBound',fromNode='ViewpointTest4',toField='set_bind',toNode='BackgroundTest4')]),
+    Group(DEF='UnboundViewpoints',
+      #  The final two viewpoints are not separately bound and can be selected to check any of the other Background nodes 
+      children=[
+      Viewpoint(description='Looking up at current Background zenith',orientation=(1,0,0,1.570796)),
+      Viewpoint(description='Looking down at current Background nadir',orientation=(1,0,0,-1.570796))])])
+) # X3D model complete
+
+###############################################
+# Self-test diagnostics
+###############################################
+
+if         metaDiagnostics(newModel): # built-in utility method in X3D class
+    print (metaDiagnostics(newModel))
+print ("python x3d.py load successful for BackgroundCollection.py")
+===========================================
+Loading local x3d.py package in python to check for correctness...
+  then test BackgroundCollection.py execution and self-validation:
+  python examples/BackgroundCollection.py
+x3d.py package loaded, have fun with X3D Graphics!
+python x3d.py load successful for BackgroundCollection.py
+convert.X3dToPython.xslt conversion of BackgroundCollection.x3d to BackgroundCollection.py complete.
+===========================================
+build.and.examples:
+BUILD SUCCESSFUL (total time: 23 seconds)

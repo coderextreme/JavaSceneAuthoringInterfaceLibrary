@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.web3d.x3d.tools.security.XmlSecurityApacheSantuario</groupId>
+  <artifactId>XmlSecurity</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20191205232747</lastUpdated>
+  </versioning>
+</metadata>

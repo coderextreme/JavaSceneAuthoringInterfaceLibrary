@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.web3d.x3d.tools.security.XmlSecurityApacheSantuario</groupId>
+        <artifactId>XmlSecurity</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>EncryptDecrypt</artifactId>
+    <name>Encrypt Decrypt</name>
+    <description>XML Security subproject</description>
+    <url>https://gitlab.nps.edu/tdnorbra/xml-security-with-apache-santuario</url>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.web3d.x3d.tools.security.XmlSecurityApacheSantuario</groupId>
+            <artifactId>DigitalSignature</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+    <groupId>org.web3d.x3d.tools.security.XmlSecurityApacheSantuario</groupId>
+</project>

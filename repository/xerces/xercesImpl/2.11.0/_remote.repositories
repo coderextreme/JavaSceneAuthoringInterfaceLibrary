@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 05 06:19:00 CST 2019
+xercesImpl-2.11.0.jar>opendaylight-mirror=
+xercesImpl-2.11.0.pom>opendaylight-mirror=

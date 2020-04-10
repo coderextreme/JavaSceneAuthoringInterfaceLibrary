@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.web3d.x3d.tools.security.XmlSecurityApacheSantuario</groupId>
+    <artifactId>XmlSecurity</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>XML Security</name>
+    <description>Using Apache Santuario (XML Security) for signing, encrypting, decrypting and verifying XML documents, or elements within XML documents, i.e. x3d. This project is based upon and borrows from coheigea's work on XML Security @ https://github.com/coheigea/testcases</description>
+    <url>https://gitlab.nps.edu/tdnorbra/xml-security-with-apache-santuario</url>
+    <organization>
+        <name>MOdeling, Virtual Environments and Simulation (MOVES) Institute</name>
+        <url>https://my.nps.edu/web/moves/</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>tdnorbra</id>
+            <name>Terry D. Norbraten</name>
+            <email>tdnorbra@nps.navy.mil</email>
+            <organization>MOVES Institute</organization>
+            <organizationUrl>https://my.nps.edu/web/moves/</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+    <contributors>
+        <contributor>
+            <name>Don Brutzman, Ph.D.</name>
+            <email>brutzman@nps.edu</email>
+            <organization>Naval Postgraduate School</organization>
+            <organizationUrl>https://www.nps.edu</organizationUrl>
+            <roles>
+                <role>architect</role>
+            </roles>
+            <timezone>+8</timezone>
+        </contributor>
+    </contributors>
+    <licenses>
+        <license>
+            <name>Apache License</name>
+            <url>https://gitlab.nps.edu/tdnorbra/xml-security-with-apache-santuario/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
+            <comments>A non-viral and business friendly license</comments>
+        </license>
+    </licenses>
+    <distributionManagement>
+        <site>
+            <id>xml-security-with-apache-santuario.website</id>
+            <name>${project.name} Website</name>
+            <url>scp://gitlab.nps.edu/tdnorbra/xml-security-with-apache-santuario/wikis/home</url>
+        </site>
+    </distributionManagement>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>13</maven.compiler.source>
+        <maven.compiler.target>13</maven.compiler.target>
+        <maven.build.timestamp>yyyy-MM-dd'T'HH:mm:ss'Z'</maven.build.timestamp>
+        <junit.version>4.12</junit.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <xmlsec.version>2.1.4</xmlsec.version>
+        <bouncy.castle.version>1.63</bouncy.castle.version>
+    </properties>
+    <modules>
+        <module>digital-signing</module>
+        <module>encrypt-decrypt</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>${bouncy.castle.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.santuario</groupId>
+            <artifactId>xmlsec</artifactId>
+            <version>${xmlsec.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+        </plugins>
+    </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>

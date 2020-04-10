@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 05 06:17:51 CST 2019
+maven-jar-plugin-2.4.jar>opendaylight-mirror=
+maven-jar-plugin-2.4.pom>opendaylight-mirror=

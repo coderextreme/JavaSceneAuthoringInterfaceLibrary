@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.web3d.x3d</groupId>
+  <artifactId>X3DJSAIL</artifactId>
+  <versioning>
+    <versions>
+      <version>4.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200319035103</lastUpdated>
+  </versioning>
+</metadata>

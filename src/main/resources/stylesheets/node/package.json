@@ -1,0 +1,9 @@
+{
+  "name": "X3DJSAIL-Node",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "xmldom": "*",
+    "node-mkdirp": "*"
+  }
+}

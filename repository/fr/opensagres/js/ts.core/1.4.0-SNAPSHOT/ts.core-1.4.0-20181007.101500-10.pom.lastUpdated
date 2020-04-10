@@ -1,0 +1,13 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 05 06:19:29 CST 2019
+http\://repository.jsweet.org/artifactory/libs-snapshot-local/.lastUpdated=1575548369152
+https\://mvnrepository.com/artifacts/.lastUpdated=1575548368392
+https\://mvnrepository.com/artifacts/.error=
+@default-jsweet-plugins-release-http\://repository.jsweet.org/artifactory/plugins-release-local/.lastUpdated=1575548367965
+@default-jsweet-release-http\://repository.jsweet.org/artifactory/libs-release-local/.lastUpdated=1575548368679
+http\://repository.jsweet.org/artifactory/plugins-snapshot-local/.error=
+http\://repository.jsweet.org/artifactory/plugins-release-local/.error=Could not transfer artifact fr.opensagres.js\:ts.core\:pom\:1.4.0-20181007.101500-10 from/to jsweet-plugins-release (http\://repository.jsweet.org/artifactory/plugins-release-local)\: Transfer failed for http\://repository.jsweet.org/artifactory/plugins-release-local/fr/opensagres/js/ts.core/1.4.0-SNAPSHOT/ts.core-1.4.0-20181007.101500-10.pom 409 Conflict
+https\://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/.lastUpdated=1575548367811
+https\://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/.error=
+http\://repository.jsweet.org/artifactory/plugins-snapshot-local/.lastUpdated=1575548368114
+http\://repository.jsweet.org/artifactory/libs-release-local/.error=Could not transfer artifact fr.opensagres.js\:ts.core\:pom\:1.4.0-20181007.101500-10 from/to jsweet-release (http\://repository.jsweet.org/artifactory/libs-release-local)\: Transfer failed for http\://repository.jsweet.org/artifactory/libs-release-local/fr/opensagres/js/ts.core/1.4.0-SNAPSHOT/ts.core-1.4.0-20181007.101500-10.pom 409 Conflict

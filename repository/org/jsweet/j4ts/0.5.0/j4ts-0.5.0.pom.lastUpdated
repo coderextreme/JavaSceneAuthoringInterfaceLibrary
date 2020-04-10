@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 05 06:18:04 CST 2019
+https\://raw.github.com/dragome/dragome/master/maven/.lastUpdated=1575548283823
+https\://nexus.opendaylight.org/content/repositories/public/.lastUpdated=1575548283140
+https\://raw.github.com/dragome/dragome/master/maven/.error=
+http\://repository.jsweet.org/artifactory/libs-release-local/.lastUpdated=1575548284287
+http\://repository.jboss.org/nexus/content/groups/public/.error=
+http\://repository.jboss.org/nexus/content/groups/public/.lastUpdated=1575548283445
+https\://nexus.opendaylight.org/content/repositories/public/.error=

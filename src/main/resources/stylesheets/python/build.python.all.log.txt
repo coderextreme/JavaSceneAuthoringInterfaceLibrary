@@ -1,0 +1,223 @@
+localadmin@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets/python
+$ ant all
+Buildfile: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\build.xml
+
+versions:
+
+versions:
+     [echo] ant -version
+     [exec] Apache Ant(TM) version 1.10.6 compiled on May 2 2019
+     [echo] java -version
+     [exec] openjdk version "12.0.2" 2019-07-16
+     [exec] OpenJDK Runtime Environment (build 12.0.2+10)
+     [exec] OpenJDK 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
+     [echo] python -version
+     [exec] Python 3.7.4
+     [echo] ANT_HOME  =C:/apache-ant-1.10.6
+     [echo] JAVA_HOME =C:/Program Files/Java/openjdk/jdk-12.0.2
+     [echo] PYTHONHOME=C:\Program Files\Python37\
+     [echo] PYTHONPATH=C:\Users\brutzman\AppData\Roaming\Python\Python37\Scripts;
+     [echo] javac source/target      $java.source=1.8
+     [echo] Java/JVM version    $ant.java.version=12
+     [echo] Java/JVM detail version $java.version=12.0.2
+     [echo] Ant version              $ant.version=Apache Ant(TM) version 1.10.6 compiled on May 2 2019
+     [echo] Configuration settings:  https://savage.nps.edu/Savage/developers.html
+     [echo] ===========================================
+
+update.modules:
+     [echo] Updating local Python installation...
+     [echo] Prerequisite: run as administrative user with administrative permissions
+     [echo] Reference:    build.DeploymentSteps.txt
+     [echo] Reference:    https://packaging.python.org/tutorials/packaging-projects/#generating-distribution-archives
+     [echo] ----------------
+     [echo] Check current Python version:
+     [exec] Python 3.7.4
+     [echo] ----------------
+     [echo] Ensure latest pip installed:
+     [echo] https://docs.python.org/3/installing/index.html?highlight=pip
+     [echo] python -m pip install --upgrade pip
+     [exec] Requirement already up-to-date: pip in c:\users\localadmin\appdata\roaming\python\python37\site-packages (19.2.3)
+     [echo] ----------------
+     [echo] Ensure latest setuptools installed:
+     [echo] python -m pip install --upgrade setuptools wheel
+     [exec] Requirement already up-to-date: setuptools in c:\users\localadmin\appdata\roaming\python\python37\site-packages (41.2.0)
+     [exec] Requirement already up-to-date: wheel in c:\program files\python37\lib\site-packages (0.33.6)
+     [echo] ----------------
+     [echo] https://pypi.org/project/twine
+     [echo] python -m pip install --upgrade twine
+     [exec] Requirement already up-to-date: twine in c:\program files\python37\lib\site-packages (1.13.0)
+     [exec] Requirement already satisfied, skipping upgrade: tqdm>=4.14 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from twine) (4.32.2)
+     [exec] Requirement already satisfied, skipping upgrade: requests!=2.15,!=2.16,>=2.5.0 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from twine) (2.22.0)
+     [exec] Requirement already satisfied, skipping upgrade: setuptools>=0.7.0 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from twine) (41.2.0)
+     [exec] Requirement already satisfied, skipping upgrade: requests-toolbelt!=0.9.0,>=0.8.0 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from twine) (0.9.1)
+     [exec] Requirement already satisfied, skipping upgrade: pkginfo>=1.4.2 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from twine) (1.5.0.1)
+     [exec] Requirement already satisfied, skipping upgrade: readme-renderer>=21.0 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from twine) (24.0)
+     [exec] Requirement already satisfied, skipping upgrade: certifi>=2017.4.17 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from requests!=2.15,!=2.16,>=2.5.0->twine) (2019.6.16)
+     [exec] Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from requests!=2.15,!=2.16,>=2.5.0->twine) (1.25.3)
+     [exec] Requirement already satisfied, skipping upgrade: chardet<3.1.0,>=3.0.2 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from requests!=2.15,!=2.16,>=2.5.0->twine) (3.0.4)
+     [exec] Requirement already satisfied, skipping upgrade: idna<2.9,>=2.5 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from requests!=2.15,!=2.16,>=2.5.0->twine) (2.8)
+     [exec] Requirement already satisfied, skipping upgrade: bleach>=2.1.0 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from readme-renderer>=21.0->twine) (3.1.0)
+     [exec] Requirement already satisfied, skipping upgrade: Pygments in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from readme-renderer>=21.0->twine) (2.4.2)
+     [exec] Requirement already satisfied, skipping upgrade: six in c:\program files\python37\lib\site-packages (from readme-renderer>=21.0->twine) (1.12.0)
+     [exec] Requirement already satisfied, skipping upgrade: docutils>=0.13.1 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from readme-renderer>=21.0->twine) (0.15.2)
+     [exec] Requirement already satisfied, skipping upgrade: webencodings in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from bleach>=2.1.0->readme-renderer>=21.0->twine) (0.5.1)
+     [echo] ----------------
+     [echo] https://www.pylint.org
+     [echo] https://en.wikipedia.org/wiki/Pylint
+     [echo] python -m pip install --upgrade pylint
+     [exec] Requirement already up-to-date: pylint in c:\program files\python37\lib\site-packages (2.3.1)
+     [exec] Requirement already satisfied, skipping upgrade: isort<5,>=4.2.5 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from pylint) (4.3.21)
+     [exec] Requirement already satisfied, skipping upgrade: mccabe<0.7,>=0.6 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from pylint) (0.6.1)
+     [exec] Requirement already satisfied, skipping upgrade: colorama; sys_platform == "win32" in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from pylint) (0.4.1)
+     [exec] Requirement already satisfied, skipping upgrade: astroid<3,>=2.2.0 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from pylint) (2.2.5)
+     [exec] Requirement already satisfied, skipping upgrade: typed-ast>=1.3.0; implementation_name == "cpython" in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from astroid<3,>=2.2.0->pylint) (1.4.0)
+     [exec] Requirement already satisfied, skipping upgrade: lazy-object-proxy in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from astroid<3,>=2.2.0->pylint) (1.4.2)
+     [exec] Requirement already satisfied, skipping upgrade: six in c:\program files\python37\lib\site-packages (from astroid<3,>=2.2.0->pylint) (1.12.0)
+     [exec] Requirement already satisfied, skipping upgrade: wrapt in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from astroid<3,>=2.2.0->pylint) (1.11.2)
+     [echo] ----------------
+     [echo] https://www.sphinx-doc.org
+     [echo] https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)
+     [echo] python -m pip install --upgrade sphinx
+     [exec] Requirement already up-to-date: sphinx in c:\program files\python37\lib\site-packages (2.2.0)
+     [exec] Requirement already satisfied, skipping upgrade: requests>=2.5.0 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (2.22.0)
+     [exec] Requirement already satisfied, skipping upgrade: babel!=2.0,>=1.3 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (2.7.0)
+     [exec] Requirement already satisfied, skipping upgrade: snowballstemmer>=1.1 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (1.9.0)
+     [exec] Requirement already satisfied, skipping upgrade: Jinja2>=2.3 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (2.10.1)
+     [exec] Requirement already satisfied, skipping upgrade: colorama>=0.3.5; sys_platform == "win32" in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (0.4.1)
+     [exec] Requirement already satisfied, skipping upgrade: alabaster<0.8,>=0.7 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (0.7.12)
+     [exec] Requirement already satisfied, skipping upgrade: sphinxcontrib-applehelp in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (1.0.1)
+     [exec] Requirement already satisfied, skipping upgrade: sphinxcontrib-devhelp in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (1.0.1)
+     [exec] Requirement already satisfied, skipping upgrade: sphinxcontrib-qthelp in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (1.0.2)
+     [exec] Requirement already satisfied, skipping upgrade: imagesize in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (1.1.0)
+     [exec] Requirement already satisfied, skipping upgrade: setuptools in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (41.2.0)
+     [exec] Requirement already satisfied, skipping upgrade: sphinxcontrib-jsmath in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (1.0.1)
+     [exec] Requirement already satisfied, skipping upgrade: docutils>=0.12 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (0.15.2)
+     [exec] Requirement already satisfied, skipping upgrade: sphinxcontrib-htmlhelp in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (1.0.2)
+     [exec] Requirement already satisfied, skipping upgrade: Pygments>=2.0 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (2.4.2)
+     [exec] Requirement already satisfied, skipping upgrade: packaging in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (19.1)
+     [exec] Requirement already satisfied, skipping upgrade: sphinxcontrib-serializinghtml in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from sphinx) (1.1.3)
+     [exec] Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from requests>=2.5.0->sphinx) (1.25.3)
+     [exec] Requirement already satisfied, skipping upgrade: chardet<3.1.0,>=3.0.2 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from requests>=2.5.0->sphinx) (3.0.4)
+     [exec] Requirement already satisfied, skipping upgrade: certifi>=2017.4.17 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from requests>=2.5.0->sphinx) (2019.6.16)
+     [exec] Requirement already satisfied, skipping upgrade: idna<2.9,>=2.5 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from requests>=2.5.0->sphinx) (2.8)
+     [exec] Requirement already satisfied, skipping upgrade: pytz>=2015.7 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from babel!=2.0,>=1.3->sphinx) (2019.2)
+     [exec] Requirement already satisfied, skipping upgrade: MarkupSafe>=0.23 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from Jinja2>=2.3->sphinx) (1.1.1)
+     [exec] Requirement already satisfied, skipping upgrade: six in c:\program files\python37\lib\site-packages (from packaging->sphinx) (1.12.0)
+     [exec] Requirement already satisfied, skipping upgrade: attrs in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from packaging->sphinx) (19.1.0)
+     [exec] Requirement already satisfied, skipping upgrade: pyparsing>=2.0.2 in c:\users\localadmin\appdata\roaming\python\python37\site-packages (from packaging->sphinx) (2.4.2)
+
+test.x3d.py:
+     [echo] Loading local x3d.py package in python to check for correctness...
+     [exec] x3d package loaded, have fun with X3D Graphics!
+
+package.prepare:
+     [echo] Preparing local Python X3D package for deployment to PyPI...
+     [echo] Prerequisite: run as administrative user with administrative permissions
+     [echo] Reference:    build.DeploymentSteps.txt
+     [echo] Reference:    https://pypi.org/project/x3d
+     [echo] Reference:    https://packaging.python.org/tutorials/packaging-projects/#generating-distribution-archives
+     [echo] ----------------
+     [echo] Upgrade distribution x3d.py, move prior pypi package files to dist.archive
+   [delete] Deleting: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\x3d\x3d.py
+     [move] Moving 2 files to C:\x3d-code\www.web3d.org\x3d\stylesheets\python\dist.archive
+     [move] Attempting to rename: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\dist\x3d-0.0.11-py3-none-any.whl to C:\x3d-code\www.web3d.org\x3d\stylesheets\python\dist.archive\x3d-0.0.11-py3-none-any.whl
+     [move] Attempting to rename: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\dist\x3d-0.0.11.tar.gz to C:\x3d-code\www.web3d.org\x3d\stylesheets\python\dist.archive\x3d-0.0.11.tar.gz
+     [copy] Copying 1 file to C:\x3d-code\www.web3d.org\x3d\stylesheets\python\x3d
+     [copy] Copying C:\x3d-code\www.web3d.org\x3d\stylesheets\python\x3d.py to C:\x3d-code\www.web3d.org\x3d\stylesheets\python\x3d\x3d.py
+     [echo] ----------------
+     [echo] View setup.py
+     [echo] """
+     [echo] setup.py is configuration information for the *x3d* PyPi project.
+     [echo] """
+     [echo]
+     [echo] import setuptools
+     [echo]
+     [echo] with open("README.md", "r") as fh:
+     [echo]     long_description = fh.read()
+     [echo]
+     [echo] setuptools.setup(
+     [echo]     name="x3d",
+     [echo]     version="0.0.11",
+     [echo]     author="Don Brutzman",
+     [echo]     author_email="brutzman@nps.edu",
+     [echo]     description="Package support for Extensible 3D (X3D) Graphics International Standard (IS)",
+     [echo]     long_description=long_description,
+     [echo]     long_description_content_type="text/markdown",
+     [echo]     url="https://www.web3d.org/x3d/stylesheets/python/python.html",
+     [echo]     packages=setuptools.find_packages(),
+     [echo]     classifiers=[
+     [echo]         "Development Status :: 4 - Beta",
+     [echo]         "License :: OSI Approved :: BSD License",
+     [echo]         "Natural Language :: English",
+     [echo]         "Operating System :: OS Independent",
+     [echo]         "Programming Language :: Python :: 3.4",
+     [echo] ###     "Topic :: Text Processing :: Markup :: X3D",
+     [echo]         "Topic :: Text Processing :: Markup :: VRML"
+     [echo]     ],
+     [echo] )
+     [echo]
+     [echo] ### package_dir={'x3d': 'dist/x3d'}, # testing...
+     [echo] ----------------
+     [echo] Build distribution package...
+     [exec] running sdist
+     [exec] running egg_info
+     [exec] writing x3d.egg-info\PKG-INFO
+     [exec] writing dependency_links to x3d.egg-info\dependency_links.txt
+     [exec] writing top-level names to x3d.egg-info\top_level.txt
+     [exec] reading manifest file 'x3d.egg-info\SOURCES.txt'
+     [exec] writing manifest file 'x3d.egg-info\SOURCES.txt'
+     [exec] running check
+     [exec] creating x3d-0.0.11
+     [exec] creating x3d-0.0.11\x3d
+     [exec] creating x3d-0.0.11\x3d.egg-info
+     [exec] copying files to x3d-0.0.11...
+     [exec] copying README.md -> x3d-0.0.11
+     [exec] copying setup.py -> x3d-0.0.11
+     [exec] copying x3d\__init__.py -> x3d-0.0.11\x3d
+     [exec] copying x3d\x3d.py -> x3d-0.0.11\x3d
+     [exec] copying x3d.egg-info\PKG-INFO -> x3d-0.0.11\x3d.egg-info
+     [exec] copying x3d.egg-info\SOURCES.txt -> x3d-0.0.11\x3d.egg-info
+     [exec] copying x3d.egg-info\dependency_links.txt -> x3d-0.0.11\x3d.egg-info
+     [exec] copying x3d.egg-info\top_level.txt -> x3d-0.0.11\x3d.egg-info
+     [exec] Writing x3d-0.0.11\setup.cfg
+     [exec] Creating tar archive
+     [exec] removing 'x3d-0.0.11' (and everything under it)
+     [exec] running bdist_wheel
+     [exec] running build
+     [exec] running build_py
+     [exec] copying x3d\x3d.py -> build\lib\x3d
+     [exec] installing to build\bdist.win-amd64\wheel
+     [exec] running install
+     [exec] running install_lib
+     [exec] creating build\bdist.win-amd64\wheel
+     [exec] creating build\bdist.win-amd64\wheel\x3d
+     [exec] copying build\lib\x3d\x3d.py -> build\bdist.win-amd64\wheel\.\x3d
+     [exec] copying build\lib\x3d\__init__.py -> build\bdist.win-amd64\wheel\.\x3d
+     [exec] running install_egg_info
+     [exec] Copying x3d.egg-info to build\bdist.win-amd64\wheel\.\x3d-0.0.11-py3.7.egg-info
+     [exec] running install_scripts
+     [exec] adding license file "license.html" (matched pattern "LICEN[CS]E*")
+     [exec] adding license file "license.txt" (matched pattern "LICEN[CS]E*")
+     [exec] creating build\bdist.win-amd64\wheel\x3d-0.0.11.dist-info\WHEEL
+     [exec] creating 'dist\x3d-0.0.11-py3-none-any.whl' and adding 'build\bdist.win-amd64\wheel' to it
+     [exec] adding 'x3d/__init__.py'
+     [exec] adding 'x3d/x3d.py'
+     [exec] adding 'x3d-0.0.11.dist-info/METADATA'
+     [exec] adding 'x3d-0.0.11.dist-info/WHEEL'
+     [exec] adding 'x3d-0.0.11.dist-info/license.html'
+     [exec] adding 'x3d-0.0.11.dist-info/license.txt'
+     [exec] adding 'x3d-0.0.11.dist-info/top_level.txt'
+     [exec] adding 'x3d-0.0.11.dist-info/RECORD'
+     [exec] removing build\bdist.win-amd64\wheel
+     [echo] ----------------
+     [echo] Prerequisite action: move previous 0.0.x versions to separate directory (not a subdirectory) e.g. ../dist.archive/
+     [echo] x3d-0.0.11-py3-none-any.whl;x3d-0.0.11.tar.gz
+     [echo] ----------------
+
+all:
+     [echo] To upload to PyPi, run as administrator: python -m twine upload dist/* --verbose
+     [echo] To upgrade x3d.py, run as administrator: ant upgrade.x3d.py
+     [echo] https://pypi.org/project/x3d
+
+BUILD SUCCESSFUL
+Total time: 8 seconds

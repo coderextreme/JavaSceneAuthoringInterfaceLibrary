@@ -1,0 +1,151 @@
+brutzman@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets/python
+$ ant package.prepare
+Buildfile: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\build.xml
+
+build.package.x3d.py:
+
+BuildX3dPythonPackageFromX3duom.saxon:
+     [echo] Following output is for X3D version 4.0 in X3dPackageSubdirectory=python/x3d
+     [java] Saxon-HE 9.7.0.13J from Saxonica
+     [java] Java version 13.0.1
+     [java] Stylesheet compilation time: 1.054136s (1054.1363ms)
+     [java] Processing file:/C:/x3d-code/www.web3d.org/specifications/X3dUnifiedObjectModel-4.0.xml
+     [java] Using parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+     [java] Building tree for file:/C:/x3d-code/www.web3d.org/specifications/X3dUnifiedObjectModel-4.0.xml using class n
+et.sf.saxon.tree.tiny.TinyBuilder
+     [java] Tree built in 129.8147ms
+     [java] Tree size: 20180 nodes, 0 characters, 28931 attributes
+     [java] Writing to file:/C:/x3d-code/www.web3d.org/x3d/stylesheets/python/x3d/__init__.py
+     [java] Writing to file:/C:/x3d-code/www.web3d.org/x3d/stylesheets/python/x3d/x3d.py
+     [java] URIResolver.resolve href="../tooltips/x3d-3.3.profile.xml" base="file:/C:/x3d-code/www.web3d.org/x3d/stylesh
+eets/X3duomToX3dPythonPackage.xslt"
+     [java] Building tree for file:/C:/x3d-code/www.web3d.org/x3d/tooltips/x3d-3.3.profile.xml using class net.sf.saxon.
+tree.tiny.TinyBuilder
+     [java] Tree built in 181.7466ms
+     [java] Tree size: 3171 nodes, 0 characters, 8803 attributes
+     [java] *** Warning, duplicate field encountered in X3DUOM: ParticleSystem geometry
+     [java] Execution time: 2.353631s (2353.6318ms)
+     [java] Memory used: 76796928
+     [echo] Result: C:\x3d-code\www.web3d.org\x3d\stylesheets/python/x3d/x3d.py and __init__.py
+     [echo] PYTHONPATH=C:\x3d-code\www.web3d.org\x3d\stylesheets\python\x3d;C:\Users\brutzman\AppData\Roaming\Python\Pyt
+hon38\Scripts;
+     [echo] BuildX3dPythonPackageFromX3duom.saxon complete.
+
+test.x3d.py.local:
+     [echo] Loading local x3d.py package in python to check for correctness...
+     [exec] x3d.py package loaded, have fun with X3D Graphics!
+
+build:
+
+package.prepare:
+     [echo] Preparing local Python X3D package for deployment to PyPI...
+     [echo] Prerequisite: run as administrative user with administrative permissions
+     [echo] References:  build.DeploymentSteps.txt
+     [echo]              https://www.web3d.org/x3d/stylesheets/python/python.html
+     [echo]              https://pypi.org/project/x3d
+     [echo]              https://packaging.python.org/tutorials/packaging-projects
+     [echo] ----------------
+     [echo] Upgrade distribution x3d.py, move prior pypi package files to dist.archive
+     [move] Moving 2 files to C:\x3d-code\www.web3d.org\x3d\stylesheets\python\dist.archive
+     [move] Attempting to rename: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\dist\x3d-0.0.23-py3-none-any.whl to C
+:\x3d-code\www.web3d.org\x3d\stylesheets\python\dist.archive\x3d-0.0.23-py3-none-any.whl
+     [move] Attempting to rename: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\dist\x3d-0.0.23.tar.gz to C:\x3d-code
+\www.web3d.org\x3d\stylesheets\python\dist.archive\x3d-0.0.23.tar.gz
+     [echo] ----------------
+     [echo] View setup.py
+     [echo] """
+     [echo] setup.py is configuration information for the *x3d* PyPi project.
+     [echo] """
+     [echo]
+     [echo] import setuptools
+     [echo]
+     [echo] with open("README.md", "r") as fh:
+     [echo]     long_description = fh.read()
+     [echo]
+     [echo] setuptools.setup(
+     [echo]     name="x3d",
+     [echo]     version="0.0.23",
+     [echo]     author="Don Brutzman",
+     [echo]     author_email="brutzman@nps.edu",
+     [echo]     description="Package support for Extensible 3D (X3D) Graphics International Standard (IS)",
+     [echo]     long_description=long_description,
+     [echo]     long_description_content_type="text/markdown",
+     [echo]     url="https://www.web3d.org/x3d/stylesheets/python/python.html",
+     [echo]     packages=setuptools.find_packages(),
+     [echo]     classifiers=[
+     [echo]         "Development Status :: 4 - Beta",
+     [echo]         "License :: OSI Approved :: BSD License",
+     [echo]         "Natural Language :: English",
+     [echo]         "Operating System :: OS Independent",
+     [echo]         "Programming Language :: Python :: 3.8",
+     [echo]         "Topic :: Text Processing :: Markup :: VRML"
+     [echo]     ],
+     [echo] ###     "Topic :: Text Processing :: Markup :: X3D",
+     [echo] )
+     [echo]
+     [echo] ### package_dir={'x3d': 'dist/x3d'}, # testing...
+     [echo] ----------------
+     [echo] Build distribution package...
+     [exec] running sdist
+     [exec] running egg_info
+     [exec] writing x3d.egg-info\PKG-INFO
+     [exec] writing dependency_links to x3d.egg-info\dependency_links.txt
+     [exec] writing top-level names to x3d.egg-info\top_level.txt
+     [exec] reading manifest file 'x3d.egg-info\SOURCES.txt'
+     [exec] writing manifest file 'x3d.egg-info\SOURCES.txt'
+     [exec] running check
+     [exec] creating x3d-0.0.23
+     [exec] creating x3d-0.0.23\x3d
+     [exec] creating x3d-0.0.23\x3d.egg-info
+     [exec] copying files to x3d-0.0.23...
+     [exec] copying README.md -> x3d-0.0.23
+     [exec] copying setup.py -> x3d-0.0.23
+     [exec] copying x3d\__init__.py -> x3d-0.0.23\x3d
+     [exec] copying x3d\x3d.py -> x3d-0.0.23\x3d
+     [exec] copying x3d.egg-info\PKG-INFO -> x3d-0.0.23\x3d.egg-info
+     [exec] copying x3d.egg-info\SOURCES.txt -> x3d-0.0.23\x3d.egg-info
+     [exec] copying x3d.egg-info\dependency_links.txt -> x3d-0.0.23\x3d.egg-info
+     [exec] copying x3d.egg-info\top_level.txt -> x3d-0.0.23\x3d.egg-info
+     [exec] Writing x3d-0.0.23\setup.cfg
+     [exec] Creating tar archive
+     [exec] removing 'x3d-0.0.23' (and everything under it)
+     [exec] running bdist_wheel
+     [exec] running build
+     [exec] running build_py
+     [exec] copying x3d\x3d.py -> build\lib\x3d
+     [exec] copying x3d\__init__.py -> build\lib\x3d
+     [exec] installing to build\bdist.win-amd64\wheel
+     [exec] running install
+     [exec] running install_lib
+     [exec] creating build\bdist.win-amd64\wheel
+     [exec] creating build\bdist.win-amd64\wheel\x3d
+     [exec] copying build\lib\x3d\x3d.py -> build\bdist.win-amd64\wheel\.\x3d
+     [exec] copying build\lib\x3d\__init__.py -> build\bdist.win-amd64\wheel\.\x3d
+     [exec] running install_egg_info
+     [exec] Copying x3d.egg-info to build\bdist.win-amd64\wheel\.\x3d-0.0.23-py3.8.egg-info
+     [exec] running install_scripts
+     [exec] adding license file "LICENSE" (matched pattern "LICEN[CS]E*")
+     [exec] adding license file "license.txt" (matched pattern "LICEN[CS]E*")
+     [exec] creating build\bdist.win-amd64\wheel\x3d-0.0.23.dist-info\WHEEL
+     [exec] creating 'dist\x3d-0.0.23-py3-none-any.whl' and adding 'build\bdist.win-amd64\wheel' to it
+     [exec] adding 'x3d/__init__.py'
+     [exec] adding 'x3d/x3d.py'
+     [exec] adding 'x3d-0.0.23.dist-info/LICENSE'
+     [exec] adding 'x3d-0.0.23.dist-info/METADATA'
+     [exec] adding 'x3d-0.0.23.dist-info/WHEEL'
+     [exec] adding 'x3d-0.0.23.dist-info/license.txt'
+     [exec] adding 'x3d-0.0.23.dist-info/top_level.txt'
+     [exec] adding 'x3d-0.0.23.dist-info/RECORD'
+     [exec] removing build\bdist.win-amd64\wheel
+     [echo] ----------------
+     [echo] Prerequisite action: move previous 0.0.x versions to separate directory (not a subdirectory) e.g. ../dist.ar
+chive/
+     [echo] x3d-0.0.23-py3-none-any.whl;x3d-0.0.23.tar.gz
+     [echo] ----------------
+     [echo] Next commands:
+     [echo] python -m twine upload dist/* --verbose
+     [echo] ant upgrade.x3d.py
+     [echo]   https://www.web3d.org/x3d/stylesheets/python/python.html
+
+BUILD SUCCESSFUL
+Total time: 6 seconds

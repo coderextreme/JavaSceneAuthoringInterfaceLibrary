@@ -1,0 +1,25 @@
+ant -f C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\python build.package.x3d.py
+build.package.x3d.py:
+X3D stylesheets.BuildPythonX3dPackageFromX3duom.saxon:
+Following output is for X3D version 4.0 
+Saxon-HE 9.9.0.2J from Saxonica
+Java version 13
+Stylesheet compilation time: 779.034ms
+Processing file:/C:/x3d-code/www.web3d.org/specifications/X3dUnifiedObjectModel-4.0.xml
+Using parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+Building tree for file:/C:/x3d-code/www.web3d.org/specifications/X3dUnifiedObjectModel-4.0.xml using class net.sf.saxon.tree.tiny.TinyBuilder
+Tree built in 97.1339ms
+Tree size: 20058 nodes, 0 characters, 28632 attributes
+URIResolver.resolve href="../tooltips/x3d-3.3.profile.xml" base="file:/C:/x3d-code/www.web3d.org/x3d/stylesheets/X3duomToX3dPythonPackage.xslt"
+Building tree for file:/C:/x3d-code/www.web3d.org/x3d/tooltips/x3d-3.3.profile.xml using class net.sf.saxon.tree.tiny.TinyBuilder
+Tree built in 126.2187ms
+Tree size: 3171 nodes, 0 characters, 8803 attributes
+*** Warning, duplicate field encountered in X3DUOM: ParticleSystem geometry
+Execution time: 1.1809766s (1180.9766ms)
+Memory used: 147,849,152
+BuildX3dPythonPackageFromX3duom.saxon complete.
+Development workaround: push x3d.py to examples directory, overriding other versions!
+test.x3d.py:
+Loading local x3d.py package in python to check for correctness...
+x3d package loaded, have fun with X3D Graphics!
+BUILD SUCCESSFUL (total time: 2 seconds)

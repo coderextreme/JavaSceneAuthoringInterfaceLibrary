@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 05 06:17:44 CST 2019
+http\://repository.jsweet.org/artifactory/plugins-release-local/.error=Could not transfer artifact org.jsweet\:jsweet-maven-plugin\:pom\:2.3.0-20190315.223739-1 from/to jsweet-plugins-release (http\://repository.jsweet.org/artifactory/plugins-release-local)\: Transfer failed for http\://repository.jsweet.org/artifactory/plugins-release-local/org/jsweet/jsweet-maven-plugin/2.3.0-SNAPSHOT/jsweet-maven-plugin-2.3.0-20190315.223739-1.pom 409 Conflict
+https\://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/.lastUpdated=1575548263905
+https\://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/.error=
+http\://repository.jsweet.org/artifactory/plugins-snapshot-local/.lastUpdated=1575548264544
+@default-jsweet-plugins-release-http\://repository.jsweet.org/artifactory/plugins-release-local/.lastUpdated=1575548264045

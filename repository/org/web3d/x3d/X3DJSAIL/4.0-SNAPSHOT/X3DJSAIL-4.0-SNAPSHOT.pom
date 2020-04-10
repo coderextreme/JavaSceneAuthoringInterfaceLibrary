@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.web3d.x3d</groupId>
+  <artifactId>X3DJSAIL</artifactId>
+  <packaging>jar</packaging>
+  <version>4.0-SNAPSHOT</version>
+  <name>app1</name>
+	<properties>
+		<jsweet.transpiler.version>3.0.0-SNAPSHOT</jsweet.transpiler.version>
+		<jsweet.core.version>6.0.2</jsweet.core.version>
+		<java.version.release>13</java.version.release>
+		<java.version>1.${java.version.release}</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- configure the versions you want to use here -->
+		<slf4j-version>1.7.25</slf4j-version>
+		<log4j.version>2.13.1</log4j.version>
+	</properties>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>jsweet-plugins-release</id>
+			<name>plugins-release</name>
+			<url>http://repository.jsweet.org/artifactory/plugins-release-local</url>
+		</pluginRepository>
+		<pluginRepository>
+			<snapshots />
+			<id>jsweet-plugins-snapshots</id>
+			<name>plugins-snapshot</name>
+			<url>http://repository.jsweet.org/artifactory/plugins-snapshot-local</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>mvn-plugins</id>
+			<name>mvnplugins-release</name>
+			<url>https://mvnrepository.com/artifacts</url>
+		</pluginRepository>
+	</pluginRepositories>
+  <repositories>
+    <repository>
+      <id>JBOSS_NEXUS</id>
+      <url>http://repository.jboss.org/nexus/content/groups/public</url>
+    </repository>
+    <repository>
+      <id>dragome</id>
+      <name>dragome</name>
+      <url>https://raw.github.com/dragome/dragome/master/maven</url>
+    </repository>
+	<repository>
+		<id>jsweet-central</id>
+		<name>libs-release</name>
+		<url>http://repository.jsweet.org/artifactory/libs-release-local</url>
+	</repository>
+	<repository>
+		<snapshots />
+		<id>jsweet-snapshots</id>
+		<name>libs-snapshot</name>
+		<url>http://repository.jsweet.org/artifactory/libs-snapshot-local</url>
+	</repository>
+    <repository>
+	<id>mvn</id>
+	<name>mvnlibs-release</name>
+	<url>https://mvnrepository.com/artifacts</url>
+    </repository>
+    <repository>
+	<id>sonatype-nexus</id>
+	<name>sonatype</name>
+	<url>https://oss.sonatype.org/content/groups/public</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+
+<!-- JAXB https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+<dependency>
+    <groupId>javax.xml.bind</groupId>
+    <artifactId>jaxb-api</artifactId>
+    <version>2.4.0-b180830.0359</version>
+</dependency>
+
+	<!-- logging -->
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>${slf4j-version}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-core</artifactId>
+	    <version>${log4j.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>net.sf.saxon</groupId>
+		<artifactId>Saxon-HE</artifactId>
+		<version>9.7.0-18</version>
+	</dependency>
+	<dependency>
+		<groupId>nagasena</groupId>
+		<artifactId>nagasena</artifactId>
+		<version>1.0</version>
+	</dependency>
+	<dependency>
+		<groupId>nagasena</groupId>
+		<artifactId>nagasena-rta</artifactId>
+		<version>1.0</version>
+	</dependency>
+	<dependency>
+		<groupId>org.web3d.tools</groupId>
+		<artifactId>x3db-c14n</artifactId>
+		<version>1</version>
+	</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.siemens.ct.exi/exificient-gui -->
+<dependency>
+    <groupId>com.siemens.ct.exi</groupId>
+    <artifactId>exificient-gui</artifactId>
+    <version>0.9.7</version>
+</dependency>
+
+	<!--
+	<dependency>
+		<groupId>com.siemens.ct.exi </groupId>
+		<artifactId>exificient-gui-jar-with-dependencies</artifactId>
+		<version>0.9.6.1</version>
+	</dependency>
+	-->
+		<dependency>
+			<groupId>org.jsweet</groupId>
+			<artifactId>j4ts</artifactId>
+			<version>0.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jsweet</groupId>
+			<artifactId>jsweet-core</artifactId>
+			<version>${jsweet.core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jsweet.candies</groupId>
+			<artifactId>jquery</artifactId>
+			<version>1.10.0-20170726</version>
+		</dependency>
+  </dependencies>
+
+
+  <build>
+    <finalName>X3DJSAIL</finalName>
+    <outputDirectory>${basedir}/target/classes</outputDirectory>
+    <plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+															<release>${java.version.release}</release>
+					<compilerVersion>${java.version}</compilerVersion>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			<!--
+			<plugin>
+				<groupId>org.jsweet</groupId>
+				<artifactId>jsweet-maven-plugin</artifactId>
+				<version>${jsweet.transpiler.version}</version>
+				<configuration>
+					<verbose>true</verbose>
+					<tsOut>target/ts</tsOut>
+					<outDir>target/js</outDir>
+					<candiesJsOut>webapp</candiesJsOut>
+					<targetVersion>ES6</targetVersion>
+					<module>none</module>
+					<moduleResolution>classic</moduleResolution>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-js</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>jsweet</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			-->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>xml-maven-plugin</artifactId>
+				<version>1.0.1</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>transform</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<transformationSets>
+						<transformationSet>
+							<dir>src/specifications</dir>
+							<stylesheet>src/main/xslt/CreateX3dSceneAccessInterfaceJava.xslt</stylesheet>
+						</transformationSet>
+						<!-- -->
+						<transformationSet>
+							<dir>src/main/x3d</dir>
+							<stylesheet>src/main/xslt/X3dToJava.xslt</stylesheet>
+							<outputDir>src/main/java/net/x3djsonld</outputDir>
+							<fileMappers>
+								<fileMapper
+									implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
+									<targetExtension>.java</targetExtension>
+								</fileMapper>
+							</fileMappers>
+							<parameters>
+								<parameter>
+									<name>packageName</name>
+									<value>net.x3djsonld</value>
+								</parameter>
+							</parameters>
+						</transformationSet>
+						<!-- -->
+					</transformationSets>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>net.sf.saxon</groupId>
+						<artifactId>Saxon-HE</artifactId>
+						<version>9.7.0-18</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<!--
+      <plugin>
+	    <groupId>com.datathings</groupId>
+	    <artifactId>j2ts-mavenplugin</artifactId>
+	    <version>88</version>
+	    <executions>
+		<execution>
+		    <id>transpile</id>
+		    <goals>
+			<goal>java2ts</goal>
+		    </goals>
+		    <configuration>
+			<name>sample</name>
+			<copyJRE>true</copyJRE>
+		    </configuration>
+		</execution>
+	    </executions>
+	</plugin>
+	-->
+</plugins>
+		<pluginManagement>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.jsweet
+										</groupId>
+										<artifactId>
+											jsweet-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.0.0,)
+										</versionRange>
+										<goals>
+											<goal>jsweet</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+  </build>
+
+
+
+</project>

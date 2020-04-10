@@ -1,0 +1,561 @@
+<html lang="en">
+    <head>
+        <title>x3d.py Python X3D Package</title>
+        <meta name="description" content="Open-Source package supporting Python X3D." />
+        <meta name="author" content="Donald P. Brutzman" />
+        <meta name="author" content="Loren E. Peitso" />
+        <meta name="created" content="18 August 2019" />
+        <meta name="identifier" content="https:/www.web3d.org/x3d/stylesheets/python/python.html" />
+        <link rel="icon" href="../images/X3DtextIcon16.png" title="X3D" type="image/png"/>
+        <!-- https://www.web3D.org/x3d/content/examples/images/X3DtextIcon16.png -->
+    </head>
+    <body>
+
+        <a id="top"></a>
+        <table style="border:0; padding:0px; margin-left:auto; margin-right:auto;">
+            <tr>
+                <td><a href="https://www.web3d.org/x3d/content/examples/X3dResources.html" target="_blank"><img src="../images/x3d2-s.gif" width="154" height="97" style="border:0" alt="to X3D Resources"/></a></td>
+                <td><pre> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </pre></td>
+                <td><h2>Python X3D Package x3d.py</h2></td>
+                <td><pre> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </pre></td>
+                <td><a href="https://www.web3d.org" target="_blank"><img src="../images/web3d_logo2.png" width="120" height="60" style="border:0" alt="to Web3D home page"/></a></td>
+            </tr>
+        </table>
+
+<p style="text-align:center;">
+    X3D Python Scene Access Interface Library (X3DPSAIL)
+</p>
+	
+        <blockquote>
+            <p style="text-align:center;"><small>
+                <a href="#Installation">Installation</a>&nbsp;|
+                <a href="#Design">Design&nbsp;Features</a>&nbsp;|
+                <a href="#Development">Development</a>&nbsp;|
+                <a href="#Examples">Examples</a>&nbsp;|
+                <a href="#Jupyter">Jupyter Notebook</a>&nbsp;|
+                <a href="#References">References</a>&nbsp;|
+                <a href="#TODO" title="Improvements">TODO</a>&nbsp;|
+                <a href="#Contact">Contact</a>
+            </small></p>
+        </blockquote>
+
+<p style="text-align:center;">
+    The x3d.py Python X3D Package supports programmers with Python interfaces and objects for
+    standards-based X3D programming, all as open source.
+    <br />
+    The presentation 
+    <a href="documents/PythonX3dPackageImplementation.pdf">Python&nbsp;X3D&nbsp;Package&nbsp;Implementation</a>
+    provides an overview and shows examples.
+</p>
+
+<!-- ======================================================== -->
+<hr />
+<h3> 
+    <!-- Unicode Character 'BOOKMARK' (U+1F516) https://www.fileformat.info/info/unicode/char/1f516/index.htm -->
+    <a href="#Installation">&#128278;</a>
+    <a id="Installation">Installation</a>
+	<a href="#"><!-- to top -->
+		<img src="../images/x3d2-s.gif" width="50" height="32" title="to top" alt="to top" style="border:0; float:right"/>
+		<!-- https://stackoverflow.com/questions/11750862/create-a-link-to-the-top-of-a-web-page-without-using-anchors -->
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href -->
+		<!-- https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid -->
+	</a>
+</h3>
+
+    <p>
+        Download and install
+        <a href="https://www.python.org" target="_blank">Python</a> on your system.
+    </p>
+
+    <p>
+        Python <code>x3d.py</code> package installation and update options:
+    </p>
+    <ul>
+        <li>
+            <b><code>pip install x3d</code></b>
+            <br/>
+            <i>or</i>
+        </li>
+        
+        <li><b><code>python -m pip install x3d</code></b></li>
+    </ul>
+        
+    <p>
+        That should be all that is needed for most Python X3D programmers!
+        Here is an example 
+        <a href='images/PythonX3dSmokeTestsIDLE.png' target="_blank">screenshot for PythonX3dSmokeTests.py using IDLE</a>.
+    </p>
+
+<!-- ======================================================== -->
+<hr />
+<h3> 
+    <!-- Unicode Character 'BOOKMARK' (U+1F516) https://www.fileformat.info/info/unicode/char/1f516/index.htm -->
+    <a href="#Design">&#128278;</a>
+	<a id="Design">Design&nbsp;Features</a>
+	<a href="#"><!-- to top -->
+		<img src="../images/x3d2-s.gif" width="50" height="32" title="to top" alt="to top"  style="border:0; float:right"/>
+		<!-- https://stackoverflow.com/questions/11750862/create-a-link-to-the-top-of-a-web-page-without-using-anchors -->
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href -->
+		<!-- https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid -->
+	</a>
+</h3>
+
+    <p>
+        The current implementation strives to follow first principles of python package design, being as "pythonic" as possible.
+    </p>
+    <p>
+        <a href="https://www.web3d.org/specifications/X3DUOM.html" target="_blank">X3D Unified Object Model (X3DUOM)</a>
+        defines a full set of object-oriented interfaces for all nodes, fields and statements in the X3D Architecture Specification.
+        The X3DUOM is used to autogenerate the entire x3d.py package, ensuring that it is always up-to-date with the latest X3D Architecture.
+        This codebase tracks with the latest draft specification for
+        <a href="https://www.web3d.org/x3dv4-implementations" target="_blank">X3Dv4</a>.
+    </p>
+    <p>
+        Python is exceedingly rigorous regarding design and implementation, demands crisp readability,
+        and often leads to a single best approach for each programming task.
+        A single well-constructed open-source Python X3D implementation might serve
+        all Python distributions and programmers well.
+    </p>
+    <p>
+        Several extensive design efforts previously tried to build a Python language package for X3D with difficulty.
+        The original
+        <a href="images/X3dPythonPackageDesign2019July3.pdf">X3D Python Package Design whiteboard diagram</a>
+        illustrates the many relationships for strict typing and an object-oriented scene graph that are being supported.
+    </p>
+    <p>
+        Creating a native-Python implementation for X3D data structures appears to provide the greatest possible portability.
+    </p>
+
+<!-- ======================================================== -->
+<hr />
+<h3> 
+    <!-- Unicode Character 'BOOKMARK' (U+1F516) https://www.fileformat.info/info/unicode/char/1f516/index.htm -->
+    <a href="#Development">&#128278;</a>
+	<a id="Development">Development</a>
+	<a href="#"><!-- to top -->
+		<img src="../images/x3d2-s.gif" width="50" height="32" title="to top" alt="to top"  style="border:0; float:right"/>
+		<!-- https://stackoverflow.com/questions/11750862/create-a-link-to-the-top-of-a-web-page-without-using-anchors -->
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href -->
+		<!-- https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid -->
+	</a>
+</h3>
+
+    <p>
+        Package designers: Don Brutzman, Loren Peitso, John Carlson, Masaki Aono, and Myeong Won Lee.
+    </p>
+        
+    <h4><a id="Build"></a><a id="build">Build</a> assets</h4>
+    
+    <p> 
+        Most development work is performed using
+        <a href="https://www.netbeans.org">Netbeans</a> 
+        and 
+        <a href="https://ant.apache.org">Ant</a>.
+    </p>
+
+    <ol>
+        <li>
+                            <a href="PythonX3dDevelopmentArchive.zip">PythonX3dDevelopmentArchive.zip</a>
+            provides a convenient asset of key development assets.
+        </li>
+        <li>
+                            <a href="build.xml">build.xml</a>
+            for Ant is primary tool for x3d.py development tasks.
+        </li>
+        <li>
+                            <a href="build.configuration.log.txt">build.configuration.log.txt</a>
+            shows an administrator console for installing/upgrading python developer module dependencies.
+        </li>
+        <li>
+                            <a href="build.package.log.txt">build.package.log.txt</a>
+            shows creation and testing of the <code>x3d.py</code> package.
+        </li>
+        <li>
+                            <a href="build.examples.log.txt">build.examples.log.txt</a>
+            shows testing of example models.
+        </li>
+        <li>
+                            <a href="build.pylint.log.txt">build.pylint.log.txt</a>
+            shows <code>pylint</code> static testing of the <code>x3d.py</code> package.
+        </li>
+        <li>
+                            <a href="build.deploy.log.txt">build.deploy.log.txt</a>
+            shows administrator deployment to PyPi.
+        </li>
+        <li>
+                            <a href="build.uninstall.log.txt">build.uninstall.log.txt</a>
+            is a debugging console showing difficulties uninstalling and reconfiguring python.
+        </li>
+    </ol>
+        
+    <h4><a id="Configuration">Configuration</a> </h4>
+        
+    <p>
+        To run python programs from command line, the <code>PATH</code> environment variable must point to PYTHONHOME or installation location.
+        The <code>PYTHONPATH</code> environment variable may also need to be set to one of the following:
+    </p>
+    <ul>
+        <li>
+            User's local pip installation of <code>x3d.py</code> module (Windows 10 example):
+            <br/>
+            <b><code>PYTHONPATH=C:\Users\username\AppData\Local\Programs\Python\Python38\Lib\site-packages\x3d;</code></b>
+        </li>
+        <li>
+            Developer's build location for <code>x3d.py</code> module:
+            <br/>
+            <b><code>PYTHONPATH=C:\x3d-code\www.web3d.org\x3d\stylesheets\python\x3d;</code></b>
+        </li>
+    </ul>
+    
+    <p>
+        <i>Now working</i>: testing confirms that deployment is exposing <code>x3d.py</code> package properly for program execution.
+        <br/>
+        <i>Workaround</i>: if needed for development, simply download 
+        <a href="x3d.py">x3d.py</a> package source and place it in same directory as your python program.
+    </p>
+    
+    
+    <h4><a id="Packaging">Packaging</a></h4>
+    
+    <p>
+        The
+        <a href="https://pypi.org/project/x3d">Python X3D project</a>
+        is published on the
+        Python Packaging Index (PyPi).
+        Development was configured by following the
+        <a href="https://packaging.python.org/tutorials/packaging-projects">PyPi packaging-projects tutorial</a>.
+    </p>
+        
+        <h4>Source code autogeneration assets</h4>
+
+        <ul>
+            <li>
+                X3DUOM definition file
+				<a href="https://www.web3d.org/specifications/X3dUnifiedObjectModel-4.0.xml">X3dUnifiedObjectModel-4.0.xml</a>
+                is primary input for all codebase production.
+            </li>
+            <li>
+                Ant
+                <a href="build.xml">build.xml</a> targets:
+                <code>build.package.x3d.py</code>,
+                <code>package.prepare</code>,
+                and
+                <code>pylint</code>.
+            </li>
+            <li>
+                X3D stylesheet descriptions are included in the X3D Resources, online at
+                <a href="https://www.web3d.org/x3d/content/examples/X3dResources.html#Stylesheets" target="_blank">X3D Resources: Stylesheets</a>
+            </li>
+            <li>
+                <a href="x3d.py" target="_blank">x3d.py</a>
+                is completely autogenerated from X3DUOM via the
+                <a href="https://www.web3d.org/x3d/stylesheets/X3duomToX3dPythonPackage.xslt" target="_blank">X3duomToX3dPythonPackage.xslt</a>
+                XSLT stylesheet.
+            </li>
+        </ul>
+        
+        <h4>Version control</h4>
+        
+        All work is maintained under a non-viral Web3D Consortium 
+        <a href="license.html">open-source license</a>
+       (<a href="license.txt">text</a>)
+        and maintained using subversion at
+        <a href="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets/python/">Sourceforge version control</a>.
+
+        <ul>
+            <li>
+                <a href="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets/python/x3d.py" target="_blank">x3d.py</a> python package
+                produced by
+                <a href="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets/X3duomToX3dPythonPackage.xslt" target="_blank">X3duomToX3dPythonPackage.xslt</a>
+            </li>
+            <li>
+                <a href="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets" target="_blank">stylesheets</a> directory
+                and
+                <a href="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets" target="_blank">python</a> subdirectory
+            </li>
+            <li>
+                Translation stylesheet
+                <a href="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets/X3dToPython.xslt" target="_blank">X3dToPython.xslt</a>
+                for converting <code>.x3d</code> models to <code>.py</code> source
+            </li>
+            <li>
+                <a href="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets/python/README.md" target="_blank">README.md</a>
+                description file for <code>x3d.py</code> package.
+            </li>
+            <li>
+                <a href="build.python.log.txt" target="_blank">build.python.log.txt</a>
+                shows compilation and smoke-testing results for <code>x3d.py</code> package.
+            </li>
+        </ul>
+        
+        <p>
+            Consistent support for all 
+            <a href="https://www.web3d.org/specifications/X3dSpecificationRelationships.png">X3D Specifications Relationships</a>
+            includes multiple file formats (XML, JSON, ClassicVRML, binary) and programming languages (JavaScript, Java, Python, C, C#, C++)
+            with fully interoperable expressive power for each.
+        </p>
+
+<!-- ======================================================== -->
+<hr />
+<h3> 
+    <!-- Unicode Character 'BOOKMARK' (U+1F516) https://www.fileformat.info/info/unicode/char/1f516/index.htm -->
+    <a href="#Examples">&#128278;</a>
+	<a id="Examples">Examples</a>
+	<a href="#"><!-- to top -->
+		<img src="../images/x3d2-s.gif" width="50" height="32" title="to top" alt="to top"  style="border:0; float:right"/>
+		<!-- https://stackoverflow.com/questions/11750862/create-a-link-to-the-top-of-a-web-page-without-using-anchors -->
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href -->
+		<!-- https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid -->
+	</a>
+</h3>
+
+<h4>Example X3D models</h4>
+
+<ul>
+    <li>
+        <a href="examples/HelloWorld.py" target="_blank">HelloWorld.py</a>
+        is produced from
+        <a href="examples/HelloWorld.x3d" target="_blank">HelloWorld.x3d</a>
+        by the
+        <a href="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets/X3dToPython.xslt" target="_blank">X3dToPython.xslt</a>
+        stylesheet.
+    </li>
+    <li>
+        <a href="examples/HelloWorldPrefixed.py" target="_blank">HelloWorldPrefixed.py</a>
+        is produced from
+        <a href="examples/HelloWorld.x3d" target="_blank">HelloWorld.x3d</a>
+        by the
+        <a href="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets/X3dToPython.xslt" target="_blank">X3dToPython.xslt</a>
+        stylesheet with invocation parameter
+        <code>insertPackagePrefix=true</code>.
+    </li>
+    <li>
+        <a href="examples/PythonX3dSmokeTests.py" target="_blank">PythonX3dSmokeTests.py</a>
+        performs
+       "<a href="https://en.wikipedia.org/wiki/Smoke_testing_(software)" target="_blank">smoke tests</a>"
+       of package functionality every time <code>x3d.py</code> is built.
+    </li>
+</ul>
+
+<p>
+    Running <code>ant examples</code> in the <code>python</code> directory produces results shown in
+    <a href="build.examples.log.txt" target="_blank">build.examples.log.txt</a>
+    for the preceding project models.
+</p>
+
+<p>
+    <a href="https://www.web3d.org/x3d/content/examples/X3dResources.html#Examples" target="_blank">X3D Resources: Examples</a>
+    includes over 3500 models converted from <code>.x3d</code> to <code>.py</code>
+    Python source. See
+    <a href="https://www.web3d.org/x3d/content/examples/build.python.all.log.txt" target="_blank">build.python.all.log.txt</a>
+    for the entire set of unit-testing results.
+</p>
+
+<h4><a id="jupyter"></a><a id="Jupyter">Jupyter</a> notebook</h4>
+
+<p>
+    Mission statement: "<a href="https://jupyter.org" target="_blank">Project Jupyter</a>
+    exists to develop open-source software, open-standards, and services
+    for interactive computing across dozens of programming languages."
+</p>
+
+<ul>
+    <li>
+        <a href="https://test-jupyter.readthedocs.io/en/latest/install.html" target="_blank">Jupyter Notebook installation</a>
+        console log for a
+        <a href="pip.install.jupyter.log.txt" target="_blank">pip install jupyter</a> session.
+    <li>
+        <a href="jupyter/TestX3D-Jupyter-Notebook-2019-8-26-Aono-Part1.pdf" target="_blank">Jupyter Notebook Initial Test</a>
+        by Masaki Aono is a session log that shows <code>x3d.py</code> capabilities live in a Web browser.
+    </li>
+    <li>
+        <a href="jupyter/HelloJupyterNotebook0.ipynb" target="_blank">HelloJupyterNotebook0.ipynb</a> test,
+        shown in
+        <a href="jupyter/HelloJupyterNotebook0.ipynb.pdf" target="_blank">pdf</a>
+        and also viewable on
+        <a href="https://nbviewer.jupyter.org/urls/www.web3d.org/x3d/stylesheets/python/jupyter/HelloJupyterNotebook0.ipynb" target="_blank">jupyter nbviewer</a>.
+       
+    </li>
+</ul>
+
+<!-- ======================================================== -->
+<hr />
+<h3> 
+    <!-- Unicode Character 'BOOKMARK' (U+1F516) https://www.fileformat.info/info/unicode/char/1f516/index.htm -->
+    <a href="#References">&#128278;</a>
+	<a id="References">References</a>
+	<a href="#"><!-- to top -->
+		<img src="../images/x3d2-s.gif" width="50" height="32" title="to top" alt="to top"  style="border:0; float:right"/>
+		<!-- https://stackoverflow.com/questions/11750862/create-a-link-to-the-top-of-a-web-page-without-using-anchors -->
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href -->
+		<!-- https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid -->
+	</a>
+</h3>
+
+<p>
+    Python puts a high value on clarity, strict style and effective documentation.
+</p>
+<h3>
+    Books
+</h3>
+
+<ul>
+    <li>
+        Mark Lutz, <i>Learning Python</i>,
+        fifth edition,
+        <a href="https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/">O'Reilly and Associates</a>,
+        Sebastopol California, 2013.
+        <a href="https://learning-python.com">https://learning-python.com</a>
+    </li>
+    <li>
+        Mark Lutz, <i>Programming Python</i>,
+        <a href="https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/">O'Reilly and Associates</a>,
+        Sebastopol California, 2011.
+        <a href="https://learning-python.com">https://learning-python.com</a>
+    </li>
+    <li>
+        David Beazley and Brian K. Jones, <i>Python Cookbook</i>,
+        <a href="https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/">O'Reilly and Associates</a>,
+        Sebastopol California, 2013.
+    </li>
+    <li>
+        Deepak Sarda, <i>Python for the Busy Java Developer: the Language, Syntax and Ecosystem</i>,
+        aPress Media, Springer, 2017.
+        <!-- https://link.springer.com/book/10.1007%2F978-1-4842-3234-7 -->
+        Online via
+        <a href="http://antrix.net/pages/python-for-java">antrix.net</a>
+    </li>
+    <li>
+        Brett Slatkin, <i>Effective Python: 59 Specific Ways to Write Better Python</i>,
+        Addison Wesley, Pearson Education, 2015. 
+        <a href="https://www.effectivePython.com">effectivePython.com</a>
+    </li>
+</ul>
+<h3>
+    Python
+</h3>
+
+<ul>
+    <li>
+        <a href="https://pypi.org/project/PyVRML97">PyVRML97 2.3.0b1</a>
+       (<a href="https://launchpad.net/pyvrml97">launchpad</a>)
+        is an earlier, unrelated project that provides VRML97 scene-graph modeling objects for Python.
+        PyVRML97 is part of
+        <a href="http://pyopengl.sourceforge.net/context">OpenGLContext</a>. a Learning Environment for PyOpenGL.
+    </li>
+</ul>
+
+<!--
+    <li>
+        
+    </li>
+    <li>
+        
+    </li>
+-->
+
+<!-- ======================================================== -->
+<hr />
+<h3> 
+    <!-- Unicode Character 'BOOKMARK' (U+1F516) https://www.fileformat.info/info/unicode/char/1f516/index.htm -->
+    <a href="#TODO">&#128278;</a>
+	<a id="TODO">TODO</a>
+	<a href="#"><!-- to top -->
+		<img src="../images/x3d2-s.gif" width="50" height="32" title="to top" alt="to top"  style="border:0; float:right"/>
+		<!-- https://stackoverflow.com/questions/11750862/create-a-link-to-the-top-of-a-web-page-without-using-anchors -->
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href -->
+		<!-- https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid -->
+	</a>
+</h3>
+        <p>Lots!  For starters, in progress:</p>
+        <ul>
+            <li>
+                <i>Confirmation testing in progress:</i>
+                Fix deployment on end-user machines so that the python usage demonstrated for all examples
+                only requires installing the <code>x3d.py</code> package from <code>pip</code> and not <code>PYTHONPATH</code>.
+            </li>
+            <li>
+                <i>Nearly complete:</i>
+                debug  conversions of all
+                <a href="https://www.web3d.org/x3d/content/examples/X3dResources.html#Stylesheets" target="_blank">X3D Resources: Examples</a>
+                as shown in
+                <a href="https://www.web3d.org/x3d/content/examples/build.python.all.log.txt" target="_blank">build.python.all.log.txt</a>
+                <ul>
+                    <li>Proper tuple-ization of MF fields that are lists of tuples.</li>
+                    <li>Class and interface inheritance for each node, then content model for all contained nodes</li>
+                    <li>Type-aware validation of values for <code>field</code> and <code>fieldValue</code> initializations.</li>
+                    <li>
+                        Extend type checking with fully strict validation of field values:
+                        min/max value restrictions (complete), allowed enumeration strings, 
+                        allowed parent-child node relationships, etc.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Development tool: use
+                <a href="https://pylint.org" target="_blank"><code>pylint</code></a>
+                for strict code quality.  See
+                <a href="build.pylint.log.txt" target="_blank">build.pylint.log.txt</a>
+                for current output results.
+            </li>
+            <li>
+                Add support for serialization output to XML (.x3d), ClassicVRML, VRML97, X3DOM and X_ITE, others.  
+                Include round-trip validation of XML outputs in build scripts for satisfactory Quality Assurance (QA).
+            </li>
+            <li>
+                Round-trip diff testing <code>toXML()</code> and package <code>x3d.py</code>
+            </li>
+            <li>
+                Stricter type checking of initialized field values.
+            </li>
+            <li>
+                Add support for contained Script and shader CDATA source code.
+            </li>
+            <li>
+                Distribution support for
+                <a href="https://jupyter.org" target="_blank">Jupyter Notebook</a> (initial example works),
+                <a href="https://zeppelin.apache.org" target="_blank">Apache Zeppelin</a> notebook,
+                <a href="https://www.anaconda.com" target="_blank">Anaconda</a> distribution of Python,
+                and other data-science platforms.
+            </li>
+            <li>
+                We need a "Getting Started" tutorial on this page.  This is a good opportunity... who wants to help?!
+            </li>
+        </ul>
+
+<!-- ======================================================== -->
+<hr />
+<h3> 
+    <!-- Unicode Character 'BOOKMARK' (U+1F516) https://www.fileformat.info/info/unicode/char/1f516/index.htm -->
+    <a href="#Contact">&#128278;</a>
+	<a id="Contact">Contact</a>
+	<a href="#"><!-- to top -->
+		<img src="../images/x3d2-s.gif" width="50" height="32" title="to top" alt="to top"  style="border:0; float:right"/>
+		<!-- https://stackoverflow.com/questions/11750862/create-a-link-to-the-top-of-a-web-page-without-using-anchors -->
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href -->
+		<!-- https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid -->
+	</a>
+</h3>
+        
+        <blockquote>
+            Questions, suggestions, additions and comments about this Python&nbsp;X3D&nbsp;Package page are welcome.
+            Please send them to
+            <a href="https://faculty.nps.edu/brutzman" target="_blank">Don&nbsp;Brutzman</a>
+            and
+            <a href="https://faculty.nps.edu/brutzman" target="_blank">Loren&nbsp;Peitso</a>
+            (email&nbsp;<a href="mailto:brutzman@__nps.edu%20(Don%20Brutzman),lepeitso@__nps.edu%20(Loren%20Peitso),?subject=feedback:%20Python%20X3D%20README%20"><i>brutzman,lepeitso&nbsp;at&nbsp;nps.edu</i></a>).
+        </blockquote>
+
+        <blockquote>
+            Master version of this Python X3D Package page is available online at
+            <br />
+            <a href="https://www.web3d.org/x3d/stylesheets/python/python.html">https://www.web3d.org/x3d/stylesheets/python/python.html</a>
+			and available in
+			<a href="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets/python">Sourceforge version control</a>.
+        </blockquote>
+        
+        <blockquote>
+            Updated: 18 January 2020
+        </blockquote>
+    </body>
+</html>

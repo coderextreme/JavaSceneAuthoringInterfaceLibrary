@@ -1,0 +1,90 @@
+CleatClamp.future.py ====================================
+Traceback (most recent call last):
+  File "CleatClamp.future.py", line 50, in <module>
+    X3D0.toFileX3D("CleatClamp_RoundTrip.x3d")
+  File "jnius\jnius_export_class.pxi", line 766, in jnius.JavaMethod.__call__
+  File "jnius\jnius_export_class.pxi", line 843, in jnius.JavaMethod.call_method
+  File "jnius\jnius_utils.pxi", line 91, in jnius.check_exception
+jnius.JavaException: JVM exception occurred: java.lang.StackOverflowError
+CleatClamp.MeshLab.future.py ====================================
+CleatClamp.MeshLab.py ====================================
+CleatClamp.py ====================================
+CleatClamp_MeshLabLauncher.future.py ====================================
+CleatClamp_MeshLabLauncher.py ====================================
+CleatClamp_MeshLabLauncherTidy.future.py ====================================
+CleatClamp_MeshLabLauncherTidy.py ====================================
+flowers4.future.py ====================================
+Traceback (most recent call last):
+  File "flowers4.future.py", line 34, in <module>
+    .addParts(x3dpsail.ShaderPart().setUrl(x3dpsail.MFString(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"])).setType(x3dpsail.SFString("FRAGMENT")))))
+  File "jnius\jnius_export_class.pxi", line 760, in jnius.JavaMethod.__call__
+  File "jnius\jnius_conversion.pxi", line 128, in jnius.populate_args
+jnius.JavaException: Expecting a python list/tuple, got <org.web3d.x3d.jsail.Shaders.ComposedShaderObject at 0x1d2059c6fc0 jclass=org/web3d/x3d/jsail/Shaders/ComposedShaderObject jself=<LocalRef obj=0x25ebdd0 at 0x1d20591daf0>>
+flowers4.py ====================================
+HelloWorldProgramOutput.future.py ====================================
+Traceback (most recent call last):
+  File "HelloWorldProgramOutput.future.py", line 53, in <module>
+    .addChild(x3dpsail.MetadataString().setDEF(x3dpsail.SFString("scene.addChildMetadata")).setName(x3dpsail.SFString("test")).setValue(x3dpsail.MFString(["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"])))
+  File "jnius\jnius_export_class.pxi", line 760, in jnius.JavaMethod.__call__
+  File "jnius\jnius_conversion.pxi", line 78, in jnius.populate_args
+  File "jnius\jnius_utils.pxi", line 205, in jnius.check_assignable_from
+jnius.JavaException: Invalid instance of 'org/web3d/x3d/jsail/Core/MetadataStringObject' passed for a 'org/web3d/x3d/sai/Core/X3DChildNode'
+HelloWorldProgramOutput.py ====================================
+HelloWorldProgramOutput_CommandLine.future.py ====================================
+Traceback (most recent call last):
+  File "HelloWorldProgramOutput_CommandLine.future.py", line 53, in <module>
+    .addChild(x3dpsail.MetadataString().setDEF(x3dpsail.SFString("scene.addChildMetadata")).setName(x3dpsail.SFString("test")).setValue(x3dpsail.MFString(["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"])))
+  File "jnius\jnius_export_class.pxi", line 760, in jnius.JavaMethod.__call__
+  File "jnius\jnius_conversion.pxi", line 78, in jnius.populate_args
+  File "jnius\jnius_utils.pxi", line 205, in jnius.check_assignable_from
+jnius.JavaException: Invalid instance of 'org/web3d/x3d/jsail/Core/MetadataStringObject' passed for a 'org/web3d/x3d/sai/Core/X3DChildNode'
+HelloWorldProgramOutput_CommandLine.py ====================================
+HelloWorldProgramOutput_CommandLineUnzipped.future.py ====================================
+Traceback (most recent call last):
+  File "HelloWorldProgramOutput_CommandLineUnzipped.future.py", line 53, in <module>
+    .addChild(x3dpsail.MetadataString().setDEF(x3dpsail.SFString("scene.addChildMetadata")).setName(x3dpsail.SFString("test")).setValue(x3dpsail.MFString(["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"])))
+  File "jnius\jnius_export_class.pxi", line 760, in jnius.JavaMethod.__call__
+  File "jnius\jnius_conversion.pxi", line 78, in jnius.populate_args
+  File "jnius\jnius_utils.pxi", line 205, in jnius.check_assignable_from
+jnius.JavaException: Invalid instance of 'org/web3d/x3d/jsail/Core/MetadataStringObject' passed for a 'org/web3d/x3d/sai/Core/X3DChildNode'
+HelloWorldProgramOutput_CommandLineUnzipped.py ====================================
+HelloWorldProgramOutput_MeshLabImport.future.py ====================================
+HelloWorldProgramOutput_MeshLabImport.py ====================================
+HelloWorldProgramOutput_ReloadedDOM.future.py ====================================
+Traceback (most recent call last):
+  File "HelloWorldProgramOutput_ReloadedDOM.future.py", line 53, in <module>
+    .addChild(x3dpsail.MetadataString().setDEF(x3dpsail.SFString("scene.addChildMetadata")).setName(x3dpsail.SFString("test")).setValue(x3dpsail.MFString(["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"])))
+  File "jnius\jnius_export_class.pxi", line 760, in jnius.JavaMethod.__call__
+  File "jnius\jnius_conversion.pxi", line 78, in jnius.populate_args
+  File "jnius\jnius_utils.pxi", line 205, in jnius.check_assignable_from
+jnius.JavaException: Invalid instance of 'org/web3d/x3d/jsail/Core/MetadataStringObject' passed for a 'org/web3d/x3d/sai/Core/X3DChildNode'
+HelloWorldProgramOutput_ReloadedDOM.py ====================================
+HelloWorldProgramOutputCanonical.future.py ====================================
+Traceback (most recent call last):
+  File "HelloWorldProgramOutputCanonical.future.py", line 48, in <module>
+    .addChild(x3dpsail.MetadataString().setDEF(x3dpsail.SFString("scene.addChildMetadata")).setName(x3dpsail.SFString("test")).setValue(x3dpsail.MFString(["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"])))
+  File "jnius\jnius_export_class.pxi", line 760, in jnius.JavaMethod.__call__
+  File "jnius\jnius_conversion.pxi", line 78, in jnius.populate_args
+  File "jnius\jnius_utils.pxi", line 205, in jnius.check_assignable_from
+jnius.JavaException: Invalid instance of 'org/web3d/x3d/jsail/Core/MetadataStringObject' passed for a 'org/web3d/x3d/sai/Core/X3DChildNode'
+HelloWorldProgramOutputCanonical.py ====================================
+HelloWorldProgramOutputTidy.future.py ====================================
+Traceback (most recent call last):
+  File "HelloWorldProgramOutputTidy.future.py", line 48, in <module>
+    .addChild(x3dpsail.Viewpoint().setDEF(x3dpsail.SFString("TopDownView")).setPosition(x3dpsail.SFVec3f(0,100,0)).setOrientation(x3dpsail.SFRotation(1,0,0,-1.570796)).setDescription(x3dpsail.SFString("top-down view from above"))))
+AttributeError: 'NoneType' object has no attribute 'addChild'
+HelloWorldProgramOutputTidy.py ====================================
+Traceback (most recent call last):
+  File "HelloWorldProgramOutputTidy.py", line 200, in <module>
+    Scene31.setMetadata(MetadataString39)
+AttributeError: 'org.web3d.x3d.jsail.Core.SceneObject' object has no attribute 'setMetadata'
+HelloWorldProgramOutputTidy_CommandLine.future.py ====================================
+Traceback (most recent call last):
+  File "HelloWorldProgramOutputTidy_CommandLine.future.py", line 48, in <module>
+    .addChild(x3dpsail.Viewpoint().setDEF(x3dpsail.SFString("TopDownView")).setPosition(x3dpsail.SFVec3f(0,100,0)).setOrientation(x3dpsail.SFRotation(1,0,0,-1.570796)).setDescription(x3dpsail.SFString("top-down view from above"))))
+AttributeError: 'NoneType' object has no attribute 'addChild'
+HelloWorldProgramOutputTidy_CommandLine.py ====================================
+Traceback (most recent call last):
+  File "HelloWorldProgramOutputTidy_CommandLine.py", line 200, in <module>
+    Scene31.setMetadata(MetadataString39)
+AttributeError: 'org.web3d.x3d.jsail.Core.SceneObject' object has no attribute 'setMetadata'

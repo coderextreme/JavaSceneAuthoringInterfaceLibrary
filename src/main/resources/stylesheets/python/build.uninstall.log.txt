@@ -1,0 +1,233 @@
+=======================================================================================
+=======================================================================================
+1. Clean uninstall:
+
+$ ant uninstall.x3d.py
+Buildfile: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\build.xml
+
+versions:
+
+versions:
+     [echo] ant -version
+     [exec] Apache Ant(TM) version 1.10.6 compiled on May 2 2019
+     [echo] java -version
+     [exec] openjdk version "12.0.2" 2019-07-16
+     [exec] OpenJDK Runtime Environment (build 12.0.2+10)
+     [exec] OpenJDK 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
+     [echo] python -version
+     [exec] Python 3.7.4
+     [echo] ANT_HOME  =C:/apache-ant-1.10.6
+     [echo] JAVA_HOME =C:/Program Files/Java/openjdk/jdk-12.0.2
+     [echo] PYTHONHOME=C:\Program Files\Python37\
+     [echo] PYTHONPATH=C:\Users\brutzman\AppData\Roaming\Python\Python37\Scripts;
+     [echo] javac source/target      $java.source=1.8
+     [echo] Java/JVM version    $ant.java.version=12
+     [echo] Java/JVM detail version $java.version=12.0.2
+     [echo] Ant version              $ant.version=Apache Ant(TM) version 1.10.6 compiled on May 2 2019
+     [echo] Configuration settings:  https://savage.nps.edu/Savage/developers.html
+     [echo] ===========================================
+
+uninstall.x3d.py:
+     [echo] Uninstall Python x3d package
+     [echo] Warning: uninstall requires that x3d.py version is not in PYTHONPATH or local directory
+     [echo] Administrator command: cd ..
+     [echo] Administrator command: python  -m pip uninstall --isolated --verbose x3d
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+localadmin@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets/python
+$ cd ..
+
+localadmin@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets
+$  python  -m pip uninstall --isolated --verbose x3d
+Uninstalling x3d-0.0.11:
+  Would remove:
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\installer
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\license.html
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\license.txt
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\metadata
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\record
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\top_level.txt
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\wheel
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\__init__.py
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\__pycache__\__init__.cpython-37.pyc
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\__pycache__\x3d.cpython-37.pyc
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\x3d.py
+  Will actually move:
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\
+Proceed (y/n)? y
+  Created temporary directory: c:\users\localadmin\appdata\roaming\python\python37\site-packages\~3d-0.0.11.dist-info
+  Removing file or directory c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\
+  Created temporary directory: c:\users\localadmin\appdata\roaming\python\python37\site-packages\~3d
+  Removing file or directory c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\
+  Successfully uninstalled x3d-0.0.11
+
+localadmin@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets
+$  python  -m pip uninstall --isolated --verbose x3d
+WARNING: Skipping x3d as it is not installed.
+
+=======================================================================================
+=======================================================================================
+
+2. Prior problematic uninstall
+
+After removing x3d.py directory from PYTHONPATH, was again able to uninstall x3d.
+Curiously there were multiple old versions that were not getting removed earlier.
+
+---------------------------------------------------------------------
+
+localadmin@DESKTOP-2S09UKA ~
+$ pip uninstall x3d
+Uninstalling x3d-0.0.6:
+  Would remove:
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.6.dist-info\*
+Proceed (y/n)? y
+  Successfully uninstalled x3d-0.0.6
+
+localadmin@DESKTOP-2S09UKA ~
+$ pip uninstall x3d
+Uninstalling x3d-0.0.1:
+  Would remove:
+    c:\program files\python37\lib\site-packages\x3d-0.0.1.dist-info\*
+    c:\program files\python37\lib\site-packages\x3d\*
+Proceed (y/n)? y
+  Successfully uninstalled x3d-0.0.1
+
+localadmin@DESKTOP-2S09UKA ~
+$ pip uninstall x3d
+WARNING: Skipping x3d as it is not installed.
+
+---------------------------------------------------------------------
+
+then
+
+---------------------------------------------------------------------
+
+localadmin@DESKTOP-2S09UKA ~
+$ pip uninstall x3d
+Uninstalling x3d-0.0.11:
+  Would remove:
+    c:\program files\python37\lib\site-packages\x3d-0.0.11.dist-info\*
+    c:\program files\python37\lib\site-packages\x3d\*
+Proceed (y/n)? y
+  Successfully uninstalled x3d-0.0.11
+
+localadmin@DESKTOP-2S09UKA ~
+$ pip uninstall x3d
+WARNING: Skipping x3d as it is not installed.
+
+localadmin@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets/python
+$ ant upgrade.x3d.py
+Buildfile: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\build.xml
+
+upgrade.x3d.py:
+     [echo] Upgrade local installation of Python X3D package
+     [echo] python  -m pip install --user --upgrade x3d
+     [exec] Collecting x3d
+     [exec]   Using cached https://files.pythonhosted.org/packages/7c/a8/e7268342708816186ecc88f94da195420141160b0c838d45030beda325e0/x3d-0.0.11-py3-none-any.whl
+     [exec] Installing collected packages: x3d
+     [exec] Successfully installed x3d-0.0.11
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+localadmin@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets/python
+$ ant upgrade.x3d.py
+Buildfile: C:\x3d-code\www.web3d.org\x3d\stylesheets\python\build.xml
+
+upgrade.x3d.py:
+     [echo] Upgrade local installation of Python X3D package
+     [echo] python  -m pip install --user --upgrade x3d
+     [exec] Requirement already up-to-date: x3d in c:\users\localadmin\appdata\roaming\python\python37\site-packages (0.0.11)
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+localadmin@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets/python
+$  python  -m pip install --user --upgrade x3d
+Requirement already up-to-date: x3d in c:\x3d-code\www.web3d.org\x3d\stylesheets\python (0.0.11)
+
+localadmin@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets/python
+$ pip install --user --upgrade x3d
+Requirement already up-to-date: x3d in c:\x3d-code\www.web3d.org\x3d\stylesheets\python (0.0.11)
+
+---------------------------------------------------------------------
+
+this seems to work...  but then in new sysadmin bash with local python directory back in PYTHONPATH:
+
+---------------------------------------------------------------------
+
+localadmin@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets/python
+$ pip uninstall x3d
+Can't uninstall 'x3d'. No files were found to uninstall.
+
+localadmin@DESKTOP-2S09UKA /cygdrive/c/x3d-code/www.web3d.org/x3d/stylesheets/python
+$ pip install --user --upgrade x3d
+Requirement already up-to-date: x3d in c:\x3d-code\www.web3d.org\x3d\stylesheets\python (0.0.11)
+
+---------------------------------------------------------------------
+
+trying again, in sysadmin cmd.exe: same results.
+
+took directory out of PYTHONPATH, was again able to uninstall.
+pip --isolated reportedly takes care of that.  add build task uninstall.x3d.py
+
+once uninstalled, python correctly says that x3d module is not found:
+
+     [exec] Importing local development copy of X3D package:
+     [exec]   from x3d import *
+     [exec] Traceback (most recent call last):
+     [exec]   File "python/examples/PythonX3dSmokeTests.py", line 21, in <module>
+     [exec]     from x3d import * # "polluting" version of import that avoids need to prepend "x3d." prefix
+     [exec] ModuleNotFoundError: No module named 'x3d'
+     
+ but then reinstalled, python finds x3d but does not find anything within it:
+
+     [exec] Traceback (most recent call last):
+     [exec]   File "python/examples/PythonX3dSmokeTests.py", line 27, in <module>
+     [exec]     test = SFBool()
+     [exec] NameError: name 'SFBool' is not defined
+     [exec] Result: 1
+
+
+then found that uninstall cannot proceed from directory holding x3d.py package:
+
+
+C:\x3d-code\www.web3d.org\x3d\stylesheets\python>python  -m pip uninstall --isolated --verbose x3d
+Not sure how to uninstall: x3d 0.0.11 - Check: c:\x3d-code\www.web3d.org\x3d\stylesheets\python
+Can't uninstall 'x3d'. No files were found to uninstall.
+
+C:\x3d-code\www.web3d.org\x3d\stylesheets\python>cd ..
+
+C:\x3d-code\www.web3d.org\x3d\stylesheets>python  -m pip uninstall --isolated --verbose x3d
+Uninstalling x3d-0.0.11:
+  Would remove:
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\installer
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\license.html
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\license.txt
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\metadata
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\record
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\top_level.txt
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\wheel
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\__init__.py
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\__pycache__\__init__.cpython-37.pyc
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\__pycache__\x3d.cpython-37.pyc
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\x3d.py
+  Will actually move:
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\
+    c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\
+Proceed (y/n)? y
+  Created temporary directory: c:\users\localadmin\appdata\roaming\python\python37\site-packages\~3d-0.0.11.dist-info
+  Removing file or directory c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d-0.0.11.dist-info\
+  Created temporary directory: c:\users\localadmin\appdata\roaming\python\python37\site-packages\~3d
+  Removing file or directory c:\users\localadmin\appdata\roaming\python\python37\site-packages\x3d\
+  Successfully uninstalled x3d-0.0.11
+
+repeating to confirm:
+
+C:\x3d-code\www.web3d.org\x3d\stylesheets>python  -m pip uninstall --isolated --verbose x3d
+WARNING: Skipping x3d as it is not installed
+
+

@@ -1,0 +1,1767 @@
+ant -f C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts all
+blender.python.clean:
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blend
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blender.ply
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blender.png
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blender.stl
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blender.tidy.x3d
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blender.x3d
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blenderTidy.x3d
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blender_mono.png
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blender_mono.x3d
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint.blender.png
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint1.blender.png
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint2.blender.png
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint3.blender.png
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint4.blender.png
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint5.blender.png
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17_mono.blend
+Deleting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\README.md
+blender.python.clean complete
+======================================================
+blender.python.help.BlenderStlToX3d:
+===========================
+blender --background --factory-startup --python BlenderStlToX3d.py
+Command line: 5 args ['blender', '--background', '--factory-startup', '--python', 'BlenderStlToX3d.py']AL lib: (EE) UpdateDeviceParams: Failed to set 44100hz, got 48000hz instead
+
+
+BlenderStlToX3d.py is a Blender Python script to load model.stl and export model.x3d
+Usage:   blender --background --factory-startup --python BlenderStlToX3d.py -- <model>.x3d [<outputpath>]
+Output:  <outputpath>/<model>.stl products/<filename>.ply
+Manual:  https://docs.blender.org/manual/en/latest/render/workflows/command_line.html
+         https://docs.blender.org/manual/en/latest/advanced/command_line/arguments.html#python-options
+Warning: cygwin unix on windows fails command-line invocation, use native operating system shell instead
+
+blender.python.help.BlenderX3dToMultipleExports:
+===========================
+blender --background --factory-startup --python BlenderX3dToMultipleExports.py
+Command line: 5 args ['blender', '--background', '--factory-startup', '--python', 'BlenderX3dToMultipleExports.py']
+
+BlenderX3dToMultipleExports.py is a Blender Python script to load model.x3d and export multiple output files
+Usage:   blender --background --factory-startup --python BlenderX3dToMultipleExports.py -- <model>.x3d [<outputpath>]
+Output:   [<outputpath>]<model>.png etc.
+Manual:  https://docs.blender.org/manual/en/latest/render/workflows/command_line.html
+AL lib: (EE) UpdateDeviceParams: Failed to set 44100hz, got 48000hz instead         https://docs.blender.org/manual/en/latest/advanced/command_line/arguments.html#python-options
+
+Warning: cygwin unix on windows fails command-line invocation, use native operating system shell instead
+
+blender.python.help.BlenderX3dToPng:
+===========================
+blender --background --factory-startup --python BlenderX3dToPng.py
+Command line: 5 args ['blender', '--background', '--factory-startup', '--python', 'BlenderX3dToPng.py']
+
+BlenderX3dToPng.py is a Blender Python script to load model.x3d and output image snapshot model.png
+
+Usage:   blender --background --factory-startup --python BlenderX3dToPng.py -- <model>.x3d [<outputpath>]
+Output:  <outputpath>/<model>.png
+Manual:  https://docs.blender.org/manual/en/latest/render/workflows/command_line.html
+         https://docs.blender.org/manual/en/latest/advanced/command_line/arguments.html#python-options
+Warning: cygwin unix on windows fails command-line invocation, use native operating system shell instead
+
+AL lib: (EE) UpdateDeviceParams: Failed to set 44100hz, got 48000hz instead
+blender.python.help:
+blender.python.help complete
+======================================================
+blender.python.build.README.file:
+C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\README.md
+README
+			
+This directory contains product files as unit tests for blender.python conversions of
+* LPD17.stl
+* LPD17.x3d
+blender.python.run.BlenderStlToX3d.py:
+===========================
+blender --background --factory-startup --python BlenderStlToX3d.py -- LPD17.stl products
+found bundled python: C:\Program Files\Blender Foundation\Blender\2.79\python
+Info: Removed 0 vertices
+Command line: 8 args ['blender', '--background', '--factory-startup', '--python', 'BlenderStlToX3d.py', '--', 'LPD17.stl', 'C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts/products']
+outputPath= C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products
+Importing LPD17.stl ...
+Import finished in 0.0000 sec.
+Deleting doubled vertices, adjust normals...
+Info: Removed 0 vertices
+Export X3D...
+Info: starting X3D export to 'C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts/products\\LPD17.blender.x3d'...
+Info: finished X3D export to 'C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts/products\\LPD17.blender.x3d'
+Export PLY...
+writing 'C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts/products\\LPD17.blender.ply' done
+Error: Not freed memory blocks: 1, total unfreed memory 0.000076 MB
+
+Blender quit
+AL lib: (EE) UpdateDeviceParams: Failed to set 44100hz, got 48000hz instead
+
+blender.python.run.BlenderX3dToPng.py:
+===========================
+blender --background --factory-startup --python BlenderX3dToPng.py -- LPD17.x3d products
+found bundled python: C:\Program Files\Blender Foundation\Blender\2.79\python
+Fra:1 Mem:12.37M (0.00M, Peak 13.08M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.37M (0.00M, Peak 13.08M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.37M (0.00M, Peak 13.08M) | Time:00:00.00 | Creating Shadowbuffers
+Fra:1 Mem:12.37M (0.00M, Peak 13.08M) | Time:00:00.00 | Raytree.. preparing
+Fra:1 Mem:12.81M (0.00M, Peak 13.08M) | Time:00:00.00 | Raytree.. building
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Raytree finished
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Creating Environment maps
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Caching Point Densities
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Loading voxel datasets
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Volume preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:19.34M (0.00M, Peak 19.73M) | Time:00:00.01 | Scene, Part 5-64
+Fra:1 Mem:19.83M (0.00M, Peak 20.21M) | Time:00:00.02 | Scene, Part 8-64
+Fra:1 Mem:20.47M (0.00M, Peak 20.64M) | Time:00:00.04 | Scene, Part 10-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.64M) | Time:00:00.12 | Scene, Part 7-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.64M) | Time:00:00.12 | Scene, Part 12-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.64M) | Time:00:00.12 | Scene, Part 13-64
+Fra:1 Mem:20.26M (0.00M, Peak 20.64M) | Time:00:00.12 | Scene, Part 14-64
+Fra:1 Mem:20.24M (0.00M, Peak 20.64M) | Time:00:00.12 | Scene, Part 15-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.64M) | Time:00:00.12 | Scene, Part 16-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.64M) | Time:00:00.12 | Scene, Part 17-64
+Fra:1 Mem:20.30M (0.00M, Peak 20.64M) | Time:00:00.12 | Scene, Part 11-64
+Fra:1 Mem:20.30M (0.00M, Peak 20.67M) | Time:00:00.12 | Scene, Part 19-64
+Fra:1 Mem:20.30M (0.00M, Peak 20.67M) | Time:00:00.13 | Scene, Part 4-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.15 | Scene, Part 6-64
+Fra:1 Mem:20.24M (0.00M, Peak 20.71M) | Time:00:00.15 | Scene, Part 22-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 3-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 24-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 25-64
+Fra:1 Mem:20.24M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 26-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 27-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 28-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 29-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 30-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 31-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 32-64
+Fra:1 Mem:20.17M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 33-64
+Fra:1 Mem:20.12M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 9-64
+Fra:1 Mem:20.05M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 35-64
+Fra:1 Mem:20.05M (0.00M, Peak 20.71M) | Time:00:00.16 | Scene, Part 36-64
+Fra:1 Mem:19.92M (0.00M, Peak 20.71M) | Time:00:00.18 | Scene, Part 2-64
+Fra:1 Mem:19.89M (0.00M, Peak 20.71M) | Time:00:00.19 | Scene, Part 37-64
+Fra:1 Mem:19.88M (0.00M, Peak 20.71M) | Time:00:00.19 | Scene, Part 39-64
+Fra:1 Mem:19.89M (0.00M, Peak 20.71M) | Time:00:00.19 | Scene, Part 40-64
+Fra:1 Mem:19.89M (0.00M, Peak 20.71M) | Time:00:00.19 | Scene, Part 41-64
+Fra:1 Mem:19.88M (0.00M, Peak 20.71M) | Time:00:00.19 | Scene, Part 42-64
+Fra:1 Mem:19.86M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 21-64
+Fra:1 Mem:19.86M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 44-64
+Fra:1 Mem:19.86M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 45-64
+Fra:1 Mem:19.86M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 23-64
+Fra:1 Mem:19.56M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 46-64
+Fra:1 Mem:19.65M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 47-64
+Fra:1 Mem:19.62M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 48-64
+Fra:1 Mem:19.54M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 49-64
+Fra:1 Mem:19.54M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 50-64
+Fra:1 Mem:19.54M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 51-64
+Fra:1 Mem:19.53M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 34-64
+Fra:1 Mem:19.77M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 52-64
+Fra:1 Mem:19.62M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 53-64
+Fra:1 Mem:19.62M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 54-64
+Fra:1 Mem:19.51M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 55-64
+Fra:1 Mem:19.77M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 56-64
+Fra:1 Mem:19.62M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 57-64
+Fra:1 Mem:19.64M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 58-64
+Fra:1 Mem:19.93M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 59-64
+Fra:1 Mem:19.98M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 60-64
+Fra:1 Mem:19.86M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 62-64
+Fra:1 Mem:19.79M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 63-64
+Fra:1 Mem:19.53M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 64-64
+Fra:1 Mem:19.25M (0.00M, Peak 20.71M) | Time:00:00.21 | Scene, Part 61-64
+Fra:1 Mem:18.83M (0.00M, Peak 20.71M) | Time:00:00.23 | Scene, Part 1-64
+Fra:1 Mem:18.54M (0.00M, Peak 20.71M) | Time:00:00.23 | Scene, Part 38-64
+Fra:1 Mem:18.25M (0.00M, Peak 20.71M) | Time:00:00.23 | Scene, Part 20-64
+Fra:1 Mem:17.97M (0.00M, Peak 20.71M) | Time:00:00.23 | Scene, Part 43-64
+Fra:1 Mem:17.56M (0.00M, Peak 20.71M) | Time:00:00.26 | Scene, Part 18-64
+Fra:1 Mem:11.56M (0.00M, Peak 20.71M) | Time:00:00.26 | Sce: Scene Ve:7825 Fa:3211 La:0
+Saved: 'C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint.blender.png'
+ Time: 00:00.39 (Saving: 00:00.13)
+
+Command line: 8 args ['blender', '--background', '--factory-startup', '--python', 'BlenderX3dToPng.py', '--', 'LPD17.x3d', 'C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts/products']
+outputPath= C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products
+Importing LPD17.x3d ...
+Deleting imported lamps, curves, cameras...
+Bounding box for Shape_IndexedFaceSet (to be copied into ModelMetadata.md file, TODO automate)
+* `bboxCenter`  = `-20.0 -8e-06 0.0` (X-Y-Z offset in meters, copied from Blender PNG export output)
+* `bboxSize`    = `208.122711 33.8232 50.16135` (X-Y-Z size in meters, copied from Blender PNG export output)
+Determining if per-vertex coloring is needed...
+mesh_object:
+---------
+obj.__doc__ = None
+obj.__module__ = bpy_types
+obj.__slots__ = ()
+obj.active_material = <bpy_struct, Material("Shape")>
+obj.active_material_index = 0
+obj.active_shape_key = None
+obj.active_shape_key_index = 0
+obj.animation_data = None
+obj.animation_data_clear = <bpy_func Object.animation_data_clear()>
+obj.animation_data_create = <bpy_func Object.animation_data_create()>
+obj.animation_visualization = <bpy_struct, AnimViz at 0x00000268EF5948E0>
+obj.bl_rna = <bpy_struct, Struct("Object")>
+obj.bound_box = <bpy_float[8], Object.bound_box>
+obj.cache_release = <bpy_func Object.cache_release()>
+obj.calc_matrix_camera = <bpy_func Object.calc_matrix_camera()>
+obj.camera_fit_coords = <bpy_func Object.camera_fit_coords()>
+obj.children = ()
+obj.closest_point_on_mesh = <bpy_func Object.closest_point_on_mesh()>
+obj.collision = <bpy_struct, CollisionSettings at 0x00000268EFB8CA58>
+obj.color = <bpy_float[4], Object.color>
+obj.constraints = <bpy_collection[0], ObjectConstraints>
+obj.convert_space = <bpy_func Object.convert_space()>
+obj.copy = <bpy_func Object.copy()>
+obj.cycles = <bpy_struct, CyclesObjectSettings("")>
+obj.cycles_visibility = <bpy_struct, CyclesVisibilitySettings("")>
+obj.data = <bpy_struct, Mesh("Shape_IndexedFaceSet")>
+obj.delta_location = <Vector (0.0000, 0.0000, 0.0000)>
+obj.delta_rotation_euler = <Euler (x=0.0000, y=0.0000, z=0.0000), order='XYZ'>
+obj.delta_rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.delta_scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.dimensions = <Vector (208.1227, 33.8232, 50.1614)>
+obj.draw_bounds_type = BOX
+obj.draw_type = TEXTURED
+obj.dupli_faces_scale = 1.0
+obj.dupli_frames_end = 100
+obj.dupli_frames_off = 0
+obj.dupli_frames_on = 1
+obj.dupli_frames_start = 1
+obj.dupli_group = None
+obj.dupli_list = <bpy_collection[0], Object.dupli_list>
+obj.dupli_list_clear = <bpy_func Object.dupli_list_clear()>
+obj.dupli_list_create = <bpy_func Object.dupli_list_create()>
+obj.dupli_type = NONE
+obj.empty_draw_size = 1.0
+obj.empty_draw_type = PLAIN_AXES
+obj.empty_image_offset = <bpy_float[2], Object.empty_image_offset>
+obj.field = <bpy_struct, FieldSettings at 0x00000268EFB8CA58>
+obj.find_armature = <bpy_func Object.find_armature()>
+obj.game = <bpy_struct, GameObjectSettings at 0x00000268EF5947A8>
+obj.grease_pencil = None
+obj.hide = False
+obj.hide_render = False
+obj.hide_select = False
+obj.image_user = None
+obj.is_deform_modified = <bpy_func Object.is_deform_modified()>
+obj.is_duplicator = False
+obj.is_library_indirect = False
+obj.is_modified = <bpy_func Object.is_modified()>
+obj.is_updated = False
+obj.is_updated_data = False
+obj.is_visible = <bpy_func Object.is_visible()>
+obj.layers = <bpy_boolean[20], Object.layers>
+obj.layers_local_view = <bpy_boolean[8], Object.layers_local_view>
+obj.library = None
+obj.location = <Vector (-20.0000, -0.0000, 0.0000)>
+obj.lock_location = <bpy_boolean[3], Object.lock_location>
+obj.lock_rotation = <bpy_boolean[3], Object.lock_rotation>
+obj.lock_rotation_w = False
+obj.lock_rotations_4d = True
+obj.lock_scale = <bpy_boolean[3], Object.lock_scale>
+obj.lod_levels = <bpy_collection[0], Object.lod_levels>
+obj.make_local = <bpy_func Object.make_local()>
+obj.material_slots = <bpy_collection[1], Object.material_slots>
+obj.matrix_basis = <Matrix 4x4 (1.0000, -0.0000,  0.0000, -20.0000)
+            (0.0000,  1.0000, -0.0000,  -0.0000)
+            (0.0000,  0.0000,  1.0000,   0.0000)
+            (0.0000,  0.0000,  0.0000,   1.0000)>
+obj.matrix_local = <Matrix 4x4 (1.0000, -0.0000,  0.0000, -20.0000)
+            (0.0000,  1.0000, -0.0000,  -0.0000)
+            (0.0000,  0.0000,  1.0000,   0.0000)
+            (0.0000,  0.0000,  0.0000,   1.0000)>
+obj.matrix_parent_inverse = <Matrix 4x4 (1.0000, 0.0000, 0.0000, 0.0000)
+            (0.0000, 1.0000, 0.0000, 0.0000)
+            (0.0000, 0.0000, 1.0000, 0.0000)
+            (0.0000, 0.0000, 0.0000, 1.0000)>
+obj.matrix_world = <Matrix 4x4 (1.0000, -0.0000,  0.0000, -20.0000)
+            (0.0000,  1.0000, -0.0000,  -0.0000)
+            (0.0000,  0.0000,  1.0000,   0.0000)
+            (0.0000,  0.0000,  0.0000,   1.0000)>
+obj.mode = OBJECT
+obj.modifiers = <bpy_collection[0], ObjectModifiers>
+obj.motion_path = None
+obj.name = Shape_IndexedFaceSet
+obj.parent = None
+obj.parent_bone = 
+obj.parent_type = OBJECT
+obj.parent_vertices = <bpy_int[3], Object.parent_vertices>
+obj.particle_systems = <bpy_collection[0], ParticleSystems>
+obj.pass_index = 0
+obj.pose = None
+obj.pose_library = None
+obj.preview = <bpy_struct, ImagePreview at 0x00000268F01FF658>
+obj.proxy = None
+obj.proxy_group = None
+obj.ray_cast = <bpy_func Object.ray_cast()>
+obj.rigid_body = None
+obj.rigid_body_constraint = None
+obj.rna_type = <bpy_struct, Struct("Object")>
+obj.rotation_axis_angle = <bpy_float[4], Object.rotation_axis_angle>
+obj.rotation_euler = <Euler (x=0.0000, y=-0.0000, z=0.0000), order='XYZ'>
+obj.rotation_mode = XYZ
+obj.rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.select = True
+obj.shape_key_add = <bpy_func Object.shape_key_add()>
+obj.shape_key_remove = <bpy_func Object.shape_key_remove()>
+obj.show_all_edges = False
+obj.show_axis = False
+obj.show_bounds = False
+obj.show_name = False
+obj.show_only_shape_key = False
+obj.show_texture_space = False
+obj.show_transparent = False
+obj.show_wire = False
+obj.show_x_ray = False
+obj.slow_parent_offset = 0.0
+obj.soft_body = None
+obj.tag = True
+obj.to_mesh = <bpy_func Object.to_mesh()>
+obj.track_axis = POS_Y
+obj.type = MESH
+obj.up_axis = Z
+obj.update_from_editmode = <bpy_func Object.update_from_editmode()>
+obj.update_tag = <bpy_func Object.update_tag()>
+obj.use_dupli_faces_scale = False
+obj.use_dupli_frames_speed = True
+obj.use_dupli_vertices_rotation = False
+obj.use_dynamic_topology_sculpting = False
+obj.use_extra_recalc_data = False
+obj.use_extra_recalc_object = False
+obj.use_fake_user = False
+obj.use_shape_key_edit_mode = False
+obj.use_slow_parent = False
+obj.user_clear = <bpy_func Object.user_clear()>
+obj.user_of_id = <bpy_func Object.user_of_id()>
+obj.user_remap = <bpy_func Object.user_remap()>
+obj.users = 1
+obj.users_group = ()
+obj.users_scene = (bpy.data.scenes['Scene'],)
+obj.vertex_groups = <bpy_collection[0], VertexGroups>
+---------
+Creating new camera...
+Setting the background color...
+Rendering image... C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products\LPD17.viewpoint.blender.png
+hasViewpoint = True
+Viewpoint 1 parameters:
+---------
+obj.__doc__ = None
+obj.__module__ = bpy_types
+obj.__slots__ = ()
+obj.active_material = None
+obj.active_material_index = 0
+obj.active_shape_key = None
+obj.active_shape_key_index = 0
+obj.animation_data = None
+obj.animation_data_clear = <bpy_func Object.animation_data_clear()>
+obj.animation_data_create = <bpy_func Object.animation_data_create()>
+obj.animation_visualization = <bpy_struct, AnimViz at 0x00000268EF594EB0>
+obj.bl_rna = <bpy_struct, Struct("Object")>
+obj.bound_box = <bpy_float[8], Object.bound_box>
+obj.cache_release = <bpy_func Object.cache_release()>
+obj.calc_matrix_camera = <bpy_func Object.calc_matrix_camera()>
+obj.camera_fit_coords = <bpy_func Object.camera_fit_coords()>
+obj.children = ()
+obj.closest_point_on_mesh = <bpy_func Object.closest_point_on_mesh()>Fra:1 Mem:12.37M (0.00M, Peak 13.08M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.37M (0.00M, Peak 13.08M) | Time:00:00.00 | Creating Shadowbuffers
+Fra:1 Mem:12.37M (0.00M, Peak 13.08M) | Time:00:00.00 | Raytree.. preparing
+Fra:1 Mem:12.81M (0.00M, Peak 13.08M) | Time:00:00.00 | Raytree.. building
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Raytree finished
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Creating Environment maps
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Caching Point Densities
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Loading voxel datasets
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.80M (0.00M, Peak 13.50M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Volume preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:18.56M (0.00M, Peak 18.72M) | Time:00:00.01 | Scene, Part 2-64
+Fra:1 Mem:20.89M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 1-64
+Fra:1 Mem:20.48M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 4-64
+Fra:1 Mem:20.70M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 3-64
+Fra:1 Mem:21.07M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 6-64
+Fra:1 Mem:21.17M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 7-64
+Fra:1 Mem:21.14M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 9-64
+Fra:1 Mem:21.10M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 5-64
+Fra:1 Mem:20.91M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 8-64
+Fra:1 Mem:20.61M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 11-64
+Fra:1 Mem:20.62M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 10-64
+Fra:1 Mem:20.68M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 12-64
+Fra:1 Mem:20.77M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 13-64
+Fra:1 Mem:20.66M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 16-64
+Fra:1 Mem:20.25M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 14-64
+Fra:1 Mem:20.11M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 15-64
+Fra:1 Mem:20.05M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 18-64
+Fra:1 Mem:20.64M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 17-64
+Fra:1 Mem:20.82M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 20-64
+Fra:1 Mem:20.55M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 19-64
+Fra:1 Mem:20.27M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 21-64
+Fra:1 Mem:20.23M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 23-64
+Fra:1 Mem:20.30M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 22-64
+Fra:1 Mem:20.19M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 24-64
+Fra:1 Mem:19.96M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 25-64
+Fra:1 Mem:19.82M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 26-64
+Fra:1 Mem:19.68M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 27-64
+Fra:1 Mem:20.00M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 31-64
+Fra:1 Mem:19.66M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 30-64
+Fra:1 Mem:19.40M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 32-64
+Fra:1 Mem:19.39M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 28-64
+Fra:1 Mem:19.66M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 33-64
+Fra:1 Mem:20.23M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 34-64
+Fra:1 Mem:20.03M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 29-64
+Fra:1 Mem:19.95M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 38-64
+Fra:1 Mem:20.07M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 37-64
+Fra:1 Mem:20.04M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 36-64
+Fra:1 Mem:20.08M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 35-64
+Fra:1 Mem:20.26M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 40-64
+Fra:1 Mem:19.81M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 39-64
+Fra:1 Mem:20.22M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 42-64
+Fra:1 Mem:19.50M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 43-64
+Fra:1 Mem:19.43M (0.00M, Peak 21.48M) | Time:00:00.02 | Scene, Part 44-64
+Fra:1 Mem:19.16M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 45-64
+Fra:1 Mem:19.07M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 46-64
+Fra:1 Mem:18.98M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 41-64
+Fra:1 Mem:18.89M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 47-64
+Fra:1 Mem:18.80M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 48-64
+Fra:1 Mem:18.71M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 49-64
+Fra:1 Mem:18.64M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 50-64
+Fra:1 Mem:18.56M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 51-64
+Fra:1 Mem:18.49M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 52-64
+Fra:1 Mem:18.42M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 53-64
+Fra:1 Mem:18.33M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 54-64
+Fra:1 Mem:18.24M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 55-64
+Fra:1 Mem:18.17M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 56-64
+Fra:1 Mem:18.09M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 57-64
+Fra:1 Mem:18.00M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 58-64
+Fra:1 Mem:17.91M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 59-64
+Fra:1 Mem:17.84M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 60-64
+Fra:1 Mem:17.77M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 63-64
+Fra:1 Mem:17.69M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 61-64
+Fra:1 Mem:17.60M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 62-64
+Fra:1 Mem:17.53M (0.00M, Peak 21.48M) | Time:00:00.11 | Scene, Part 64-64
+Fra:1 Mem:11.56M (0.00M, Peak 21.48M) | Time:00:00.11 | Sce: Scene Ve:7825 Fa:3211 La:0
+Saved: 'C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint1.blender.png'
+ Time: 00:00.13 (Saving: 00:00.02)
+
+
+obj.collision = None
+obj.color = <bpy_float[4], Object.color>
+obj.constraints = <bpy_collection[0], ObjectConstraints>
+obj.convert_space = <bpy_func Object.convert_space()>
+obj.copy = <bpy_func Object.copy()>
+obj.cycles = <bpy_struct, CyclesObjectSettings("")>
+obj.cycles_visibility = <bpy_struct, CyclesVisibilitySettings("")>
+obj.data = <bpy_struct, Camera("Viewpoint.004")>
+obj.delta_location = <Vector (0.0000, 0.0000, 0.0000)>
+obj.delta_rotation_euler = <Euler (x=0.0000, y=0.0000, z=0.0000), order='XYZ'>
+obj.delta_rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.delta_scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.dimensions = <Vector (0.0000, 0.0000, 0.0000)>
+obj.draw_bounds_type = BOX
+obj.draw_type = TEXTURED
+obj.dupli_faces_scale = 1.0
+obj.dupli_frames_end = 100
+obj.dupli_frames_off = 0
+obj.dupli_frames_on = 1
+obj.dupli_frames_start = 1
+obj.dupli_group = None
+obj.dupli_list = <bpy_collection[0], Object.dupli_list>
+obj.dupli_list_clear = <bpy_func Object.dupli_list_clear()>
+obj.dupli_list_create = <bpy_func Object.dupli_list_create()>
+obj.dupli_type = NONE
+obj.empty_draw_size = 1.0
+obj.empty_draw_type = PLAIN_AXES
+obj.empty_image_offset = <bpy_float[2], Object.empty_image_offset>
+obj.field = <bpy_struct, FieldSettings at 0x00000268EFB8D4A8>
+obj.find_armature = <bpy_func Object.find_armature()>
+obj.game = <bpy_struct, GameObjectSettings at 0x00000268EF594D78>
+obj.grease_pencil = None
+obj.hide = False
+obj.hide_render = False
+obj.hide_select = False
+obj.image_user = None
+obj.is_deform_modified = <bpy_func Object.is_deform_modified()>
+obj.is_duplicator = False
+obj.is_library_indirect = False
+obj.is_modified = <bpy_func Object.is_modified()>
+obj.is_updated = False
+obj.is_updated_data = False
+obj.is_visible = <bpy_func Object.is_visible()>
+obj.layers = <bpy_boolean[20], Object.layers>
+obj.layers_local_view = <bpy_boolean[8], Object.layers_local_view>
+obj.library = None
+obj.location = <Vector (-200.0000, 200.0000, 100.0000)>
+obj.lock_location = <bpy_boolean[3], Object.lock_location>
+obj.lock_rotation = <bpy_boolean[3], Object.lock_rotation>
+obj.lock_rotation_w = False
+obj.lock_rotations_4d = True
+obj.lock_scale = <bpy_boolean[3], Object.lock_scale>
+obj.lod_levels = <bpy_collection[0], Object.lod_levels>
+obj.make_local = <bpy_func Object.make_local()>
+obj.material_slots = <bpy_collection[0], Object.material_slots>
+obj.matrix_basis = <Matrix 4x4 (-0.7071,  0.2357, -0.6667, -200.0000)
+            (-0.7071, -0.2357,  0.6667,  200.0000)
+            ( 0.0000,  0.9428,  0.3333,  100.0000)
+            ( 0.0000,  0.0000,  0.0000,    1.0000)>
+obj.matrix_local = <Matrix 4x4 (-0.7071,  0.2357, -0.6667, -200.0000)
+            (-0.7071, -0.2357,  0.6667,  200.0000)
+            ( 0.0000,  0.9428,  0.3333,  100.0000)
+            ( 0.0000,  0.0000,  0.0000,    1.0000)>
+obj.matrix_parent_inverse = <Matrix 4x4 (1.0000, 0.0000, 0.0000, 0.0000)
+            (0.0000, 1.0000, 0.0000, 0.0000)
+            (0.0000, 0.0000, 1.0000, 0.0000)
+            (0.0000, 0.0000, 0.0000, 1.0000)>
+obj.matrix_world = <Matrix 4x4 (-0.7071,  0.2357, -0.6667, -200.0000)
+            (-0.7071, -0.2357,  0.6667,  200.0000)
+            ( 0.0000,  0.9428,  0.3333,  100.0000)
+            ( 0.0000,  0.0000,  0.0000,    1.0000)>
+obj.mode = OBJECT
+obj.modifiers = <bpy_collection[0], ObjectModifiers>
+obj.motion_path = None
+obj.name = Viewpoint.004
+obj.parent = None
+obj.parent_bone = 
+obj.parent_type = OBJECT
+obj.parent_vertices = <bpy_int[3], Object.parent_vertices>
+obj.particle_systems = <bpy_collection[0], ParticleSystems>
+obj.pass_index = 0
+obj.pose = None
+obj.pose_library = None
+obj.preview = <bpy_struct, ImagePreview at 0x00000268F02005F8>
+obj.proxy = None
+obj.proxy_group = None
+obj.ray_cast = <bpy_func Object.ray_cast()>
+obj.rigid_body = None
+obj.rigid_body_constraint = None
+obj.rna_type = <bpy_struct, Struct("Object")>
+obj.rotation_axis_angle = <bpy_float[4], Object.rotation_axis_angle>
+obj.rotation_euler = <Euler (x=1.2310, y=-0.0000, z=-2.3562), order='XYZ'>
+obj.rotation_mode = XYZ
+obj.rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.select = True
+obj.shape_key_add = <bpy_func Object.shape_key_add()>
+obj.shape_key_remove = <bpy_func Object.shape_key_remove()>
+obj.show_all_edges = False
+obj.show_axis = False
+obj.show_bounds = False
+obj.show_name = False
+obj.show_only_shape_key = False
+obj.show_texture_space = False
+obj.show_transparent = False
+obj.show_wire = False
+obj.show_x_ray = False
+obj.slow_parent_offset = 0.0
+obj.soft_body = None
+obj.tag = True
+obj.to_mesh = <bpy_func Object.to_mesh()>
+obj.track_axis = NEG_Z
+obj.type = CAMERA
+obj.up_axis = Y
+obj.update_from_editmode = <bpy_func Object.update_from_editmode()>
+obj.update_tag = <bpy_func Object.update_tag()>
+obj.use_dupli_faces_scale = False
+obj.use_dupli_frames_speed = True
+obj.use_dupli_vertices_rotation = False
+obj.use_dynamic_topology_sculpting = False
+obj.use_extra_recalc_data = False
+obj.use_extra_recalc_object = False
+obj.use_fake_user = False
+obj.use_shape_key_edit_mode = False
+obj.use_slow_parent = False
+obj.user_clear = <bpy_func Object.user_clear()>
+obj.user_of_id = <bpy_func Object.user_of_id()>
+obj.user_remap = <bpy_func Object.user_remap()>
+obj.users = 1
+obj.users_group = ()
+obj.users_scene = (bpy.data.scenes['Scene'],)
+obj.vertex_groups = <bpy_collection[0], VertexGroups>
+---------
+Resetting camera...
+Viewpoint 2 parameters:
+---------
+obj.__doc__ = None
+obj.__module__ = bpy_types
+obj.__slots__ = ()
+obj.active_material = None
+obj.active_material_index = 0
+obj.active_shape_key = None
+obj.active_shape_key_index = 0
+obj.animation_data = None
+obj.animation_data_clear = <bpy_func Object.animation_data_clear()>
+obj.animation_data_create = <bpy_func Object.animation_data_create()>
+obj.animation_visualization = <bpy_struct, AnimViz at 0x00000268EF5965F0>
+obj.bl_rna = <bpy_struct, Struct("Object")>
+obj.bound_box = <bpy_float[8], Object.bound_box>
+obj.cache_release = <bpy_func Object.cache_release()>
+obj.calc_matrix_camera = <bpy_func Object.calc_matrix_camera()>
+obj.camera_fit_coords = <bpy_func Object.camera_fit_coords()>
+obj.children = ()
+obj.closest_point_on_mesh = <bpy_func Object.closest_point_on_mesh()>
+obj.collision = None
+obj.color = <bpy_float[4], Object.color>
+obj.constraints = <bpy_collection[0], ObjectConstraints>
+obj.convert_space = <bpy_func Object.convert_space()>
+obj.copy = <bpy_func Object.copy()>
+obj.cycles = <bpy_struct, CyclesObjectSettings("")>
+obj.cycles_visibility = <bpy_struct, CyclesVisibilitySettings("")>
+obj.data = <bpy_struct, Camera("Viewpoint.003")>
+obj.delta_location = <Vector (0.0000, 0.0000, 0.0000)>
+obj.delta_rotation_euler = <Euler (x=0.0000, y=0.0000, z=0.0000), order='XYZ'>
+obj.delta_rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.delta_scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.dimensions = <Vector (0.0000, 0.0000, 0.0000)>
+obj.draw_bounds_type = BOX
+obj.draw_type = TEXTURED
+obj.dupli_faces_scale = 1.0
+obj.dupli_frames_end = 100
+obj.dupli_frames_off = 0
+obj.dupli_frames_on = 1
+obj.dupli_frames_start = 1
+obj.dupli_group = None
+obj.dupli_list = <bpy_collection[0], Object.dupli_list>
+obj.dupli_list_clear = <bpy_func Object.dupli_list_clear()>
+obj.dupli_list_create = <bpy_func Object.dupli_list_create()>
+obj.dupli_type = NONE
+obj.empty_draw_size = 1.0
+obj.empty_draw_type = PLAIN_AXES
+obj.empty_image_offset = <bpy_float[2], Object.empty_image_offset>
+obj.field = <bpy_struct, FieldSettings at 0x00000268EFB8D818>
+obj.find_armature = <bpy_func Object.find_armature()>
+obj.game = <bpy_struct, GameObjectSettings at 0x00000268EF5964B8>
+obj.grease_pencil = None
+obj.hide = False
+obj.hide_render = False
+obj.hide_select = False
+obj.image_user = None
+obj.is_deform_modified = <bpy_func Object.is_deform_modified()>
+obj.is_duplicator = False
+obj.is_library_indirect = False
+obj.is_modified = <bpy_func Object.is_modified()>
+obj.is_updated = False
+obj.is_updated_data = False
+obj.is_visible = <bpy_func Object.is_visible()>Fra:1 Mem:12.37M (0.00M, Peak 13.08M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.37M (0.00M, Peak 13.08M) | Time:00:00.00 | Creating Shadowbuffers
+Fra:1 Mem:12.37M (0.00M, Peak 13.08M) | Time:00:00.00 | Raytree.. preparing
+Fra:1 Mem:12.82M (0.00M, Peak 13.08M) | Time:00:00.00 | Raytree.. building
+Fra:1 Mem:12.81M (0.00M, Peak 13.50M) | Time:00:00.01 | Raytree finished
+Fra:1 Mem:12.81M (0.00M, Peak 13.50M) | Time:00:00.01 | Creating Environment maps
+Fra:1 Mem:12.81M (0.00M, Peak 13.50M) | Time:00:00.01 | Caching Point Densities
+Fra:1 Mem:12.81M (0.00M, Peak 13.50M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.81M (0.00M, Peak 13.50M) | Time:00:00.01 | Loading voxel datasets
+Fra:1 Mem:12.81M (0.00M, Peak 13.50M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.81M (0.00M, Peak 13.50M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Volume preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:18.81M (0.00M, Peak 18.81M) | Time:00:00.01 | Scene, Part 1-64
+Fra:1 Mem:19.29M (0.00M, Peak 19.40M) | Time:00:00.01 | Scene, Part 2-64
+Fra:1 Mem:19.16M (0.00M, Peak 19.89M) | Time:00:00.01 | Scene, Part 3-64
+Fra:1 Mem:18.74M (0.00M, Peak 19.89M) | Time:00:00.01 | Scene, Part 4-64
+Fra:1 Mem:18.90M (0.00M, Peak 19.89M) | Time:00:00.01 | Scene, Part 6-64
+Fra:1 Mem:18.72M (0.00M, Peak 19.89M) | Time:00:00.01 | Scene, Part 9-64
+Fra:1 Mem:19.43M (0.00M, Peak 19.89M) | Time:00:00.01 | Scene, Part 7-64
+Fra:1 Mem:19.77M (0.00M, Peak 19.89M) | Time:00:00.01 | Scene, Part 8-64
+Fra:1 Mem:19.77M (0.00M, Peak 19.91M) | Time:00:00.01 | Scene, Part 5-64
+Fra:1 Mem:18.83M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 13-64
+Fra:1 Mem:19.11M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 12-64
+Fra:1 Mem:19.66M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 11-64
+Fra:1 Mem:19.57M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 14-64
+Fra:1 Mem:19.02M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 10-64
+Fra:1 Mem:19.73M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 16-64
+Fra:1 Mem:19.82M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 15-64
+Fra:1 Mem:19.86M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 17-64
+Fra:1 Mem:19.80M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 18-64
+Fra:1 Mem:19.95M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 20-64
+Fra:1 Mem:19.93M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 21-64
+Fra:1 Mem:19.25M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 23-64
+Fra:1 Mem:19.63M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 22-64
+Fra:1 Mem:20.20M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 24-64
+Fra:1 Mem:19.68M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 25-64
+Fra:1 Mem:19.73M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 19-64
+Fra:1 Mem:19.41M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 27-64
+Fra:1 Mem:19.73M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 28-64
+Fra:1 Mem:19.98M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 26-64
+Fra:1 Mem:19.27M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 29-64
+Fra:1 Mem:19.62M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 31-64
+Fra:1 Mem:20.00M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 30-64
+Fra:1 Mem:19.78M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 32-64
+Fra:1 Mem:19.70M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 34-64
+Fra:1 Mem:19.19M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 33-64
+Fra:1 Mem:19.31M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 35-64
+Fra:1 Mem:19.99M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 38-64
+Fra:1 Mem:19.81M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 36-64
+Fra:1 Mem:19.80M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 37-64
+Fra:1 Mem:19.63M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 40-64
+Fra:1 Mem:19.50M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 41-64
+Fra:1 Mem:19.78M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 39-64
+Fra:1 Mem:19.78M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 43-64
+Fra:1 Mem:19.23M (0.00M, Peak 20.43M) | Time:00:00.01 | Scene, Part 42-64
+Fra:1 Mem:19.16M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 45-64
+Fra:1 Mem:19.07M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 44-64
+Fra:1 Mem:18.98M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 46-64
+Fra:1 Mem:18.89M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 49-64
+Fra:1 Mem:18.82M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 50-64
+Fra:1 Mem:18.75M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 47-64
+Fra:1 Mem:18.66M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 48-64
+Fra:1 Mem:18.57M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 55-64
+Fra:1 Mem:18.49M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 52-64
+Fra:1 Mem:18.42M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 51-64
+Fra:1 Mem:18.35M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 56-64
+Fra:1 Mem:18.27M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 53-64
+Fra:1 Mem:18.18M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 54-64
+Fra:1 Mem:18.09M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 57-64
+Fra:1 Mem:18.01M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 58-64
+Fra:1 Mem:17.92M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 59-64
+Fra:1 Mem:17.84M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 60-64
+Fra:1 Mem:17.77M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 64-64
+Fra:1 Mem:17.71M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 61-64
+Fra:1 Mem:17.62M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 63-64
+Fra:1 Mem:17.55M (0.00M, Peak 21.08M) | Time:00:00.11 | Scene, Part 62-64
+Fra:1 Mem:11.57M (0.00M, Peak 21.08M) | Time:00:00.11 | Sce: Scene Ve:7825 Fa:3211 La:0
+Saved: 'C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint2.blender.png'
+ Time: 00:00.13 (Saving: 00:00.02)
+
+
+obj.layers = <bpy_boolean[20], Object.layers>
+obj.layers_local_view = <bpy_boolean[8], Object.layers_local_view>
+obj.library = None
+obj.location = <Vector (0.0000, 0.0000, 300.0000)>
+obj.lock_location = <bpy_boolean[3], Object.lock_location>
+obj.lock_rotation = <bpy_boolean[3], Object.lock_rotation>
+obj.lock_rotation_w = False
+obj.lock_rotations_4d = True
+obj.lock_scale = <bpy_boolean[3], Object.lock_scale>
+obj.lod_levels = <bpy_collection[0], Object.lod_levels>
+obj.make_local = <bpy_func Object.make_local()>
+obj.material_slots = <bpy_collection[0], Object.material_slots>
+obj.matrix_basis = <Matrix 4x4 (-1.0000,  0.0000, -0.0000,   0.0000)
+            (-0.0000, -1.0000,  0.0000,   0.0000)
+            ( 0.0000,  0.0000,  1.0000, 300.0000)
+            ( 0.0000,  0.0000,  0.0000,   1.0000)>
+obj.matrix_local = <Matrix 4x4 (-1.0000,  0.0000, -0.0000,   0.0000)
+            (-0.0000, -1.0000,  0.0000,   0.0000)
+            ( 0.0000,  0.0000,  1.0000, 300.0000)
+            ( 0.0000,  0.0000,  0.0000,   1.0000)>
+obj.matrix_parent_inverse = <Matrix 4x4 (1.0000, 0.0000, 0.0000, 0.0000)
+            (0.0000, 1.0000, 0.0000, 0.0000)
+            (0.0000, 0.0000, 1.0000, 0.0000)
+            (0.0000, 0.0000, 0.0000, 1.0000)>
+obj.matrix_world = <Matrix 4x4 (-1.0000,  0.0000, -0.0000,   0.0000)
+            (-0.0000, -1.0000,  0.0000,   0.0000)
+            ( 0.0000,  0.0000,  1.0000, 300.0000)
+            ( 0.0000,  0.0000,  0.0000,   1.0000)>
+obj.mode = OBJECT
+obj.modifiers = <bpy_collection[0], ObjectModifiers>
+obj.motion_path = None
+obj.name = Viewpoint.003
+obj.parent = None
+obj.parent_bone = 
+obj.parent_type = OBJECT
+obj.parent_vertices = <bpy_int[3], Object.parent_vertices>
+obj.particle_systems = <bpy_collection[0], ParticleSystems>
+obj.pass_index = 0
+obj.pose = None
+obj.pose_library = None
+obj.preview = <bpy_struct, ImagePreview at 0x00000268F02010E8>
+obj.proxy = None
+obj.proxy_group = None
+obj.ray_cast = <bpy_func Object.ray_cast()>
+obj.rigid_body = None
+obj.rigid_body_constraint = None
+obj.rna_type = <bpy_struct, Struct("Object")>
+obj.rotation_axis_angle = <bpy_float[4], Object.rotation_axis_angle>
+obj.rotation_euler = <Euler (x=0.0000, y=-0.0000, z=3.1416), order='XYZ'>
+obj.rotation_mode = XYZ
+obj.rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.select = False
+obj.shape_key_add = <bpy_func Object.shape_key_add()>
+obj.shape_key_remove = <bpy_func Object.shape_key_remove()>
+obj.show_all_edges = False
+obj.show_axis = False
+obj.show_bounds = False
+obj.show_name = False
+obj.show_only_shape_key = False
+obj.show_texture_space = False
+obj.show_transparent = False
+obj.show_wire = False
+obj.show_x_ray = False
+obj.slow_parent_offset = 0.0
+obj.soft_body = None
+obj.tag = True
+obj.to_mesh = <bpy_func Object.to_mesh()>
+obj.track_axis = NEG_Z
+obj.type = CAMERA
+obj.up_axis = Y
+obj.update_from_editmode = <bpy_func Object.update_from_editmode()>
+obj.update_tag = <bpy_func Object.update_tag()>
+obj.use_dupli_faces_scale = False
+obj.use_dupli_frames_speed = True
+obj.use_dupli_vertices_rotation = False
+obj.use_dynamic_topology_sculpting = False
+obj.use_extra_recalc_data = False
+obj.use_extra_recalc_object = False
+obj.use_fake_user = False
+obj.use_shape_key_edit_mode = False
+obj.use_slow_parent = False
+obj.user_clear = <bpy_func Object.user_clear()>
+obj.user_of_id = <bpy_func Object.user_of_id()>
+obj.user_remap = <bpy_func Object.user_remap()>
+obj.users = 1
+obj.users_group = ()
+obj.users_scene = (bpy.data.scenes['Scene'],)
+obj.vertex_groups = <bpy_collection[0], VertexGroups>
+---------
+Resetting camera...
+Viewpoint 3 parameters:
+---------
+obj.__doc__ = None
+obj.__module__ = bpy_types
+obj.__slots__ = ()
+obj.active_material = None
+obj.active_material_index = 0
+obj.active_shape_key = None
+obj.active_shape_key_index = 0
+obj.animation_data = None
+obj.animation_data_clear = <bpy_func Object.animation_data_clear()>
+obj.animation_data_create = <bpy_func Object.animation_data_create()>
+obj.animation_visualization = <bpy_struct, AnimViz at 0x00000268EF593D40>
+obj.bl_rna = <bpy_struct, Struct("Object")>
+obj.bound_box = <bpy_float[8], Object.bound_box>
+obj.cache_release = <bpy_func Object.cache_release()>
+obj.calc_matrix_camera = <bpy_func Object.calc_matrix_camera()>
+obj.camera_fit_coords = <bpy_func Object.camera_fit_coords()>
+obj.children = ()
+obj.closest_point_on_mesh = <bpy_func Object.closest_point_on_mesh()>
+obj.collision = None
+obj.color = <bpy_float[4], Object.color>
+obj.constraints = <bpy_collection[0], ObjectConstraints>
+obj.convert_space = <bpy_func Object.convert_space()>
+obj.copy = <bpy_func Object.copy()>
+obj.cycles = <bpy_struct, CyclesObjectSettings("")>
+obj.cycles_visibility = <bpy_struct, CyclesVisibilitySettings("")>
+obj.data = <bpy_struct, Camera("Viewpoint.002")>
+obj.delta_location = <Vector (0.0000, 0.0000, 0.0000)>
+obj.delta_rotation_euler = <Euler (x=0.0000, y=0.0000, z=0.0000), order='XYZ'>
+obj.delta_rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.delta_scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.dimensions = <Vector (0.0000, 0.0000, 0.0000)>
+obj.draw_bounds_type = BOX
+obj.draw_type = TEXTURED
+obj.dupli_faces_scale = 1.0
+obj.dupli_frames_end = 100
+obj.dupli_frames_off = 0
+obj.dupli_frames_on = 1
+obj.dupli_frames_start = 1
+obj.dupli_group = None
+obj.dupli_list = <bpy_collection[0], Object.dupli_list>
+obj.dupli_list_clear = <bpy_func Object.dupli_list_clear()>
+obj.dupli_list_create = <bpy_func Object.dupli_list_create()>
+obj.dupli_type = NONE
+obj.empty_draw_size = 1.0
+obj.empty_draw_type = PLAIN_AXES
+obj.empty_image_offset = <bpy_float[2], Object.empty_image_offset>
+obj.field = <bpy_struct, FieldSettings at 0x00000268EFB8C588>
+obj.find_armature = <bpy_func Object.find_armature()>
+obj.game = <bpy_struct, GameObjectSettings at 0x00000268EF593C08>
+obj.grease_pencil = None
+obj.hide = False
+obj.hide_render = False
+obj.hide_select = False
+obj.image_user = None
+obj.is_deform_modified = <bpy_func Object.is_deform_modified()>
+obj.is_duplicator = False
+obj.is_library_indirect = False
+obj.is_modified = <bpy_func Object.is_modified()>
+obj.is_updated = False
+obj.is_updated_data = False
+obj.is_visible = <bpy_func Object.is_visible()>
+obj.layers = <bpy_boolean[20], Object.layers>
+obj.layers_local_view = <bpy_boolean[8], Object.layers_local_view>
+obj.library = None
+obj.location = <Vector (0.0000, -300.0000, 0.0000)>
+obj.lock_location = <bpy_boolean[3], Object.lock_location>
+obj.lock_rotation = <bpy_boolean[3], Object.lock_rotation>
+obj.lock_rotation_w = False
+obj.lock_rotations_4d = True
+obj.lock_scale = <bpy_boolean[3], Object.lock_scale>
+obj.lod_levels = <bpy_collection[0], Object.lod_levels>
+obj.make_local = <bpy_func Object.make_local()>
+obj.material_slots = <bpy_collection[0], Object.material_slots>
+obj.matrix_basis = <Matrix 4x4 (1.0000,  0.0000,  0.0000,    0.0000)
+            (0.0000, -0.0000, -1.0000, -300.0000)
+            (0.0000,  1.0000, -0.0000,    0.0000)
+            (0.0000,  0.0000,  0.0000,    1.0000)>
+obj.matrix_local = <Matrix 4x4 (1.0000,  0.0000,  0.0000,    0.0000)
+            (0.0000, -0.0000, -1.0000, -300.0000)
+            (0.0000,  1.0000, -0.0000,    0.0000)
+            (0.0000,  0.0000,  0.0000,    1.0000)>
+obj.matrix_parent_inverse = <Matrix 4x4 (1.0000, 0.0000, 0.0000, 0.0000)
+            (0.0000, 1.0000, 0.0000, 0.0000)
+            (0.0000, 0.0000, 1.0000, 0.0000)
+            (0.0000, 0.0000, 0.0000, 1.0000)>
+obj.matrix_world = <Matrix 4x4 (1.0000,  0.0000,  0.0000,    0.0000)
+            (0.0000, -0.0000, -1.0000, -300.0000)
+            (0.0000,  1.0000, -0.0000,    0.0000)
+            (0.0000,  0.0000,  0.0000,    1.0000)>
+obj.mode = OBJECT
+obj.modifiers = <bpy_collection[0], ObjectModifiers>
+obj.motion_path = None
+obj.name = Viewpoint.002
+obj.parent = None
+obj.parent_bone = 
+obj.parent_type = OBJECT
+obj.parent_vertices = <bpy_int[3], Object.parent_vertices>
+obj.particle_systems = <bpy_collection[0], ParticleSystems>
+obj.pass_index = 0
+obj.pose = NoneFra:1 Mem:12.38M (0.00M, Peak 13.09M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.38M (0.00M, Peak 13.09M) | Time:00:00.00 | Creating Shadowbuffers
+Fra:1 Mem:12.38M (0.00M, Peak 13.09M) | Time:00:00.00 | Raytree.. preparing
+Fra:1 Mem:12.82M (0.00M, Peak 13.09M) | Time:00:00.00 | Raytree.. building
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.00 | Raytree finished
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.00 | Creating Environment maps
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.00 | Caching Point Densities
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.00 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.00 | Loading voxel datasets
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.00 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Volume preprocessing
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:17.46M (0.00M, Peak 17.46M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:18.53M (0.00M, Peak 18.53M) | Time:00:00.01 | Scene, Part 1-64
+Fra:1 Mem:18.78M (0.00M, Peak 18.79M) | Time:00:00.01 | Scene, Part 2-64
+Fra:1 Mem:19.42M (0.00M, Peak 19.70M) | Time:00:00.01 | Scene, Part 3-64
+Fra:1 Mem:19.50M (0.00M, Peak 19.70M) | Time:00:00.01 | Scene, Part 4-64
+Fra:1 Mem:19.22M (0.00M, Peak 19.75M) | Time:00:00.01 | Scene, Part 6-64
+Fra:1 Mem:19.27M (0.00M, Peak 19.75M) | Time:00:00.01 | Scene, Part 7-64
+Fra:1 Mem:18.95M (0.00M, Peak 19.75M) | Time:00:00.01 | Scene, Part 9-64
+Fra:1 Mem:19.06M (0.00M, Peak 19.75M) | Time:00:00.01 | Scene, Part 5-64
+Fra:1 Mem:19.06M (0.00M, Peak 19.75M) | Time:00:00.01 | Scene, Part 8-64
+Fra:1 Mem:19.35M (0.00M, Peak 19.75M) | Time:00:00.01 | Scene, Part 11-64
+Fra:1 Mem:18.81M (0.00M, Peak 19.75M) | Time:00:00.01 | Scene, Part 10-64
+Fra:1 Mem:19.77M (0.00M, Peak 19.79M) | Time:00:00.01 | Scene, Part 13-64
+Fra:1 Mem:19.77M (0.00M, Peak 19.79M) | Time:00:00.01 | Scene, Part 12-64
+Fra:1 Mem:19.84M (0.00M, Peak 19.88M) | Time:00:00.01 | Scene, Part 14-64
+Fra:1 Mem:19.47M (0.00M, Peak 20.48M) | Time:00:00.01 | Scene, Part 16-64
+Fra:1 Mem:19.84M (0.00M, Peak 20.48M) | Time:00:00.01 | Scene, Part 15-64
+Fra:1 Mem:19.04M (0.00M, Peak 20.48M) | Time:00:00.01 | Scene, Part 18-64
+Fra:1 Mem:19.26M (0.00M, Peak 20.48M) | Time:00:00.01 | Scene, Part 20-64
+Fra:1 Mem:20.53M (0.00M, Peak 21.13M) | Time:00:00.01 | Scene, Part 21-64
+Fra:1 Mem:20.99M (0.00M, Peak 21.13M) | Time:00:00.01 | Scene, Part 17-64
+Fra:1 Mem:20.83M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 23-64
+Fra:1 Mem:20.77M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 22-64
+Fra:1 Mem:20.58M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 24-64
+Fra:1 Mem:20.77M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 25-64
+Fra:1 Mem:20.41M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 26-64
+Fra:1 Mem:20.63M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 27-64
+Fra:1 Mem:20.81M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 28-64
+Fra:1 Mem:20.51M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 29-64
+Fra:1 Mem:20.18M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 30-64
+Fra:1 Mem:20.37M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 31-64
+Fra:1 Mem:20.17M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 32-64
+Fra:1 Mem:20.18M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 33-64
+Fra:1 Mem:20.42M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 34-64
+Fra:1 Mem:19.91M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 19-64
+Fra:1 Mem:19.53M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 37-64
+Fra:1 Mem:19.61M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 40-64
+Fra:1 Mem:19.71M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 38-64
+Fra:1 Mem:19.75M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 36-64
+Fra:1 Mem:19.69M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 41-64
+Fra:1 Mem:20.13M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 39-64
+Fra:1 Mem:20.04M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 42-64
+Fra:1 Mem:19.73M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 44-64
+Fra:1 Mem:19.31M (0.00M, Peak 21.22M) | Time:00:00.01 | Scene, Part 45-64
+Fra:1 Mem:19.15M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 43-64
+Fra:1 Mem:19.07M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 35-64
+Fra:1 Mem:18.98M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 46-64
+Fra:1 Mem:18.90M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 48-64
+Fra:1 Mem:18.81M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 47-64
+Fra:1 Mem:18.72M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 49-64
+Fra:1 Mem:18.64M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 50-64
+Fra:1 Mem:18.57M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 51-64
+Fra:1 Mem:18.50M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 52-64
+Fra:1 Mem:18.42M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 53-64
+Fra:1 Mem:18.33M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 54-64
+Fra:1 Mem:18.24M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 56-64
+Fra:1 Mem:18.17M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 55-64
+Fra:1 Mem:18.10M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 57-64
+Fra:1 Mem:18.01M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 59-64
+Fra:1 Mem:17.93M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 60-64
+Fra:1 Mem:17.86M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 58-64
+Fra:1 Mem:17.77M (0.00M, Peak 21.22M) | Time:00:00.10 | Scene, Part 63-64
+Fra:1 Mem:17.70M (0.00M, Peak 21.22M) | Time:00:00.11 | Scene, Part 62-64
+Fra:1 Mem:17.62M (0.00M, Peak 21.22M) | Time:00:00.11 | Scene, Part 64-64
+Fra:1 Mem:17.56M (0.00M, Peak 21.22M) | Time:00:00.11 | Scene, Part 61-64
+Fra:1 Mem:11.57M (0.00M, Peak 21.22M) | Time:00:00.11 | Sce: Scene Ve:7825 Fa:3211 La:0
+Saved: 'C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint3.blender.png'
+ Time: 00:00.13 (Saving: 00:00.02)
+
+
+obj.pose_library = None
+obj.preview = <bpy_struct, ImagePreview at 0x00000268F02019F8>
+obj.proxy = None
+obj.proxy_group = None
+obj.ray_cast = <bpy_func Object.ray_cast()>
+obj.rigid_body = None
+obj.rigid_body_constraint = None
+obj.rna_type = <bpy_struct, Struct("Object")>
+obj.rotation_axis_angle = <bpy_float[4], Object.rotation_axis_angle>
+obj.rotation_euler = <Euler (x=1.5708, y=-0.0000, z=0.0000), order='XYZ'>
+obj.rotation_mode = XYZ
+obj.rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.select = False
+obj.shape_key_add = <bpy_func Object.shape_key_add()>
+obj.shape_key_remove = <bpy_func Object.shape_key_remove()>
+obj.show_all_edges = False
+obj.show_axis = False
+obj.show_bounds = False
+obj.show_name = False
+obj.show_only_shape_key = False
+obj.show_texture_space = False
+obj.show_transparent = False
+obj.show_wire = False
+obj.show_x_ray = False
+obj.slow_parent_offset = 0.0
+obj.soft_body = None
+obj.tag = True
+obj.to_mesh = <bpy_func Object.to_mesh()>
+obj.track_axis = NEG_Z
+obj.type = CAMERA
+obj.up_axis = Y
+obj.update_from_editmode = <bpy_func Object.update_from_editmode()>
+obj.update_tag = <bpy_func Object.update_tag()>
+obj.use_dupli_faces_scale = False
+obj.use_dupli_frames_speed = True
+obj.use_dupli_vertices_rotation = False
+obj.use_dynamic_topology_sculpting = False
+obj.use_extra_recalc_data = False
+obj.use_extra_recalc_object = False
+obj.use_fake_user = False
+obj.use_shape_key_edit_mode = False
+obj.use_slow_parent = False
+obj.user_clear = <bpy_func Object.user_clear()>
+obj.user_of_id = <bpy_func Object.user_of_id()>
+obj.user_remap = <bpy_func Object.user_remap()>
+obj.users = 1
+obj.users_group = ()
+obj.users_scene = (bpy.data.scenes['Scene'],)
+obj.vertex_groups = <bpy_collection[0], VertexGroups>
+---------
+Resetting camera...
+Viewpoint 4 parameters:
+---------
+obj.__doc__ = None
+obj.__module__ = bpy_types
+obj.__slots__ = ()
+obj.active_material = None
+obj.active_material_index = 0
+obj.active_shape_key = None
+obj.active_shape_key_index = 0
+obj.animation_data = None
+obj.animation_data_clear = <bpy_func Object.animation_data_clear()>
+obj.animation_data_create = <bpy_func Object.animation_data_create()>
+obj.animation_visualization = <bpy_struct, AnimViz at 0x00000268EF593770>
+obj.bl_rna = <bpy_struct, Struct("Object")>
+obj.bound_box = <bpy_float[8], Object.bound_box>
+obj.cache_release = <bpy_func Object.cache_release()>
+obj.calc_matrix_camera = <bpy_func Object.calc_matrix_camera()>
+obj.camera_fit_coords = <bpy_func Object.camera_fit_coords()>
+obj.children = ()
+obj.closest_point_on_mesh = <bpy_func Object.closest_point_on_mesh()>
+obj.collision = None
+obj.color = <bpy_float[4], Object.color>
+obj.constraints = <bpy_collection[0], ObjectConstraints>
+obj.convert_space = <bpy_func Object.convert_space()>
+obj.copy = <bpy_func Object.copy()>
+obj.cycles = <bpy_struct, CyclesObjectSettings("")>
+obj.cycles_visibility = <bpy_struct, CyclesVisibilitySettings("")>
+obj.data = <bpy_struct, Camera("Viewpoint.001")>
+obj.delta_location = <Vector (0.0000, 0.0000, 0.0000)>
+obj.delta_rotation_euler = <Euler (x=0.0000, y=0.0000, z=0.0000), order='XYZ'>
+obj.delta_rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.delta_scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.dimensions = <Vector (0.0000, 0.0000, 0.0000)>
+obj.draw_bounds_type = BOX
+obj.draw_type = TEXTURED
+obj.dupli_faces_scale = 1.0
+obj.dupli_frames_end = 100
+obj.dupli_frames_off = 0
+obj.dupli_frames_on = 1
+obj.dupli_frames_start = 1
+obj.dupli_group = None
+obj.dupli_list = <bpy_collection[0], Object.dupli_list>
+obj.dupli_list_clear = <bpy_func Object.dupli_list_clear()>
+obj.dupli_list_create = <bpy_func Object.dupli_list_create()>
+obj.dupli_type = NONE
+obj.empty_draw_size = 1.0
+obj.empty_draw_type = PLAIN_AXES
+obj.empty_image_offset = <bpy_float[2], Object.empty_image_offset>
+obj.field = <bpy_struct, FieldSettings at 0x00000268EFB8C0B8>
+obj.find_armature = <bpy_func Object.find_armature()>
+obj.game = <bpy_struct, GameObjectSettings at 0x00000268EF593638>
+obj.grease_pencil = None
+obj.hide = False
+obj.hide_render = False
+obj.hide_select = False
+obj.image_user = None
+obj.is_deform_modified = <bpy_func Object.is_deform_modified()>
+obj.is_duplicator = False
+obj.is_library_indirect = False
+obj.is_modified = <bpy_func Object.is_modified()>
+obj.is_updated = False
+obj.is_updated_data = False
+obj.is_visible = <bpy_func Object.is_visible()>
+obj.layers = <bpy_boolean[20], Object.layers>
+obj.layers_local_view = <bpy_boolean[8], Object.layers_local_view>
+obj.library = None
+obj.location = <Vector (-300.0000, 0.0000, 0.0000)>
+obj.lock_location = <bpy_boolean[3], Object.lock_location>
+obj.lock_rotation = <bpy_boolean[3], Object.lock_rotation>
+obj.lock_rotation_w = False
+obj.lock_rotations_4d = True
+obj.lock_scale = <bpy_boolean[3], Object.lock_scale>
+obj.lod_levels = <bpy_collection[0], Object.lod_levels>
+obj.make_local = <bpy_func Object.make_local()>
+obj.material_slots = <bpy_collection[0], Object.material_slots>
+obj.matrix_basis = <Matrix 4x4 (-0.0000, -0.0000, -1.0000, -300.0000)
+            (-1.0000,  0.0000,  0.0000,    0.0000)
+            ( 0.0000,  1.0000, -0.0000,    0.0000)
+            ( 0.0000,  0.0000,  0.0000,    1.0000)>
+obj.matrix_local = <Matrix 4x4 (-0.0000, -0.0000, -1.0000, -300.0000)
+            (-1.0000,  0.0000,  0.0000,    0.0000)
+            ( 0.0000,  1.0000, -0.0000,    0.0000)
+            ( 0.0000,  0.0000,  0.0000,    1.0000)>
+obj.matrix_parent_inverse = <Matrix 4x4 (1.0000, 0.0000, 0.0000, 0.0000)
+            (0.0000, 1.0000, 0.0000, 0.0000)
+            (0.0000, 0.0000, 1.0000, 0.0000)
+            (0.0000, 0.0000, 0.0000, 1.0000)>
+obj.matrix_world = <Matrix 4x4 (-0.0000, -0.0000, -1.0000, -300.0000)
+            (-1.0000,  0.0000,  0.0000,    0.0000)
+            ( 0.0000,  1.0000, -0.0000,    0.0000)
+            ( 0.0000,  0.0000,  0.0000,    1.0000)>
+obj.mode = OBJECT
+obj.modifiers = <bpy_collection[0], ObjectModifiers>
+obj.motion_path = None
+obj.name = Viewpoint.001
+obj.parent = None
+obj.parent_bone = 
+obj.parent_type = OBJECT
+obj.parent_vertices = <bpy_int[3], Object.parent_vertices>
+obj.particle_systems = <bpy_collection[0], ParticleSystems>
+obj.pass_index = 0
+obj.pose = None
+obj.pose_library = None
+obj.preview = <bpy_struct, ImagePreview at 0x00000268F0202F88>
+obj.proxy = None
+obj.proxy_group = None
+obj.ray_cast = <bpy_func Object.ray_cast()>
+obj.rigid_body = None
+obj.rigid_body_constraint = None
+obj.rna_type = <bpy_struct, Struct("Object")>
+obj.rotation_axis_angle = <bpy_float[4], Object.rotation_axis_angle>
+obj.rotation_euler = <Euler (x=1.5708, y=-0.0000, z=-1.5708), order='XYZ'>
+obj.rotation_mode = XYZ
+obj.rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.select = False
+obj.shape_key_add = <bpy_func Object.shape_key_add()>
+obj.shape_key_remove = <bpy_func Object.shape_key_remove()>
+obj.show_all_edges = False
+obj.show_axis = False
+obj.show_bounds = False
+obj.show_name = False
+obj.show_only_shape_key = False
+obj.show_texture_space = False
+obj.show_transparent = False
+obj.show_wire = False
+obj.show_x_ray = False
+obj.slow_parent_offset = 0.0
+obj.soft_body = None
+obj.tag = True
+obj.to_mesh = <bpy_func Object.to_mesh()>
+obj.track_axis = NEG_Z
+obj.type = CAMERA
+obj.up_axis = Y
+obj.update_from_editmode = <bpy_func Object.update_from_editmode()>
+obj.update_tag = <bpy_func Object.update_tag()>
+obj.use_dupli_faces_scale = False
+obj.use_dupli_frames_speed = True
+obj.use_dupli_vertices_rotation = False
+obj.use_dynamic_topology_sculpting = False
+obj.use_extra_recalc_data = False
+obj.use_extra_recalc_object = False
+obj.use_fake_user = False
+obj.use_shape_key_edit_mode = False
+obj.use_slow_parent = False
+obj.user_clear = <bpy_func Object.user_clear()>
+obj.user_of_id = <bpy_func Object.user_of_id()>
+obj.user_remap = <bpy_func Object.user_remap()>
+obj.users = 1
+obj.users_group = ()
+obj.users_scene = (bpy.data.scenes['Scene'],)
+obj.vertex_groups = <bpy_collection[0], VertexGroups>Fra:1 Mem:12.38M (0.00M, Peak 13.09M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.38M (0.00M, Peak 13.09M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.38M (0.00M, Peak 13.09M) | Time:00:00.00 | Creating Shadowbuffers
+Fra:1 Mem:12.38M (0.00M, Peak 13.09M) | Time:00:00.00 | Raytree.. preparing
+Fra:1 Mem:12.82M (0.00M, Peak 13.09M) | Time:00:00.00 | Raytree.. building
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.01 | Raytree finished
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.01 | Creating Environment maps
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.01 | Caching Point Densities
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.01 | Loading voxel datasets
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.81M (0.00M, Peak 13.51M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.47M (0.00M, Peak 17.47M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.47M (0.00M, Peak 17.47M) | Time:00:00.01 | Volume preprocessing
+Fra:1 Mem:17.47M (0.00M, Peak 17.47M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:17.47M (0.00M, Peak 17.47M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:20.31M (0.00M, Peak 21.56M) | Time:00:00.07 | Scene, Part 3-64
+Fra:1 Mem:20.18M (0.00M, Peak 21.56M) | Time:00:00.07 | Scene, Part 4-64
+Fra:1 Mem:20.31M (0.00M, Peak 21.56M) | Time:00:00.07 | Scene, Part 6-64
+Fra:1 Mem:20.18M (0.00M, Peak 21.56M) | Time:00:00.08 | Scene, Part 5-64
+Fra:1 Mem:20.47M (0.00M, Peak 21.56M) | Time:00:00.09 | Scene, Part 8-64
+Fra:1 Mem:20.18M (0.00M, Peak 21.56M) | Time:00:00.09 | Scene, Part 2-64
+Fra:1 Mem:20.18M (0.00M, Peak 21.56M) | Time:00:00.09 | Scene, Part 1-64
+Fra:1 Mem:20.18M (0.00M, Peak 21.56M) | Time:00:00.09 | Scene, Part 15-64
+Fra:1 Mem:20.18M (0.00M, Peak 21.56M) | Time:00:00.10 | Scene, Part 13-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.10 | Scene, Part 7-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.10 | Scene, Part 18-64
+Fra:1 Mem:20.13M (0.00M, Peak 21.56M) | Time:00:00.11 | Scene, Part 9-64
+Fra:1 Mem:20.15M (0.00M, Peak 21.56M) | Time:00:00.12 | Scene, Part 20-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.12 | Scene, Part 21-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.13 | Scene, Part 19-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.14 | Scene, Part 23-64
+Fra:1 Mem:20.13M (0.00M, Peak 21.56M) | Time:00:00.15 | Scene, Part 11-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.15 | Scene, Part 25-64
+Fra:1 Mem:20.15M (0.00M, Peak 21.56M) | Time:00:00.15 | Scene, Part 26-64
+Fra:1 Mem:20.15M (0.00M, Peak 21.56M) | Time:00:00.15 | Scene, Part 27-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.15 | Scene, Part 28-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.15 | Scene, Part 17-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.16 | Scene, Part 30-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.16 | Scene, Part 31-64
+Fra:1 Mem:20.13M (0.00M, Peak 21.56M) | Time:00:00.20 | Scene, Part 32-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.20 | Scene, Part 33-64
+Fra:1 Mem:20.13M (0.00M, Peak 21.56M) | Time:00:00.20 | Scene, Part 34-64
+Fra:1 Mem:20.06M (0.00M, Peak 21.56M) | Time:00:00.21 | Scene, Part 29-64
+Fra:1 Mem:19.93M (0.00M, Peak 21.56M) | Time:00:00.22 | Scene, Part 10-64
+Fra:1 Mem:19.93M (0.00M, Peak 21.56M) | Time:00:00.22 | Scene, Part 37-64
+Fra:1 Mem:19.92M (0.00M, Peak 21.56M) | Time:00:00.22 | Scene, Part 38-64
+Fra:1 Mem:19.90M (0.00M, Peak 21.56M) | Time:00:00.22 | Scene, Part 36-64
+Fra:1 Mem:19.90M (0.00M, Peak 21.56M) | Time:00:00.22 | Scene, Part 40-64
+Fra:1 Mem:19.90M (0.00M, Peak 21.56M) | Time:00:00.22 | Scene, Part 35-64
+Fra:1 Mem:19.87M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 16-64
+Fra:1 Mem:19.86M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 43-64
+Fra:1 Mem:19.87M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 44-64
+Fra:1 Mem:19.94M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 45-64
+Fra:1 Mem:19.87M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 46-64
+Fra:1 Mem:19.87M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 47-64
+Fra:1 Mem:19.87M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 48-64
+Fra:1 Mem:19.97M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 41-64
+Fra:1 Mem:19.63M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 50-64
+Fra:1 Mem:19.96M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 49-64
+Fra:1 Mem:19.63M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 51-64
+Fra:1 Mem:20.02M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 52-64
+Fra:1 Mem:19.87M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 53-64
+Fra:1 Mem:19.97M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 54-64
+Fra:1 Mem:19.90M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 56-64
+Fra:1 Mem:19.64M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 55-64
+Fra:1 Mem:20.22M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 57-64
+Fra:1 Mem:19.86M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 59-64
+Fra:1 Mem:19.97M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 58-64
+Fra:1 Mem:19.86M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 60-64
+Fra:1 Mem:19.97M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 61-64
+Fra:1 Mem:19.82M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 12-64
+Fra:1 Mem:19.75M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 62-64
+Fra:1 Mem:19.48M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 63-64
+Fra:1 Mem:19.11M (0.00M, Peak 21.56M) | Time:00:00.23 | Scene, Part 64-64
+Fra:1 Mem:18.85M (0.00M, Peak 21.56M) | Time:00:00.25 | Scene, Part 42-64
+Fra:1 Mem:18.44M (0.00M, Peak 21.56M) | Time:00:00.25 | Scene, Part 14-64
+Fra:1 Mem:18.16M (0.00M, Peak 21.56M) | Time:00:00.26 | Scene, Part 39-64
+Fra:1 Mem:17.87M (0.00M, Peak 21.56M) | Time:00:00.26 | Scene, Part 24-64
+Fra:1 Mem:17.57M (0.00M, Peak 21.56M) | Time:00:00.26 | Scene, Part 22-64
+Fra:1 Mem:11.57M (0.00M, Peak 21.56M) | Time:00:00.27 | Sce: Scene Ve:7825 Fa:3211 La:0
+Saved: 'C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint4.blender.png'
+ Time: 00:00.29 (Saving: 00:00.02)
+
+Fra:1 Mem:12.38M (0.00M, Peak 13.09M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.38M (0.00M, Peak 13.09M) | Time:00:00.00 | Creating Shadowbuffers
+Fra:1 Mem:12.38M (0.00M, Peak 13.09M) | Time:00:00.00 | Raytree.. preparing
+Fra:1 Mem:12.82M (0.00M, Peak 13.09M) | Time:00:00.00 | Raytree.. building
+Fra:1 Mem:12.82M (0.00M, Peak 13.51M) | Time:00:00.00 | Raytree finished
+Fra:1 Mem:12.82M (0.00M, Peak 13.51M) | Time:00:00.00 | Creating Environment maps
+Fra:1 Mem:12.82M (0.00M, Peak 13.51M) | Time:00:00.00 | Caching Point Densities
+Fra:1 Mem:12.82M (0.00M, Peak 13.51M) | Time:00:00.00 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.82M (0.00M, Peak 13.51M) | Time:00:00.00 | Loading voxel datasets
+Fra:1 Mem:12.82M (0.00M, Peak 13.51M) | Time:00:00.00 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.82M (0.00M, Peak 13.51M) | Time:00:00.00 | Occlusion preprocessing
+Fra:1 Mem:17.47M (0.00M, Peak 17.47M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.47M (0.00M, Peak 17.47M) | Time:00:00.01 | Volume preprocessing
+Fra:1 Mem:17.47M (0.00M, Peak 17.47M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:17.47M (0.00M, Peak 17.47M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:19.01M (0.00M, Peak 19.35M) | Time:00:00.01 | Scene, Part 2-64
+Fra:1 Mem:19.03M (0.00M, Peak 19.35M) | Time:00:00.01 | Scene, Part 1-64
+Fra:1 Mem:18.75M (0.00M, Peak 19.94M) | Time:00:00.01 | Scene, Part 6-64
+Fra:1 Mem:18.96M (0.00M, Peak 19.94M) | Time:00:00.01 | Scene, Part 3-64
+Fra:1 Mem:18.91M (0.00M, Peak 19.94M) | Time:00:00.01 | Scene, Part 5-64
+Fra:1 Mem:19.25M (0.00M, Peak 19.94M) | Time:00:00.01 | Scene, Part 8-64
+Fra:1 Mem:19.39M (0.00M, Peak 19.94M) | Time:00:00.01 | Scene, Part 7-64
+Fra:1 Mem:18.96M (0.00M, Peak 19.94M) | Time:00:00.01 | Scene, Part 9-64
+Fra:1 Mem:18.87M (0.00M, Peak 19.94M) | Time:00:00.01 | Scene, Part 11-64
+Fra:1 Mem:18.75M (0.00M, Peak 19.94M) | Time:00:00.01 | Scene, Part 13-64
+Fra:1 Mem:18.75M (0.00M, Peak 19.94M) | Time:00:00.02 | Scene, Part 12-64
+Fra:1 Mem:19.33M (0.00M, Peak 19.94M) | Time:00:00.02 | Scene, Part 14-64
+Fra:1 Mem:19.87M (0.00M, Peak 19.94M) | Time:00:00.02 | Scene, Part 10-64
+Fra:1 Mem:19.92M (0.00M, Peak 19.97M) | Time:00:00.02 | Scene, Part 4-64
+Fra:1 Mem:19.55M (0.00M, Peak 20.08M) | Time:00:00.02 | Scene, Part 16-64
+Fra:1 Mem:18.96M (0.00M, Peak 20.08M) | Time:00:00.02 | Scene, Part 15-64
+Fra:1 Mem:18.96M (0.00M, Peak 20.08M) | Time:00:00.02 | Scene, Part 17-64
+Fra:1 Mem:19.03M (0.00M, Peak 20.08M) | Time:00:00.02 | Scene, Part 19-64
+Fra:1 Mem:18.75M (0.00M, Peak 20.08M) | Time:00:00.02 | Scene, Part 18-64
+Fra:1 Mem:18.92M (0.00M, Peak 20.08M) | Time:00:00.02 | Scene, Part 21-64
+Fra:1 Mem:19.58M (0.00M, Peak 20.08M) | Time:00:00.02 | Scene, Part 20-64
+Fra:1 Mem:19.39M (0.00M, Peak 20.08M) | Time:00:00.02 | Scene, Part 22-64
+Fra:1 Mem:19.40M (0.00M, Peak 20.08M) | Time:00:00.02 | Scene, Part 23-64
+Fra:1 Mem:19.69M (0.00M, Peak 20.08M) | Time:00:00.02 | Scene, Part 25-64
+Fra:1 Mem:19.51M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 26-64
+Fra:1 Mem:19.62M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 29-64
+Fra:1 Mem:19.46M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 27-64
+Fra:1 Mem:19.30M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 31-64
+Fra:1 Mem:19.40M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 30-64
+Fra:1 Mem:19.67M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 32-64
+Fra:1 Mem:19.61M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 34-64
+Fra:1 Mem:19.39M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 33-64
+Fra:1 Mem:18.77M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 38-64
+Fra:1 Mem:18.96M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 37-64
+Fra:1 Mem:18.84M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 35-64
+Fra:1 Mem:19.04M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 39-64
+Fra:1 Mem:19.68M (0.00M, Peak 20.10M) | Time:00:00.02 | Scene, Part 36-64
+Fra:1 Mem:20.10M (0.00M, Peak 20.13M) | Time:00:00.02 | Scene, Part 40-64
+Fra:1 Mem:19.73M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 41-64
+Fra:1 Mem:19.75M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 42-64
+Fra:1 Mem:20.03M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 44-64
+Fra:1 Mem:19.38M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 45-64
+Fra:1 Mem:20.05M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 43-64
+Fra:1 Mem:20.13M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 28-64
+Fra:1 Mem:19.80M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 46-64
+Fra:1 Mem:19.53M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 47-64
+Fra:1 Mem:19.85M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 49-64
+Fra:1 Mem:19.67M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 48-64
+Fra:1 Mem:19.55M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 50-64
+Fra:1 Mem:19.65M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 51-64
+Fra:1 Mem:19.79M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 52-64
+Fra:1 Mem:19.72M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 55-64
+Fra:1 Mem:19.64M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 56-64
+Fra:1 Mem:19.84M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 54-64
+Fra:1 Mem:19.61M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 53-64
+Fra:1 Mem:19.41M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 59-64
+Fra:1 Mem:19.66M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 57-64
+Fra:1 Mem:19.58M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 58-64
+Fra:1 Mem:18.75M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 60-64
+Fra:1 Mem:18.68M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 62-64
+Fra:1 Mem:18.39M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 61-64
+Fra:1 Mem:17.92M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 63-64
+Fra:1 Mem:17.84M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 64-64
+Fra:1 Mem:17.57M (0.00M, Peak 20.46M) | Time:00:00.02 | Scene, Part 24-64
+Fra:1 Mem:11.58M (0.00M, Peak 20.46M) | Time:00:00.02 | Sce: Scene Ve:7825 Fa:3211 La:0
+Saved: 'C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.viewpoint5.blender.png'
+ Time: 00:00.04 (Saving: 00:00.02)
+
+
+---------
+Resetting camera...
+Viewpoint 5 parameters:
+---------
+obj.__doc__ = None
+obj.__module__ = bpy_types
+obj.__slots__ = ()
+obj.active_material = None
+obj.active_material_index = 0
+obj.active_shape_key = None
+obj.active_shape_key_index = 0
+obj.animation_data = None
+obj.animation_data_clear = <bpy_func Object.animation_data_clear()>
+obj.animation_data_create = <bpy_func Object.animation_data_create()>
+obj.animation_visualization = <bpy_struct, AnimViz at 0x00000268EF595A50>
+obj.bl_rna = <bpy_struct, Struct("Object")>
+obj.bound_box = <bpy_float[8], Object.bound_box>
+obj.cache_release = <bpy_func Object.cache_release()>
+obj.calc_matrix_camera = <bpy_func Object.calc_matrix_camera()>
+obj.camera_fit_coords = <bpy_func Object.camera_fit_coords()>
+obj.children = ()
+obj.closest_point_on_mesh = <bpy_func Object.closest_point_on_mesh()>
+obj.collision = None
+obj.color = <bpy_float[4], Object.color>
+obj.constraints = <bpy_collection[0], ObjectConstraints>
+obj.convert_space = <bpy_func Object.convert_space()>
+obj.copy = <bpy_func Object.copy()>
+obj.cycles = <bpy_struct, CyclesObjectSettings("")>
+obj.cycles_visibility = <bpy_struct, CyclesVisibilitySettings("")>
+obj.data = <bpy_struct, Camera("Viewpoint")>
+obj.delta_location = <Vector (0.0000, 0.0000, 0.0000)>
+obj.delta_rotation_euler = <Euler (x=0.0000, y=0.0000, z=0.0000), order='XYZ'>
+obj.delta_rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.delta_scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.dimensions = <Vector (0.0000, 0.0000, 0.0000)>
+obj.draw_bounds_type = BOX
+obj.draw_type = TEXTURED
+obj.dupli_faces_scale = 1.0
+obj.dupli_frames_end = 100
+obj.dupli_frames_off = 0
+obj.dupli_frames_on = 1
+obj.dupli_frames_start = 1
+obj.dupli_group = None
+obj.dupli_list = <bpy_collection[0], Object.dupli_list>
+obj.dupli_list_clear = <bpy_func Object.dupli_list_clear()>
+obj.dupli_list_create = <bpy_func Object.dupli_list_create()>
+obj.dupli_type = NONE
+obj.empty_draw_size = 1.0
+obj.empty_draw_type = PLAIN_AXES
+obj.empty_image_offset = <bpy_float[2], Object.empty_image_offset>
+obj.field = <bpy_struct, FieldSettings at 0x00000268EFB8CE78>
+obj.find_armature = <bpy_func Object.find_armature()>
+obj.game = <bpy_struct, GameObjectSettings at 0x00000268EF595918>
+obj.grease_pencil = None
+obj.hide = False
+obj.hide_render = False
+obj.hide_select = False
+obj.image_user = None
+obj.is_deform_modified = <bpy_func Object.is_deform_modified()>
+obj.is_duplicator = False
+obj.is_library_indirect = False
+obj.is_modified = <bpy_func Object.is_modified()>
+obj.is_updated = False
+obj.is_updated_data = False
+obj.is_visible = <bpy_func Object.is_visible()>
+obj.layers = <bpy_boolean[20], Object.layers>
+obj.layers_local_view = <bpy_boolean[8], Object.layers_local_view>
+obj.library = None
+obj.location = <Vector (0.0000, 300.0000, 0.0000)>
+obj.lock_location = <bpy_boolean[3], Object.lock_location>
+obj.lock_rotation = <bpy_boolean[3], Object.lock_rotation>
+obj.lock_rotation_w = False
+obj.lock_rotations_4d = True
+obj.lock_scale = <bpy_boolean[3], Object.lock_scale>
+obj.lod_levels = <bpy_collection[0], Object.lod_levels>
+obj.make_local = <bpy_func Object.make_local()>
+obj.material_slots = <bpy_collection[0], Object.material_slots>
+obj.matrix_basis = <Matrix 4x4 (-1.0000, -0.0000, -0.0000,   0.0000)
+            (-0.0000,  0.0000,  1.0000, 300.0000)
+            ( 0.0000,  1.0000, -0.0000,   0.0000)
+            ( 0.0000,  0.0000,  0.0000,   1.0000)>
+obj.matrix_local = <Matrix 4x4 (-1.0000, -0.0000, -0.0000,   0.0000)
+            (-0.0000,  0.0000,  1.0000, 300.0000)
+            ( 0.0000,  1.0000, -0.0000,   0.0000)
+            ( 0.0000,  0.0000,  0.0000,   1.0000)>
+obj.matrix_parent_inverse = <Matrix 4x4 (1.0000, 0.0000, 0.0000, 0.0000)
+            (0.0000, 1.0000, 0.0000, 0.0000)
+            (0.0000, 0.0000, 1.0000, 0.0000)
+            (0.0000, 0.0000, 0.0000, 1.0000)>
+obj.matrix_world = <Matrix 4x4 (-1.0000, -0.0000, -0.0000,   0.0000)
+            (-0.0000,  0.0000,  1.0000, 300.0000)
+            ( 0.0000,  1.0000, -0.0000,   0.0000)
+            ( 0.0000,  0.0000,  0.0000,   1.0000)>
+obj.mode = OBJECT
+obj.modifiers = <bpy_collection[0], ObjectModifiers>
+obj.motion_path = None
+obj.name = Viewpoint
+obj.parent = None
+obj.parent_bone = 
+obj.parent_type = OBJECT
+obj.parent_vertices = <bpy_int[3], Object.parent_vertices>
+obj.particle_systems = <bpy_collection[0], ParticleSystems>
+obj.pass_index = 0
+obj.pose = None
+obj.pose_library = None
+obj.preview = <bpy_struct, ImagePreview at 0x00000268F1D632F8>
+obj.proxy = None
+obj.proxy_group = None
+obj.ray_cast = <bpy_func Object.ray_cast()>
+obj.rigid_body = None
+obj.rigid_body_constraint = None
+obj.rna_type = <bpy_struct, Struct("Object")>
+obj.rotation_axis_angle = <bpy_float[4], Object.rotation_axis_angle>
+obj.rotation_euler = <Euler (x=1.5708, y=-0.0000, z=3.1416), order='XYZ'>
+obj.rotation_mode = XYZ
+obj.rotation_quaternion = <Quaternion (w=1.0000, x=0.0000, y=0.0000, z=0.0000)>
+obj.scale = <Vector (1.0000, 1.0000, 1.0000)>
+obj.select = False
+obj.shape_key_add = <bpy_func Object.shape_key_add()>
+obj.shape_key_remove = <bpy_func Object.shape_key_remove()>
+obj.show_all_edges = False
+obj.show_axis = False
+obj.show_bounds = False
+obj.show_name = False
+obj.show_only_shape_key = False
+obj.show_texture_space = False
+obj.show_transparent = False
+obj.show_wire = False
+obj.show_x_ray = False
+obj.slow_parent_offset = 0.0
+obj.soft_body = None
+obj.tag = True
+obj.to_mesh = <bpy_func Object.to_mesh()>
+obj.track_axis = NEG_Z
+obj.type = CAMERA
+obj.up_axis = Y
+obj.update_from_editmode = <bpy_func Object.update_from_editmode()>
+obj.update_tag = <bpy_func Object.update_tag()>
+obj.use_dupli_faces_scale = False
+obj.use_dupli_frames_speed = True
+obj.use_dupli_vertices_rotation = False
+obj.use_dynamic_topology_sculpting = False
+obj.use_extra_recalc_data = False
+obj.use_extra_recalc_object = False
+obj.use_fake_user = False
+obj.use_shape_key_edit_mode = False
+obj.use_slow_parent = False
+obj.user_clear = <bpy_func Object.user_clear()>
+obj.user_of_id = <bpy_func Object.user_of_id()>
+obj.user_remap = <bpy_func Object.user_remap()>
+obj.users = 1
+obj.users_group = ()
+obj.users_scene = (bpy.data.scenes['Scene'],)
+obj.vertex_groups = <bpy_collection[0], VertexGroups>
+---------
+Resetting camera...
+Quitting Blender
+Error: Not freed memory blocks: 1, total unfreed memory 0.000076 MB
+
+Blender quit
+AL lib: (EE) UpdateDeviceParams: Failed to set 44100hz, got 48000hz instead
+
+blender.python.run.BlenderX3dToMultipleExports.py:
+===========================
+blender --background --factory-startup --python BlenderX3dToMultipleExports.py -- LPD17.x3d products
+found bundled python: C:\Program Files\Blender Foundation\Blender\2.79\python
+Fra:1 Mem:12.36M (0.00M, Peak 13.07M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.36M (0.00M, Peak 13.07M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.36M (0.00M, Peak 13.07M) | Time:00:00.00 | Creating Shadowbuffers
+Fra:1 Mem:12.36M (0.00M, Peak 13.07M) | Time:00:00.00 | Raytree.. preparing
+Fra:1 Mem:12.80M (0.00M, Peak 13.07M) | Time:00:00.00 | Raytree.. building
+Fra:1 Mem:12.79M (0.00M, Peak 13.49M) | Time:00:00.01 | Raytree finished
+Fra:1 Mem:12.79M (0.00M, Peak 13.49M) | Time:00:00.01 | Creating Environment maps
+Fra:1 Mem:12.79M (0.00M, Peak 13.49M) | Time:00:00.01 | Caching Point Densities
+Fra:1 Mem:12.79M (0.00M, Peak 13.49M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.79M (0.00M, Peak 13.49M) | Time:00:00.01 | Loading voxel datasets
+Fra:1 Mem:12.79M (0.00M, Peak 13.49M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.79M (0.00M, Peak 13.49M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.45M (0.00M, Peak 17.45M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.45M (0.00M, Peak 17.45M) | Time:00:00.01 | Volume preprocessing
+Fra:1 Mem:17.45M (0.00M, Peak 17.45M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:17.45M (0.00M, Peak 17.45M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:20.36M (0.00M, Peak 20.70M) | Time:00:00.01 | Scene, Part 5-64
+Fra:1 Mem:20.13M (0.00M, Peak 20.70M) | Time:00:00.01 | Scene, Part 8-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.70M) | Time:00:00.02 | Scene, Part 10-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.70M) | Time:00:00.12 | Scene, Part 7-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.70M) | Time:00:00.12 | Scene, Part 12-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.70M) | Time:00:00.12 | Scene, Part 13-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.70M) | Time:00:00.12 | Scene, Part 14-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.70M) | Time:00:00.12 | Scene, Part 15-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.70M) | Time:00:00.12 | Scene, Part 16-64
+Fra:1 Mem:19.95M (0.00M, Peak 20.70M) | Time:00:00.12 | Scene, Part 11-64
+Fra:1 Mem:20.66M (0.00M, Peak 20.70M) | Time:00:00.12 | Scene, Part 17-64
+Fra:1 Mem:20.41M (0.00M, Peak 20.79M) | Time:00:00.12 | Scene, Part 19-64
+Fra:1 Mem:20.29M (0.00M, Peak 20.79M) | Time:00:00.14 | Scene, Part 4-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.79M) | Time:00:00.15 | Scene, Part 6-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.79M) | Time:00:00.15 | Scene, Part 22-64
+Fra:1 Mem:20.23M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 3-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 24-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 25-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 26-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 27-64
+Fra:1 Mem:20.16M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 28-64
+Fra:1 Mem:20.25M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 29-64
+Fra:1 Mem:20.23M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 30-64
+Fra:1 Mem:20.25M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 31-64
+Fra:1 Mem:20.25M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 32-64
+Fra:1 Mem:20.25M (0.00M, Peak 20.79M) | Time:00:00.16 | Scene, Part 33-64
+Fra:1 Mem:20.04M (0.00M, Peak 20.79M) | Time:00:00.17 | Scene, Part 9-64
+Fra:1 Mem:20.04M (0.00M, Peak 20.79M) | Time:00:00.17 | Scene, Part 35-64
+Fra:1 Mem:20.04M (0.00M, Peak 20.79M) | Time:00:00.17 | Scene, Part 36-64
+Fra:1 Mem:19.91M (0.00M, Peak 20.79M) | Time:00:00.18 | Scene, Part 2-64
+Fra:1 Mem:19.88M (0.00M, Peak 20.79M) | Time:00:00.20 | Scene, Part 37-64
+Fra:1 Mem:19.94M (0.00M, Peak 20.79M) | Time:00:00.20 | Scene, Part 39-64
+Fra:1 Mem:19.88M (0.00M, Peak 20.79M) | Time:00:00.20 | Scene, Part 40-64
+Fra:1 Mem:19.88M (0.00M, Peak 20.79M) | Time:00:00.20 | Scene, Part 41-64
+Fra:1 Mem:19.87M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 42-64
+Fra:1 Mem:19.92M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 23-64
+Fra:1 Mem:19.94M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 44-64
+Fra:1 Mem:19.85M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 34-64
+Fra:1 Mem:19.94M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 45-64
+Fra:1 Mem:19.92M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 46-64
+Fra:1 Mem:19.91M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 47-64
+Fra:1 Mem:19.82M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 48-64
+Fra:1 Mem:19.86M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 49-64
+Fra:1 Mem:19.80M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 50-64
+Fra:1 Mem:19.80M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 51-64
+Fra:1 Mem:19.84M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 52-64
+Fra:1 Mem:19.85M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 53-64
+Fra:1 Mem:19.82M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 54-64
+Fra:1 Mem:19.80M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 55-64
+Fra:1 Mem:19.84M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 56-64
+Fra:1 Mem:19.85M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 57-64
+Fra:1 Mem:19.82M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 58-64
+Fra:1 Mem:19.80M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 59-64
+Fra:1 Mem:19.84M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 60-64
+Fra:1 Mem:19.82M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 61-64
+Fra:1 Mem:19.80M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 62-64
+Fra:1 Mem:19.78M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 63-64
+Fra:1 Mem:19.52M (0.00M, Peak 20.79M) | Time:00:00.21 | Scene, Part 64-64
+Fra:1 Mem:19.25M (0.00M, Peak 20.79M) | Time:00:00.22 | Scene, Part 21-64
+Fra:1 Mem:18.94M (0.00M, Peak 20.79M) | Time:00:00.23 | Scene, Part 20-64
+Fra:1 Mem:18.66M (0.00M, Peak 20.79M) | Time:00:00.23 | Scene, Part 38-64
+Fra:1 Mem:18.24M (0.00M, Peak 20.79M) | Time:00:00.23 | Scene, Part 1-64
+Fra:1 Mem:17.96M (0.00M, Peak 20.79M) | Time:00:00.24 | Scene, Part 43-64
+Fra:1 Mem:17.55M (0.00M, Peak 20.79M) | Time:00:00.26 | Scene, Part 18-64
+Fra:1 Mem:11.55M (0.00M, Peak 20.79M) | Time:00:00.26 | Sce: Scene Ve:7825 Fa:3211 La:0
+Saved: 'C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blender.png'
+ Time: 00:00.39 (Saving: 00:00.13)
+
+Info: Total files 0 | Changed 0 | Failed 0
+Fra:1 Mem:12.44M (0.00M, Peak 13.15M) | Time:00:00.00 | Preparing Scene data
+Fra:1 Mem:12.44M (0.00M, Peak 13.15M) | Time:00:00.00 | Creating Shadowbuffers
+Fra:1 Mem:12.44M (0.00M, Peak 13.15M) | Time:00:00.00 | Raytree.. preparing
+Fra:1 Mem:12.88M (0.00M, Peak 13.15M) | Time:00:00.00 | Raytree.. building
+Fra:1 Mem:12.87M (0.00M, Peak 13.57M) | Time:00:00.00 | Raytree finished
+Fra:1 Mem:12.87M (0.00M, Peak 13.57M) | Time:00:00.00 | Creating Environment maps
+Fra:1 Mem:12.87M (0.00M, Peak 13.57M) | Time:00:00.00 | Caching Point Densities
+Fra:1 Mem:12.87M (0.00M, Peak 13.57M) | Time:00:00.00 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.87M (0.00M, Peak 13.57M) | Time:00:00.00 | Loading voxel datasets
+Fra:1 Mem:12.87M (0.00M, Peak 13.57M) | Time:00:00.00 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:12.87M (0.00M, Peak 13.57M) | Time:00:00.00 | Occlusion preprocessing
+Fra:1 Mem:17.53M (0.00M, Peak 17.53M) | Time:00:00.01 | Occlusion preprocessing
+Fra:1 Mem:17.53M (0.00M, Peak 17.53M) | Time:00:00.01 | Volume preprocessing
+Fra:1 Mem:17.53M (0.00M, Peak 17.53M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:17.53M (0.00M, Peak 17.53M) | Time:00:00.01 | Sce: Scene Ve:7825 Fa:3211 La:0
+Fra:1 Mem:20.72M (0.00M, Peak 21.28M) | Time:00:00.04 | Scene, Part 8-64
+Fra:1 Mem:20.63M (0.00M, Peak 21.28M) | Time:00:00.04 | Scene, Part 5-64
+Fra:1 Mem:20.55M (0.00M, Peak 21.28M) | Time:00:00.04 | Scene, Part 10-64
+Fra:1 Mem:20.33M (0.00M, Peak 21.28M) | Time:00:00.11 | Scene, Part 11-64
+Fra:1 Mem:20.31M (0.00M, Peak 21.28M) | Time:00:00.11 | Scene, Part 12-64
+Fra:1 Mem:20.33M (0.00M, Peak 21.28M) | Time:00:00.11 | Scene, Part 13-64
+Fra:1 Mem:20.31M (0.00M, Peak 21.28M) | Time:00:00.11 | Scene, Part 14-64
+Fra:1 Mem:20.24M (0.00M, Peak 21.28M) | Time:00:00.11 | Scene, Part 15-64
+Fra:1 Mem:20.24M (0.00M, Peak 21.28M) | Time:00:00.11 | Scene, Part 16-64
+Fra:1 Mem:20.24M (0.00M, Peak 21.28M) | Time:00:00.11 | Scene, Part 17-64
+Fra:1 Mem:20.37M (0.00M, Peak 21.28M) | Time:00:00.11 | Scene, Part 7-64
+Fra:1 Mem:20.46M (0.00M, Peak 21.28M) | Time:00:00.11 | Scene, Part 19-64
+Fra:1 Mem:20.24M (0.00M, Peak 21.28M) | Time:00:00.15 | Scene, Part 6-64
+Fra:1 Mem:20.24M (0.00M, Peak 21.28M) | Time:00:00.15 | Scene, Part 4-64
+Fra:1 Mem:20.33M (0.00M, Peak 21.28M) | Time:00:00.15 | Scene, Part 22-64
+Fra:1 Mem:20.40M (0.00M, Peak 21.28M) | Time:00:00.15 | Scene, Part 3-64
+Fra:1 Mem:20.40M (0.00M, Peak 21.28M) | Time:00:00.16 | Scene, Part 24-64
+Fra:1 Mem:20.48M (0.00M, Peak 21.28M) | Time:00:00.16 | Scene, Part 25-64
+Fra:1 Mem:20.33M (0.00M, Peak 21.28M) | Time:00:00.16 | Scene, Part 26-64
+Fra:1 Mem:20.31M (0.00M, Peak 21.28M) | Time:00:00.16 | Scene, Part 27-64
+Fra:1 Mem:20.33M (0.00M, Peak 21.28M) | Time:00:00.16 | Scene, Part 28-64
+Fra:1 Mem:20.31M (0.00M, Peak 21.28M) | Time:00:00.16 | Scene, Part 29-64
+Fra:1 Mem:20.24M (0.00M, Peak 21.28M) | Time:00:00.16 | Scene, Part 30-64
+Fra:1 Mem:20.33M (0.00M, Peak 21.28M) | Time:00:00.16 | Scene, Part 31-64
+Fra:1 Mem:20.24M (0.00M, Peak 21.28M) | Time:00:00.16 | Scene, Part 32-64
+Fra:1 Mem:20.24M (0.00M, Peak 21.28M) | Time:00:00.16 | Scene, Part 33-64
+Fra:1 Mem:20.19M (0.00M, Peak 21.28M) | Time:00:00.18 | Scene, Part 9-64
+Fra:1 Mem:20.12M (0.00M, Peak 21.28M) | Time:00:00.18 | Scene, Part 35-64
+Fra:1 Mem:20.12M (0.00M, Peak 21.28M) | Time:00:00.18 | Scene, Part 36-64
+Fra:1 Mem:20.05M (0.00M, Peak 21.28M) | Time:00:00.18 | Scene, Part 2-64
+Fra:1 Mem:19.96M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 34-64
+Fra:1 Mem:19.95M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 39-64
+Fra:1 Mem:19.84M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 1-64
+Fra:1 Mem:19.84M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 40-64
+Fra:1 Mem:19.81M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 41-64
+Fra:1 Mem:19.71M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 37-64
+Fra:1 Mem:20.24M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 42-64
+Fra:1 Mem:19.74M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 45-64
+Fra:1 Mem:20.10M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 44-64
+Fra:1 Mem:19.73M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 46-64
+Fra:1 Mem:20.15M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 47-64
+Fra:1 Mem:19.58M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 49-64
+Fra:1 Mem:19.92M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 48-64
+Fra:1 Mem:19.56M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 50-64
+Fra:1 Mem:19.89M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 51-64
+Fra:1 Mem:19.79M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 52-64
+Fra:1 Mem:19.97M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 53-64
+Fra:1 Mem:19.79M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 55-64
+Fra:1 Mem:19.82M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 54-64
+Fra:1 Mem:19.79M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 56-64
+Fra:1 Mem:19.80M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 57-64
+Fra:1 Mem:19.77M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 58-64
+Fra:1 Mem:19.76M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 59-64
+Fra:1 Mem:19.79M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 60-64
+Fra:1 Mem:19.58M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 61-64
+Fra:1 Mem:19.77M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 62-64
+Fra:1 Mem:19.73M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 63-64
+Fra:1 Mem:19.47M (0.00M, Peak 21.28M) | Time:00:00.21 | Scene, Part 64-64
+Fra:1 Mem:19.20M (0.00M, Peak 21.28M) | Time:00:00.22 | Scene, Part 23-64
+Fra:1 Mem:18.90M (0.00M, Peak 21.28M) | Time:00:00.22 | Scene, Part 21-64
+Fra:1 Mem:18.61M (0.00M, Peak 21.28M) | Time:00:00.23 | Scene, Part 38-64
+Fra:1 Mem:18.32M (0.00M, Peak 21.28M) | Time:00:00.23 | Scene, Part 20-64
+Fra:1 Mem:18.04M (0.00M, Peak 21.28M) | Time:00:00.24 | Scene, Part 43-64
+Fra:1 Mem:17.63M (0.00M, Peak 21.28M) | Time:00:00.25 | Scene, Part 18-64
+Fra:1 Mem:11.63M (0.00M, Peak 21.28M) | Time:00:00.25 | Sce: Scene Ve:7825 Fa:3211 La:0
+Saved: 'C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts\products\LPD17.blender_mono.png'
+ Time: 00:00.27 (Saving: 00:00.02)
+
+Command line: 8 args ['blender', '--background', '--factory-startup', '--python', 'BlenderX3dToMultipleExports.py', '--', 'LPD17.x3d', 'C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts/products']
+outputPath= C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products
+Importing LPD17.x3d ...
+Deleting imported lamps, curves, cameras...
+Determining if per-vertex coloring is needed...
+Setting camera...
+Setting background color...
+Rendering image... C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products\LPD17.blender.png
+Exporting C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products\LPD17.blender.x3d
+
+Info: starting X3D export to 'C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts/products\\LPD17.blender.x3d'...
+Info: finished X3D export to 'C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts/products\\LPD17.blender.x3d'
+Saving .blend file C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products\LPD17.blend ...
+Export STL C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products\LPD17.blender.stl ...
+Rendering monochrome C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products\LPD17.blender_mono.png ...
+Exporting cleaned monochrome C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products\LPD17.blender_mono.x3d ...
+Info: starting X3D export to 'C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts/products\\LPD17.blender_mono.x3d'...
+Info: finished X3D export to 'C:\\x3d-code\\www.web3d.org\\x3d\\stylesheets\\java\\src\\python\\blenderScripts/products\\LPD17.blender_mono.x3d'
+Saving monochrome .blend file C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products\LPD17_mono.blend ...
+Error: Not freed memory blocks: 1, total unfreed memory 0.000076 MB
+
+Blender quit
+AL lib: (EE) UpdateDeviceParams: Failed to set 44100hz, got 48000hz instead
+
+blender.python.run:
+blender.python.run complete
+======================================================
+blender.python.validate:
+Validate input model C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/LPD17.x3d
+parameter: source file LPD17.x3d filesize 112303 bytes
+CommandLine parameter: "-validate" for model validation
+Parsing using Document Object Model (DOM) based X3DLoader...
+validate results: success, no problems noted
+Validate conversion result C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products/LPD17.blender.x3d
+parameter: source file LPD17.blender.x3d filesize 123106 bytes
+CommandLine parameter: "-validate" for model validation
+Parsing using Document Object Model (DOM) based X3DLoader...
+Warning: meta name newValue="filename" has an unrecognized value not matching any of the optional string tokens.
+Warning: NavigationInfo type newValue="[EXAMINE", "ANY]" has an unrecognized value not matching any of the optional string tokens.
+Warning: meta name newValue="filename" has an unrecognized value not matching any of the optional string tokens.
+Warning: NavigationInfo type newValue="[EXAMINE", "ANY]" has an unrecognized value not matching any of the optional string tokens.
+validate results: success, no problems noted
+X3dTidy using stylesheet conversion
+*** modifyX3dVersion: change version to 3.3 (original version='3.0')
+*** fixMetaNamesMatchDublinCore: change meta name='filename' to name='title'
+*** insertMissingMetaLicense: &lt;meta content='http://www.web3d.org/x3d/content/examples/license.html' name='license'/&gt;
+X3dTidy using X3DJSAIL CommandLine -X3dTidy
+parameter: source file LPD17.blender.x3d filesize 123106 bytes
+CommandLine parameter: "-X3dTidy" for producing X3D-Tidy cleanup of .x3d
+CommandLine parameter: "-toFile" "C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products/LPD17.blender.tidy.x3d" for result file name root C:\x3d-code\www.web3d.org\x3d\stylesheets\java\src\python\blenderScripts/products/LPD17.blender.tidy
+convert to X3D Tidy cleaned-up version
+*** modifyX3dVersion: change version to 3.3 (original version='3.0')
+*** fixMetaNamesMatchDublinCore: change meta name='filename' to name='title'
+*** insertMissingMetaLicense: &lt;meta content='http://www.web3d.org/x3d/content/examples/license.html' name='license'/&gt;
+===========================
+blender.python.all:
+all:
+BUILD SUCCESSFUL (total time: 36 seconds)

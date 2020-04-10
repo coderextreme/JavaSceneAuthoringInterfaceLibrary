@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 05 06:19:43 CST 2019
+closure-compiler-v20161201.jar>opendaylight-mirror=
+closure-compiler-v20161201.pom>opendaylight-mirror=
